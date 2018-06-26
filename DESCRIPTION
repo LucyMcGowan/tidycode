@@ -1,0 +1,10 @@
+Package: tidycode
+Type: Package
+Title: A package to analyze lines of R code
+Version: 0.1.0
+Author: Lucy D'Agostino McGowan
+Maintainer: Lucy D'Agostino McGowan <lucydagostino@gmail.com>
+Description: A package to analyze lines of R code
+License: MIT + file license
+Encoding: UTF-8
+LazyData: true
