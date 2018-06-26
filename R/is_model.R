@@ -10,7 +10,9 @@
 #' purrr::map_lgl(val, is_model)
 
 is_model <- function(x) {
-  any(class(x) %in% c("lm", "glm", "train", "recipe", "lme4", "coxph"))
+  any(class(x) %in% c("lm", "glm", "train", "recipe", "lme4",
+                      "coxph", "rpart", "nnet", "glmnet", "gbm",
+                      "lars", "randomForest"))
 }
 
 
