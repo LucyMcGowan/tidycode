@@ -28,7 +28,7 @@ is_plot <- function(x) {
               "stars", "stem", "strheight", "stripchart", "strwidth",
               "sunflowerplot", "symbols", "text", "title", "xinch", "xlim",
               "xspline", "xyinch", "yinch", "ylim",
-              "ggplot"))
+              "ggplot", "bmp", "jpeg", "png", "tiff"))
     )
   } else FALSE
 }
