@@ -6,6 +6,9 @@
 #' @export
 #'
 #' @examples
+#' matahari::dance_start(value = TRUE)
+#' m <- lm(mpg ~ cyl, mtcars)
+#' matahari::dance_stop()
 #' val <- matahari::dance_tbl()$value
 #' purrr::map_lgl(val, is_model)
 

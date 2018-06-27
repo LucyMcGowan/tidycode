@@ -6,6 +6,9 @@
 #' @export
 #'
 #' @examples
+#' matahari::dance_start()
+#' library(tidycode)
+#' matahari::dance_stop()
 #' expr <- matahari::dance_tbl()$expr
 #' purrr::map_lgl(expr, is_package)
 is_package <- function(x) {
