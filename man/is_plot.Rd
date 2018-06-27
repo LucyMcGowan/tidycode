@@ -16,6 +16,9 @@ logical
 Check if an expression is calling a plot function
 }
 \examples{
+matahari::dance_start()
+plot(1:10)
+matahari::dance_stop()
 expr <- matahari::dance_tbl()$expr
 purrr::map_lgl(expr, is_plot)
 }
