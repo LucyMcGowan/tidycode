@@ -21,4 +21,5 @@ plot(1:10)
 matahari::dance_stop()
 expr <- matahari::dance_tbl()$expr
 purrr::map_lgl(expr, is_plot)
+matahari::dance_remove()
 }

@@ -21,4 +21,5 @@ library(tidycode)
 matahari::dance_stop()
 expr <- matahari::dance_tbl()$expr
 purrr::map_lgl(expr, is_package)
+matahari::dance_remove()
 }

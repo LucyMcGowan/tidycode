@@ -2,23 +2,24 @@
 % Please edit documentation in R/is_model.R
 \name{is_model}
 \alias{is_model}
-\title{Check if value is of a model class}
+\title{Check if an expression is calling a model function}
 \usage{
 is_model(x)
 }
 \arguments{
-\item{x}{value of R expression}
+\item{x}{an R expression}
 }
 \value{
 logical
 }
 \description{
-Check if value is of a model class
+Check if an expression is calling a model function
 }
 \examples{
-matahari::dance_start(value = TRUE)
+matahari::dance_start()
 m <- lm(mpg ~ cyl, mtcars)
 matahari::dance_stop()
-val <- matahari::dance_tbl()$value
-purrr::map_lgl(val, is_model)
+expr <- matahari::dance_tbl()$expr
+purrr::map_lgl(expr, is_model)
+matahari::dance_remove()
 }
