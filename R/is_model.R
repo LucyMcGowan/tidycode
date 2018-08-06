@@ -1,21 +1,23 @@
-#' Check if value is of a model class
+#' Check if an expression is calling a model function
 #'
-#' @param x value of R expression
+#' @param x an R expression
 #'
 #' @return logical
 #' @export
 #'
 #' @examples
-#' matahari::dance_start(value = TRUE)
+#' matahari::dance_start()
 #' m <- lm(mpg ~ cyl, mtcars)
 #' matahari::dance_stop()
-#' val <- matahari::dance_tbl()$value
-#' purrr::map_lgl(val, is_model)
+#' expr <- matahari::dance_tbl()$expr
+#' purrr::map_lgl(expr, is_model)
+#' matahari::dance_remove()
 
 is_model <- function(x) {
-  any(class(x) %in% c("lm", "glm", "train", "recipe", "lme4",
-                      "coxph", "rpart", "nnet", "glmnet", "gbm",
-                      "lars", "randomForest"))
+  if (class(x) %in% c("call", "<-")) {
+    x <- pryr::fun_calls(x)
+    return(any(x %in% .tidycode$model_tbl$model_fx))
+  } else FALSE
 }
 
 
