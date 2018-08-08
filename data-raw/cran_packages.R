@@ -23,9 +23,9 @@ tibble(
 get_namespace <- function(repo) {
   safe_gh <- purrr::possibly(gh::gh, NULL)
   d <- safe_gh("/repos/:owner/:repo/contents/:path",
-              owner = "cran",
-              repo = repo,
-              path = "NAMESPACE")
+               owner = "cran",
+               repo = repo,
+               path = "NAMESPACE")
   if (is.null(d)) {
     return(
       list(
@@ -45,7 +45,7 @@ get_namespace <- function(repo) {
 extract_namespace <- function(x, thing) {
   if (is.null(x)) {
     return(NA_character_)
-    }
+  }
   str <- stringr::str_extract_all(x, glue::glue("{thing}\\((?:([^\\)]*)(?:[^\\)]|$))\\)"))
   if (length(str[[1]]) == 0) {
     return(NA_character_)
@@ -58,10 +58,13 @@ extract_namespace <- function(x, thing) {
   unlist(stringr::str_split(str, ","))
 }
 
-get_namespace_tbl <- function(repo) {
+get_namespace_tbl <- function(repo, verbose = TRUE) {
   d <- get_namespace(repo)
+  if (verbose) {
+    message(glue::glue("Got repo: {repo}"))
+  }
 
- list(
+  list(
     export_methods = extract_namespace(d$namespace, "exportMethods"),
     export_classes = extract_namespace(d$namespace, "exportClasses"),
     export = extract_namespace(d$namespace, "export"),
@@ -69,7 +72,7 @@ get_namespace_tbl <- function(repo) {
   ) %>%
     enframe("namespace_directive", "func") %>%
     unnest() %>%
-   mutate(package = d$repo)
+    mutate(package = d$repo)
 }
 
 slowly <- function(f, delay = 0.75) {
@@ -80,3 +83,22 @@ slowly <- function(f, delay = 0.75) {
 }
 
 namespace_tbl <- map_df(repos, slowly(get_namespace_tbl))
+
+write_csv(namespace_tbl, "inst/extdata/namespace_tbl.csv")
+
+## make sure the ones with all NAs didn't just hit a rate limit
+## or something
+# check <- namespace_tbl %>%
+#   group_by(package) %>%
+#   filter(all(is.na(func))) %>%
+#   pull(package) %>%
+#   unique()
+#
+# checked <- map_df(check, get_namespace_tbl)
+#
+# test <- checked %>%
+#   group_by(package) %>%
+#   filter(all(is.na(func))) %>%
+#   pull(package) %>%
+#   unique()
+## looks good!
