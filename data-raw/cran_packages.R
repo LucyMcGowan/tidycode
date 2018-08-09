@@ -102,3 +102,56 @@ write_csv(namespace_tbl, "inst/extdata/namespace_tbl.csv")
 #   pull(package) %>%
 #   unique()
 ## looks good!
+
+## Pull all .R files for packages that don't export anything.
+
+get_export_pattern <- function(repo, verbose = TRUE) {
+  d <- get_namespace(repo)
+  if (verbose) {
+    message(glue::glue("Got repo: {repo}"))
+  }
+
+  tibble::tibble(
+    repo = repo,
+    export_pattern = extract_namespace(d$namespace, "exportPattern")
+  )
+}
+
+
+
+check_export_pattern <- namespace_tbl %>%
+  filter(namespace_directive == "export", is.na(func)) %>%
+  pull(package)
+
+export_pattern_tbl <- map_df(check_export_pattern, get_export_pattern)
+
+
+many <- export_pattern_tbl %>%
+  filter(!is.na(export_pattern)) %>%
+  distinct() %>%
+  group_by(repo) %>%
+  filter(n() > 1)
+
+export_pattern_repos <- export_pattern_tbl %>%
+  filter(!is.na(export_pattern)) %>%
+  pull(repo) %>%
+  unique()
+
+get_r_paths <- function(repo) {
+  safe_gh <- purrr::possibly(gh::gh, NULL)
+  d <- safe_gh("/repos/:owner/:repo/contents/:path",
+               owner = "cran",
+               repo = repo,
+               path = "R")
+  tibble::tibble(
+    repo = repo,
+    path = map_chr(d, "path")
+  )
+}
+
+r_paths <- map_df(export_pattern_repos, get_r_paths)
+
+map2(d$repo, d$path, ~gh::gh("/repos/:owner/:repo/contents/:path",
+                             owner = "cran",
+                             repo = .x,
+                             path = .y))
