@@ -7,7 +7,7 @@
 is_package(x)
 }
 \arguments{
-\item{x}{an R expression}
+\item{x}{an R call}
 }
 \value{
 logical

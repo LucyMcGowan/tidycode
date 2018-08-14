@@ -1,6 +1,6 @@
 #' Check if an expression is loading an R package
 #'
-#' @param x an R expression
+#' @param x an R call
 #'
 #' @return logical
 #' @export

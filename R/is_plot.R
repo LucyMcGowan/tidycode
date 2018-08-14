@@ -1,6 +1,6 @@
 #' Check if an expression is calling a plot function
 #'
-#' @param x an R expression
+#' @param x an R call
 #'
 #' @return logical
 #' @export
