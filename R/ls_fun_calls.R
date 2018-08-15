@@ -14,10 +14,10 @@
 #' matahari::dance_remove()
 ls_fun_calls <- function (x) {
   if (is.function(x)) {
-    c(fun_calls(formals(x)), fun_calls(body(x)))
+    c(ls_fun_calls(formals(x)), ls_fun_calls(body(x)))
   }
   else if (is.call(x)) {
     fname <- as.character(x[[1]])
-    c(fname, unlist(lapply(x[-1], fun_calls), use.names = FALSE))
+    c(fname, unlist(lapply(x[-1], ls_fun_calls), use.names = FALSE))
   }
 }

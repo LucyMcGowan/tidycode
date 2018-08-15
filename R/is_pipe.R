@@ -14,7 +14,7 @@
 #' matahari::dance_remove()
 #'
 is_pipe <- function(x) {
-  if (class(x) %in% c("call", "<-")) {
+  if (is.call(x)) {
     x <- pryr::fun_calls(x)
     return(any(x == "%>%"))
   } else FALSE

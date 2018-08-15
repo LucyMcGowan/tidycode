@@ -14,7 +14,7 @@
 #' matahari::dance_remove()
 
 is_plot <- function(x) {
-  if (class(x) %in% c("call", "<-")) {
+  if (is.call(x)) {
     x <- pryr::fun_calls(x)
     return(any(x %in% .tidycode$plot_tbl$plot_fx))
   } else FALSE

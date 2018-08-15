@@ -14,7 +14,7 @@
 #' matahari::dance_remove()
 
 is_package <- function(x) {
-  if (class(x) %in% c("call", "<-")) {
+  if (is.call(x)) {
     x <- pryr::fun_calls(x)
     return(any(x %in% c("library", "require")))
   } else FALSE
