@@ -14,7 +14,7 @@
 #' matahari::dance_remove()
 ls_fun_args <- function (x) {
   if (is.function(x)) {
-    c(ls_fun_args(formals(x)), ls_fun_args(body(f)))
+    c(ls_fun_args(formals(x)), ls_fun_args(body(x)))
   }
   else if (is.call(x)) {
     args <- as.list(x[-1])
