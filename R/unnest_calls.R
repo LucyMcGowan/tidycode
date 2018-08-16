@@ -16,16 +16,19 @@
 unnest_calls <- function(x) {
   if (is.list(x)) {
     m <- purrr::map(x, unnest_calls)
-    t <- dplyr::bind_rows(m, .id = "line") # TODO I hate having a dplyr dependency :(
-    t$line <- as.numeric(t$line)
+    line <- rep(1:length(m), times = map_dbl(m, nrow))
+    t <- do.call(rbind, m)
+    t$line <- line
   }
   if (is.call(x)) {
   t <- tibble::tibble(names = ls_fun_calls(x),
-                 args = ls_fun_args(x))
+                 args = ls_fun_args(x),
+                 line = 1)
   }
   if (is.name(x)) {
   t <- tibble::tibble(names = as.character(x),
-                   args = list(character(0)))
+                   args = list(character(0)),
+                   line = 1)
   }
   return(t)
 }
