@@ -16,7 +16,7 @@
 unnest_calls <- function(x) {
   if (is.list(x)) {
     m <- purrr::map(x, unnest_calls)
-    line <- rep(1:length(m), times = map_dbl(m, nrow))
+    line <- rep(1:length(m), times = purrr::map_dbl(m, nrow))
     t <- do.call(rbind, m)
     t$line <- line
   }
