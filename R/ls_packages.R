@@ -1,17 +1,18 @@
 #' List packages
 #'
-#' @param x list of R calls
+#' @param x an R call or list of R calls
 #'
-#' @return Character. Vector of packages called during matahari session.
+#' @return Character. Vector of packages called.
 #' @export
 #'
 #' @examples
-#' matahari::dance_start()
-#' library(tidycode)
-#' matahari::dance_stop()
-#' expr <- matahari::dance_tbl()$expr
-#' matahari::dance_remove()
+#' ls_packages(quote(library(tidyverse)))
 ls_packages <- function(x) {
-  packages <- x[purrr::map_lgl(x, is_package)]
-  gsub("library\\(|require\\(|\\)|\\\"|\\\'", "", packages)
+  if (is.call(x)) {
+    x <- deparse(x)
+  }
+  packages <- x[is_package(x)]
+  unique(
+    gsub("library\\(|require\\(|\\)|\\\"|\\\'|::(.*)", "", packages)
+  )
 }

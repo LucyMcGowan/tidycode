@@ -18,7 +18,7 @@ repos <- unlist(map(pages, get_repos))
 tibble(
   cran_packages = repos
 ) %>%
-  write_csv("inst/extdata/cran_packges.csv")
+  write_csv("inst/extdata/cran_packages.csv")
 
 get_namespace <- function(repo) {
   safe_gh <- purrr::possibly(gh::gh, NULL)
