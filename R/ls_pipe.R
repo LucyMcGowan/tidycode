@@ -10,6 +10,7 @@
 #' mtcars$mpg %>% mean()
 #' matahari::dance_stop()
 #' expr <- matahari::dance_tbl()$expr
+#' ls_pipe(expr)
 #' matahari::dance_remove()
 ls_pipes <- function(x) {
   if (is.call(x)) {
