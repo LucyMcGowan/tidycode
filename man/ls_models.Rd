@@ -7,7 +7,7 @@
 ls_models(x)
 }
 \arguments{
-\item{x}{list of R calls}
+\item{x}{an R call or list of R calls}
 }
 \value{
 Character. Vector of unique models called during matahari session.
@@ -20,5 +20,6 @@ matahari::dance_start()
 m <- lm(mpg ~ cyl, mtcars)
 matahari::dance_stop()
 expr <- matahari::dance_tbl()$expr
+ls_models(expr)
 matahari::dance_remove()
 }

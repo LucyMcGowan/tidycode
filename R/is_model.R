@@ -20,6 +20,8 @@ is_model <- function(x) {
   if (is.call(x)) {
     x <- pryr::fun_calls(x)
     return(any(x %in% .tidycode$model_tbl$model_fx))
+  } else if (is.character(x)) {
+    return(grepl(paste(.tidycode$model_tbl$model_fx, collapse = "|"), x))
   } else FALSE
 }
 
