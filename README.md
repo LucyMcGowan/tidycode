@@ -61,7 +61,7 @@ expr
 We can check which expressions are plots using the `is_plot()` function.
 
 ``` r
-purrr::map_lgl(expr, is_plot)
+is_plot(expr)
 #> [1] FALSE FALSE  TRUE FALSE FALSE
 ```
 
@@ -69,7 +69,7 @@ We can check which expressions are calling modeling functions using the
 `is_model()` function.
 
 ``` r
-purrr::map_lgl(expr, is_model)
+is_model(expr)
 #> [1] FALSE FALSE FALSE  TRUE FALSE
 ```
 
