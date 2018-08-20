@@ -1,6 +1,6 @@
 #' Check if an expression is calling a plot function
 #'
-#' @param x an R call
+#' @param x an R call or list of R calls
 #'
 #' @return logical
 #' @export
@@ -10,10 +10,13 @@
 #' plot(1:10)
 #' matahari::dance_stop()
 #' expr <- matahari::dance_tbl()$expr
-#' purrr::map_lgl(expr, is_plot)
+#' is_plot(expr)
 #' matahari::dance_remove()
 
 is_plot <- function(x) {
+  if(is.list(x)) {
+    return(purrr::map_lgl(x, is_plot))
+  }
   if (is.call(x)) {
     x <- pryr::fun_calls(x)
     return(any(x %in% .tidycode$plot_tbl$plot_fx))

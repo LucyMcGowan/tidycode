@@ -16,7 +16,7 @@
 
 is_package <- function(x) {
   if(is.list(x)) {
-    return(map_lgl(x, is_package))
+    return(purrr::map_lgl(x, is_package))
   }
   if (is.call(x)) {
     x <- pryr::fun_calls(x)
