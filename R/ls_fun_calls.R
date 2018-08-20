@@ -1,6 +1,6 @@
 #' List functions in R call
 #'
-#' @param x an R call
+#' @param x an R call or list of R calls
 #'
 #' @return Character, all functions in an R call
 #' @export
