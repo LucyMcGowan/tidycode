@@ -20,6 +20,8 @@ is_plot <- function(x) {
   if (is.call(x)) {
     x <- pryr::fun_calls(x)
     return(any(x %in% .tidycode$plot_tbl$plot_fx))
+  } else if (is.character(x)) {
+    return(grepl(paste(.tidycode$plot_tbl$plot_fx, collapse = "|"), x))
   } else FALSE
 }
 
