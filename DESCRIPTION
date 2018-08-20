@@ -1,6 +1,6 @@
 Package: tidycode
 Type: Package
-Title: A package to analyze lines of R code?
+Title: A package to analyze lines of R code
 Version: 0.1.0
 Authors@R: c(
          person("Lucy", "D'Agostino McGowan", email = "lucydagostino@gmail.com", role = c("aut", "cre")),
