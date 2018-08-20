@@ -7,7 +7,7 @@
 is_plot(x)
 }
 \arguments{
-\item{x}{an R call}
+\item{x}{an R call or list of R calls}
 }
 \value{
 logical
@@ -20,6 +20,6 @@ matahari::dance_start()
 plot(1:10)
 matahari::dance_stop()
 expr <- matahari::dance_tbl()$expr
-purrr::map_lgl(expr, is_plot)
+is_plot(expr)
 matahari::dance_remove()
 }

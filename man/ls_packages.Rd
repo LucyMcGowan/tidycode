@@ -7,18 +7,14 @@
 ls_packages(x)
 }
 \arguments{
-\item{x}{list of R calls}
+\item{x}{an R call or list of R calls}
 }
 \value{
-Character. Vector of packages called during matahari session.
+Character. Vector of packages called.
 }
 \description{
 List packages
 }
 \examples{
-matahari::dance_start()
-library(tidycode)
-matahari::dance_stop()
-expr <- matahari::dance_tbl()$expr
-matahari::dance_remove()
+ls_packages(quote(library(tidyverse)))
 }

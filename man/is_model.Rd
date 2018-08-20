@@ -7,7 +7,7 @@
 is_model(x)
 }
 \arguments{
-\item{x}{an R call}
+\item{x}{an R call or list of R calls}
 }
 \value{
 logical
@@ -20,6 +20,6 @@ matahari::dance_start()
 m <- lm(mpg ~ cyl, mtcars)
 matahari::dance_stop()
 expr <- matahari::dance_tbl()$expr
-purrr::map_lgl(expr, is_model)
+is_model(expr)
 matahari::dance_remove()
 }

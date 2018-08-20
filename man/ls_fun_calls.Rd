@@ -7,7 +7,7 @@
 ls_fun_calls(x)
 }
 \arguments{
-\item{x}{an R call}
+\item{x}{an R call or list of R calls}
 }
 \value{
 Character, all functions in an R call

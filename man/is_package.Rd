@@ -7,19 +7,20 @@
 is_package(x)
 }
 \arguments{
-\item{x}{an R call}
+\item{x}{an R call or list of R calls}
 }
 \value{
-logical
+logical value or list of logical values
 }
 \description{
 Check if an expression is loading an R package
 }
 \examples{
-matahari::dance_start()
-library(tidycode)
-matahari::dance_stop()
-expr <- matahari::dance_tbl()$expr
-purrr::map_lgl(expr, is_package)
-matahari::dance_remove()
+is_package(quote(library(tidycode)))
+is_package(quote(tidycode::is_package))
+is_package(
+  list(
+    quote(library(tidycode)),
+    quote(library(matahari)))
+  )
 }
