@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-#' ls_packages(quote(library(tidyverse)))
+#' ls_packages(quote(library(tidycode)))
 ls_packages <- function(x) {
   if (is.call(x)) {
     x <- deparse(x)

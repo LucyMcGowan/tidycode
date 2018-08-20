@@ -16,5 +16,5 @@ Character. Vector of packages called.
 List packages
 }
 \examples{
-ls_packages(quote(library(tidyverse)))
+ls_packages(quote(library(tidycode)))
 }
