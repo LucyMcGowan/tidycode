@@ -20,7 +20,7 @@ matahari::dance_start()
 mtcars$mpg \%>\% mean()
 matahari::dance_stop()
 expr <- matahari::dance_tbl()$expr
-purrr::map_lgl(expr, is_pipe)
+is_pipe(expr)
 matahari::dance_remove()
 
 }

@@ -7,7 +7,7 @@
 ls_pipes(x)
 }
 \arguments{
-\item{x}{list of R calls}
+\item{x}{an R call or list of R calls}
 }
 \value{
 Character. Vector of piped calls during matahari session.
