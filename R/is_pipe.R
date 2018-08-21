@@ -14,13 +14,11 @@
 #' matahari::dance_remove()
 #'
 is_pipe <- function(x) {
-  if (is.list(x)) {
+  if(is.list(x) | (is.character(x) & length(x) > 1)) {
     return(purrr::map_lgl(x, is_pipe))
   }
   if (is.call(x)) {
     x <- pryr::fun_calls(x)
-    return(any(x == "%>%"))
-  } else if (is.character(x)) {
-    return(grepl("%>%", x))
-  } else FALSE
+  }
+  any(x == "%>%")
 }

@@ -15,15 +15,13 @@
 #'   )
 
 is_package <- function(x) {
-  if(is.list(x)) {
+  if(is.list(x) | (is.character(x) & length(x) > 1)) {
     return(purrr::map_lgl(x, is_package))
   }
   if (is.call(x)) {
     x <- pryr::fun_calls(x)
-    return(any(x %in% c("library", "require", "::")))
-  } else if (is.character(x)) {
-    return(grepl("library|require|::", x))
-  } else FALSE
+  }
+  any(x %in% c("library", "require", "::"))
 }
 
 
