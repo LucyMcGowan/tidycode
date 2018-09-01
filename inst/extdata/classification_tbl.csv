@@ -184,6 +184,12 @@ exploratory,read.csv
 exploratory,rm
 exploratory,by
 exploratory,ldply
+exploratory,select
+exploratory,geom_smooth
+exploratory,scale_y_log10
+exploratory,scale_x_sqrt
+exploratory,geom_hex
+exploratory,xlim
 cleaning,for
 cleaning,nrow
 cleaning,as.factor
@@ -262,6 +268,13 @@ cleaning,return
 cleaning,%in%
 cleaning,table
 cleaning,count
+cleaning,experience
+cleaning,sqrt
+cleaning,ln
+cleaning,log
+cleaning,nest
+cleaning,map
+cleaning,map_dbl
 modeling,factor
 modeling,DESeqDataSetFromMatrix
 modeling,DESeq
@@ -325,6 +338,9 @@ modeling,plot
 modeling,lines
 modeling,cort
 modeling,score.sentiment
+modeling,cor
+modeling,cor.test
+modeling,spearman
 evaluation,results
 evaluation,summary
 evaluation,mcols
