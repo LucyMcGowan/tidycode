@@ -10,6 +10,10 @@ get_packages_tbl <- function(pkg_names = NULL) {
   }
   pkg_names <- c(pkg_names, "stats", "methods", "grDevices", "graphics",
                  "datasets", "base")
+  if ("tidyverse" %in% pkg_names) {
+    pkg_names <- c(pkg_names, "ggplot2", "purrr", "dplyr", "tibble", "tidyr",
+                   "readr", "stringr", "forcats")
+  }
   .tidycode$cran_tbl[(.tidycode$cran_tbl$package %in% pkg_names) &
                        !is.na(.tidycode$cran_tbl$func), ]
 }
