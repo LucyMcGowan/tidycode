@@ -36,6 +36,13 @@ namespace_tbl_1000 <- df %>%
   arrange(desc(count)) %>%
   select(-count) %>%
   head(1000) %>%
-  left_join(fun_df)
+  left_join(fun_df) %>%
+  select(-namespace_directive) %>%
+  add_row(package = "stats", func = ls("package:stats")) %>%
+  add_row(package = "methods", func = ls("package:methods")) %>%
+  add_row(package = "grDevices", func = ls("package:grDevices")) %>%
+  add_row(package = "graphics", func = ls("package:graphics")) %>%
+  add_row(package = "datasets", func = ls("package:datasets")) %>%
+  add_row(package = "base", func = ls("package:base"))
 
 write_csv(namespace_tbl_1000, "inst/extdata/namespace_tbl_1000.csv")
