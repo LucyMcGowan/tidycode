@@ -6,7 +6,7 @@
 #' @return Tibble with two columns, `classification` and `func`
 #' @export
 get_classification_tbl <- function(func_names = NULL) {
-  if (is.null(fun_names)) {
+  if (is.null(func_names)) {
     return(.tidycode$classification_tbl)
   }
   .tidycode$classification_tbl[.tidycode$classification_tbl$func %in% func_names, ]
