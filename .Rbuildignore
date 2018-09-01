@@ -4,3 +4,4 @@
 ^README-.*\.png$
 ^internal$
 ^data-raw$
+^\.httr-oauth$

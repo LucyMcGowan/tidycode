@@ -4,7 +4,10 @@
 #'
 #' @return Tibble with two columns, `package` and `func`
 #' @export
-get_packages_tbl <- function(pkg_names) {
+get_packages_tbl <- function(pkg_names = NULL) {
+  if (is.null(pkg_names)) {
+    return(.tidycode$cran_tbl)
+  }
   pkg_names <- c(pkg_names, "stats", "methods", "grDevices", "graphics",
                  "datasets", "base")
   .tidycode$cran_tbl[(.tidycode$cran_tbl$package %in% pkg_names) &

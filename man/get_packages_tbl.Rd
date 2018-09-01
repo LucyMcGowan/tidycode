@@ -4,7 +4,7 @@
 \alias{get_packages_tbl}
 \title{Create a tibble of all functions included in all packages used in your analysis}
 \usage{
-get_packages_tbl(pkg_names)
+get_packages_tbl(pkg_names = NULL)
 }
 \arguments{
 \item{pkg_names}{Character vector of the names of all packages used in analysis}

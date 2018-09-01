@@ -25,3 +25,7 @@ NULL
   read.csv(stringsAsFactors = FALSE) %>%
   tibble::as_tibble()
 
+.tidycode$classification_tbl <-
+  system.file("extdata", "classification_tbl.csv", package = "tidycode") %>%
+  read.csv(stringsAsFactors = FALSE) %>%
+  tibble::as_tibble()
