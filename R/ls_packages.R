@@ -6,13 +6,19 @@
 #' @export
 #'
 #' @examples
-#' ls_packages(quote(library(tidycode)))
+#' matahari::dance_start()
+#' library(tidycode)
+#' expr <- matahari::dance_tbl()$expr
+#' ls_packages(expr)
+#' matahari::dance_remove()
 ls_packages <- function(x) {
   if (is.call(x)) {
     x <- deparse(x)
   }
   packages <- x[is_package(x)]
   unique(
-    gsub("library\\(|require\\(|\\)|\\\"|\\\'|::(.*)", "", packages)
+    trimws(
+      gsub("library\\(|require\\(|\\)|\\\"|\\\'|::(.*)|.*<-", "", packages)
+    )
   )
 }
