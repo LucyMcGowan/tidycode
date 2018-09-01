@@ -35,14 +35,17 @@ glue_data(t, 'The point estimate for term {term} is {estimate}.')
 m <- matahari::dance_recital(code)
 ```
 
+Alternatively, you may already have a matahari tibble that was recorded
+during an R session.
+
 Load the tidycode library.
 
 ``` r
 library(tidycode)
 ```
 
-We can use the expressions from this matahari tibble extract the names
-of the packages included.
+We can use the expressions from this matahari tibble to extract the
+names of the packages included.
 
 ``` r
 (pkg_names <- ls_packages(m$expr))
@@ -70,7 +73,7 @@ included in the packages that were used.
 #> # ... with 2,391 more rows
 ```
 
-Create a dataframe of your expressions, splitting each into individual
+Create a data frame of your expressions, splitting each into individual
 functions.
 
 ``` r
