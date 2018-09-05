@@ -212,7 +212,7 @@ c <- unnest_calls(m$expr)
 
 ## Send to Google Sheets
 tmp <- tempfile(fileext = ".csv")
-write_csv(c$names, tmp)
+write.csv(c$names, tmp, row.names = FALSE)
 s <- drive_upload(tmp,
                   type = "spreadsheet")
 
