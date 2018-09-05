@@ -145,4 +145,6 @@ matahari::dance_remove()
 
 ## Contributing
 
+We are crowdsourcing the function classification. If you would like to contribute, you can fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSfyDIVPC3cgKfplS3O7n-lCjWDLIzpCzgV2ffYAhyFuJaUooA/viewform?usp=sf_link)!
+
 Currently, the model and plot functions work by pulling in all functions from certain packages that are intended for modeling and plotting. To add more functions, update the files in the [`data-raw`](https://github.com/LucyMcGowan/tidycode/tree/master/data-raw) folder.
