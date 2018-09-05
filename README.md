@@ -188,6 +188,57 @@ We are crowdsourcing the function classification. If you would like to
 contribute, you can fill out [this
 form](https://docs.google.com/forms/d/e/1FAIpQLSfyDIVPC3cgKfplS3O7n-lCjWDLIzpCzgV2ffYAhyFuJaUooA/viewform?usp=sf_link)\!
 
+Alternatively, this method may help you classify the functions faster:
+
+``` r
+library(tidycode)
+library(googledrive)
+library(tidyverse)
+
+## Copy code from R script and paste it here as a string
+code <- "
+library(broom)
+library(glue)
+m <- lm(mpg ~ am, data = mtcars)
+t <- tidy(m)
+glue_data(t, 'The point estimate for term {term} is {estimate}.')
+"
+
+## Turn code into matahari data frame
+m <- matahari::dance_recital(code)
+
+## Unnest calls
+c <- unnest_calls(m$expr)
+
+## Send to Google Sheets
+tmp <- tempfile(fileext = ".csv")
+write_csv(c$names, tmp)
+s <- drive_upload(tmp,
+                  type = "spreadsheet")
+
+## Head to drive to update the sheet with 
+## "Setup", "Exploratory", "Data Cleaning", "Modeling", "Evaluation"
+## "Communication", "Import", or "Export"
+drive_browse(s)
+
+## Once you've finished classifying, convert to same format as the Google form
+tmp <- tempfile(fileext = ".csv")
+drive_download(file = s,
+               path = tmp) 
+c_ <- read_csv(tmp)
+colnames(c_) <- c("func", "classification")
+c_ %>%
+  group_by(classification) %>%
+  summarise(func = toString(func))
+#> # A tibble: 4 x 2
+#>   classification func            
+#>   <chr>          <chr>           
+#> 1 data cleaning  tidy, glue_data 
+#> 2 model          lm              
+#> 3 setup          library, library
+#> 4 NA             <-, ~, <-       
+```
+
 Currently, the model and plot functions work by pulling in all functions
 from certain packages that are intended for modeling and plotting. To
 add more functions, update the files in the
