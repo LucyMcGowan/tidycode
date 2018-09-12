@@ -18,6 +18,6 @@ ls_fun_calls <- function (x) {
   }
   else if (is.call(x)) {
     fname <- as.character(x[[1]])
-    c(fname, unlist(lapply(x[-1], ls_fun_calls), use.names = FALSE))
+    c(list(fname), unlist(lapply(x[-1], ls_fun_calls), use.names = FALSE))
   }
 }

@@ -21,8 +21,10 @@ unnest_calls <- function(x) {
     t$line <- line
   }
   if (is.call(x)) {
-  t <- tibble::tibble(names = ls_fun_calls(x),
-                 args = ls_fun_args(x),
+  c <-  ls_fun_calls(x)
+  a <- ls_fun_args(x)
+  t <- tibble::tibble(names = unlist(c),
+                 args = rep(a, purrr::map_dbl(c, length)),
                  line = 1)
   }
   if (is.name(x)) {
