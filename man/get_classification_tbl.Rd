@@ -4,14 +4,22 @@
 \alias{get_classification_tbl}
 \title{Create a tibble of classifications of all functions used in your analysis}
 \usage{
-get_classification_tbl(func_names = NULL)
+get_classification_tbl(func_names = NULL, include_prevalence = TRUE)
 }
 \arguments{
-\item{func_names}{Character vector of the names of all functions used in analysis. If `NULL`,
-will return the full data frame of all classified functions.}
+\item{func_names}{Character vector of the names of all functions used in
+analysis. If `NULL`, will return the full data frame of all classified functions.}
+
+\item{include_prevalence}{Logical. Indicates whether to include all functions
+and classifications along with their prevalence (default, `TRUE`) - this may
+result in multiple lines (with multiple classifications) for a single function.
+If `FALSE`, the most prevalent classification will be selected.}
 }
 \value{
-Tibble with two columns, `classification` and `func`
+If `include_prevalence = TRUE`, tibble with four columns,
+`classification` and `func`, `n`, `prevalence`.
+If `include_prevalence = FALSE`, tibble with two columns, `classification` and
+`func`.
 }
 \description{
 Create a tibble of classifications of all functions used in your analysis

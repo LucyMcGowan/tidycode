@@ -33,6 +33,7 @@ classification_tbl <- tibble::tibble(
     func = cleanup(d$evaluation)
   ) %>%
   filter(!is.na(func)) %>%
-  distinct()
-
+  group_by(func, classification) %>%
+  summarise(n = n()) %>%
+  mutate(prevalence = n / sum(n))
 write_csv(classification_tbl, "inst/extdata/classification_tbl.csv")
