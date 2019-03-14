@@ -3,7 +3,7 @@
 #' @param x an R call or list of R calls
 #'
 #' @return a tibble of the unnested R calls with three columns: `line`: the line number of the call
-#'  (if a list was supplied), `names`: the name of the function called, `args`: a list of arguments
+#'  (if a list was supplied), `func`: the name of the function called, `args`: a list of arguments
 #' @export
 #'
 #' @examples
@@ -23,12 +23,12 @@ unnest_calls <- function(x) {
   if (is.call(x)) {
   c <-  ls_fun_calls(x)
   a <- ls_fun_args(x)
-  t <- tibble::tibble(names = unlist(c),
+  t <- tibble::tibble(func = unlist(c),
                  args = rep(a, purrr::map_dbl(c, length)),
                  line = 1)
   }
   if (is.name(x)) {
-  t <- tibble::tibble(names = as.character(x),
+  t <- tibble::tibble(func = as.character(x),
                    args = list(character(0)),
                    line = 1)
   }

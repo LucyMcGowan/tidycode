@@ -73,7 +73,7 @@ Left join the package tibble to classify your functions by package name.
 
 ```{r}
 u <- u %>%
-  dplyr::left_join(pkg_tbl, c("names" = "func"))
+  dplyr::left_join(pkg_tbl)
 u
 ```
 
@@ -82,7 +82,7 @@ Add in the function classifications!
 ```{r}
 classification_tbl <- get_classification_tbl()
 u %>%
-  dplyr::left_join(classification_tbl, c("names" = "func"))
+  dplyr::left_join(classification_tbl)
 ```
 
 
@@ -171,7 +171,7 @@ c <- unnest_calls(m$expr)
 
 ## Send to Google Sheets
 tmp <- tempfile(fileext = ".csv")
-write.csv(c$names, tmp, row.names = FALSE)
+write.csv(c$func, tmp, row.names = FALSE)
 s <- drive_upload(tmp,
                   type = "spreadsheet")
 

@@ -11,7 +11,7 @@ unnest_calls(x)
 }
 \value{
 a tibble of the unnested R calls with three columns: `line`: the line number of the call
- (if a list was supplied), `names`: the name of the function called, `args`: a list of arguments
+ (if a list was supplied), `func`: the name of the function called, `args`: a list of arguments
 }
 \description{
 Unnest R calls

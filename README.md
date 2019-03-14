@@ -70,7 +70,7 @@ included in the packages that were used.
 #>  8 inflate         broom  
 #>  9 tidy            broom  
 #> 10 tidyMCMC        broom  
-#> # ... with 2,391 more rows
+#> # … with 2,391 more rows
 ```
 
 Create a data frame of your expressions, splitting each into individual
@@ -84,10 +84,11 @@ Left join the package tibble to classify your functions by package name.
 
 ``` r
 u <- u %>%
-  dplyr::left_join(pkg_tbl, c("names" = "func"))
+  dplyr::left_join(pkg_tbl)
+#> Joining, by = "func"
 u
 #> # A tibble: 8 x 4
-#>   names     args        line package
+#>   func      args        line package
 #>   <chr>     <list>     <int> <chr>  
 #> 1 library   <list [1]>     1 base   
 #> 2 library   <list [1]>     2 base   
@@ -104,18 +105,21 @@ Add in the function classifications\!
 ``` r
 classification_tbl <- get_classification_tbl()
 u %>%
-  dplyr::left_join(classification_tbl, c("names" = "func"))
-#> # A tibble: 8 x 5
-#>   names     args        line package classification
-#>   <chr>     <list>     <int> <chr>   <chr>         
-#> 1 library   <list [1]>     1 base    setup         
-#> 2 library   <list [1]>     2 base    setup         
-#> 3 <-        <list [2]>     3 base    <NA>          
-#> 4 lm        <list [2]>     3 stats   modeling      
-#> 5 ~         <list [2]>     3 base    <NA>          
-#> 6 <-        <list [2]>     4 base    <NA>          
-#> 7 tidy      <list [1]>     4 broom   <NA>          
-#> 8 glue_data <list [2]>     5 glue    <NA>
+  dplyr::left_join(classification_tbl)
+#> Joining, by = "func"
+#> # A tibble: 10 x 7
+#>    func      args        line package classification     n prevalence
+#>    <chr>     <list>     <int> <chr>   <chr>          <int>      <dbl>
+#>  1 library   <list [1]>     1 base    cleaning           1    0.00617
+#>  2 library   <list [1]>     1 base    setup            161    0.994  
+#>  3 library   <list [1]>     2 base    cleaning           1    0.00617
+#>  4 library   <list [1]>     2 base    setup            161    0.994  
+#>  5 <-        <list [2]>     3 base    <NA>              NA   NA      
+#>  6 lm        <list [2]>     3 stats   modeling          17    1      
+#>  7 ~         <list [2]>     3 base    <NA>              NA   NA      
+#>  8 <-        <list [2]>     4 base    <NA>              NA   NA      
+#>  9 tidy      <list [1]>     4 broom   <NA>              NA   NA      
+#> 10 glue_data <list [2]>     5 glue    <NA>              NA   NA
 ```
 
 ### Extract Plots and Models *(this may get deprecated, we are looking into new ways to label functions)*
@@ -212,7 +216,7 @@ c <- unnest_calls(m$expr)
 
 ## Send to Google Sheets
 tmp <- tempfile(fileext = ".csv")
-write.csv(c$names, tmp, row.names = FALSE)
+write.csv(c$func, tmp, row.names = FALSE)
 s <- drive_upload(tmp,
                   type = "spreadsheet")
 
