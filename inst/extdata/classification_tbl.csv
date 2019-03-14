@@ -1,653 +1,3540 @@
 func,classification,n,prevalence
-%%,cleaning,4,1
-%>%,cleaning,19,0.8636363636363636
-%>%,exploratory,2,0.09090909090909091
-%>%,setup,1,0.045454545454545456
-%in%,cleaning,6,1
-%within%,cleaning,1,1
-abline,evaluation,2,1
-abs,cleaning,2,0.6666666666666666
-abs,modeling,1,0.3333333333333333
-ad.data.frame,exploratory,1,1
-adonis,exploratory,1,0.5
-adonis,modeling,1,0.5
-aes,evaluation,5,0.15625
-aes,exploratory,27,0.84375
-AIC,evaluation,2,1
-AnnotationHub,setup,1,1
-anova,modeling,1,1
-anti_join,cleaning,1,1
-aov,evaluation,2,0.6666666666666666
-aov,modeling,1,0.3333333333333333
-apply,cleaning,8,0.7272727272727273
-apply,exploratory,2,0.18181818181818182
-apply,modeling,1,0.09090909090909091
-arrange,cleaning,8,1
-arrangeGrob,setup,10,1
-as_tibble,setup,1,1
-as.character,cleaning,16,0.8
-as.character,evaluation,1,0.05
-as.character,exploratory,3,0.15
-as.data.frame,cleaning,7,0.4666666666666667
-as.data.frame,evaluation,1,0.06666666666666667
-as.data.frame,exploratory,3,0.2
-as.data.frame,setup,4,0.26666666666666666
-as.factor,cleaning,16,0.8888888888888888
-as.factor,exploratory,2,0.1111111111111111
-as.integer,evaluation,2,0.6666666666666666
-as.integer,setup,1,0.3333333333333333
-as.list,modeling,1,1
-as.matrix,cleaning,1,0.2
-as.matrix,evaluation,1,0.2
-as.matrix,modeling,1,0.2
-as.matrix,setup,2,0.4
-as.numeric,cleaning,23,0.5897435897435898
-as.numeric,evaluation,12,0.3076923076923077
-as.numeric,modeling,2,0.05128205128205128
-as.numeric,setup,2,0.05128205128205128
-as.numerics,cleaning,1,1
-as.POSIXct,cleaning,1,1
-attach,setup,2,1
-attributes,cleaning,3,1
-AUCRF,modeling,1,1
-barplot,exploratory,6,1
-bayesglm,modeling,2,1
-bind_rows,cleaning,1,1
-binom.test,evaluation,1,1
-biocLite,setup,1,1
-brewer.pal,evaluation,1,1
-broom,modeling,1,1
-bucket_age,cleaning,1,1
-build_dep,setup,1,1
-by,cleaning,2,0.6666666666666666
-by,exploratory,1,0.3333333333333333
-c,cleaning,30,0.3409090909090909
-c,evaluation,19,0.2159090909090909
-c,exploratory,18,0.20454545454545456
-c,modeling,6,0.06818181818181818
-c,setup,15,0.17045454545454544
-calcCI.exp,exploratory,2,0.5
-calcCI.exp,modeling,2,0.5
-calcNormFactors,modeling,2,1
-capture.output,cleaning,1,1
-cat,cleaning,10,0.4166666666666667
-cat,evaluation,2,0.08333333333333333
-cat,modeling,2,0.08333333333333333
-cat,setup,10,0.4166666666666667
-cbind,cleaning,16,0.6153846153846154
-cbind,evaluation,4,0.15384615384615385
-cbind,modeling,2,0.07692307692307693
-cbind,setup,4,0.15384615384615385
-cBind,cleaning,3,0.375
-cBind,evaluation,2,0.25
-cBind,modeling,3,0.375
-center,cleaning,1,1
-cite_options,setup,1,1
-cleanbib,setup,1,1
-close,setup,1,1
-cnetplot,exploratory,1,1
-coef,evaluation,6,0.46153846153846156
-coef,exploratory,2,0.15384615384615385
-coef,modeling,5,0.38461538461538464
-colnames,cleaning,37,0.6851851851851852
-colnames,evaluation,12,0.2222222222222222
-colnames,modeling,4,0.07407407407407407
-colnames,setup,1,0.018518518518518517
-colorRampPalette,evaluation,3,1
-commanArgs,setup,1,1
-conames,cleaning,1,1
-confusionMatrix,evaluation,2,1
-coord_cartesian,exploratory,2,1
-coord_map,exploratory,4,1
-cor,exploratory,1,0.07692307692307693
-cor,modeling,12,0.9230769230769231
-cor.test,modeling,6,1
-corplot,exploratory,1,1
-corPvalueStudent,evaluation,3,1
-cort,modeling,1,1
-count,cleaning,2,0.5
-count,exploratory,1,0.25
-count,setup,1,0.25
-coxph,modeling,1,1
-cpm,modeling,2,1
-create_analysis_df,setup,1,1
-createSummaryDataset,exploratory,1,1
-crossprod,cleaning,1,1
-data,setup,3,1
-data.frame,cleaning,3,0.23076923076923078
-data.frame,evaluation,1,0.07692307692307693
-data.frame,exploratory,2,0.15384615384615385
-data.frame,modeling,2,0.15384615384615385
-data.frame,setup,5,0.38461538461538464
-data.matrix,cleaning,2,1
-data.table,setup,1,1
-DataFrame,modeling,1,1
-date,setup,1,1
-dbind,cleaning,1,1
-dcast,cleaning,3,1
-ddply,cleaning,7,1
-decideTestsDGE,modeling,2,1
-desc,cleaning,3,1
-DESeq,modeling,1,1
-DESeqDataSetFromMatrix,modeling,1,1
-detecCores,setup,1,1
-detectCores,setup,1,1
-dev.off,exploratory,3,1
-DGEList,modeling,2,1
-dict,cleaning,3,1
-dim,cleaning,2,0.5
-dim,modeling,2,0.5
-dir.create,setup,1,1
-distinct,cleaning,1,1
-dmr,modeling,2,1
-dnorm,modeling,1,1
-do.call,cleaning,1,0.3333333333333333
-do.call,setup,2,0.6666666666666666
-dotplot,evaluation,1,0.5
-dotplot,exploratory,1,0.5
-download.file,setup,4,1
-drop_na,cleaning,1,1
-duplicated,exploratory,1,1
-eBayes,modeling,2,1
-Edit.table,cleaning,2,1
-EditTable,cleaning,3,1
-else,cleaning,1,0.25
-else,evaluation,2,0.5
-else,setup,1,0.25
-enrichGo,cleaning,1,1
-enrichKEGG,modeling,1,1
-enrichMap,exploratory,1,1
-estimateDisp,modeling,1,1
-eval,exploratory,1,1
-exists,setup,1,1
-exp,evaluation,1,0.3333333333333333
-exp,exploratory,1,0.3333333333333333
-exp,modeling,1,0.3333333333333333
-expand_limits,exploratory,3,1
-expand.grid,cleaning,2,0.3333333333333333
-expand.grid,modeling,4,0.6666666666666666
-experience,cleaning,1,1
-facet_grid,evaluation,3,0.6
-facet_grid,exploratory,2,0.4
-facet_wrap,exploratory,1,1
-factor,cleaning,12,0.36363636363636365
-factor,exploratory,2,0.06060606060606061
-factor,modeling,17,0.5151515151515151
-factor,setup,2,0.06060606060606061
-favtor,modeling,1,1
-fev.off,setup,1,1
-file,setup,1,1
-file.exists,setup,2,1
-file.path,setup,1,1
-fill,cleaning,1,1
-filter,cleaning,20,0.7407407407407407
-filter,evaluation,2,0.07407407407407407
-filter,exploratory,5,0.18518518518518517
-Filter,cleaning,1,0.5
-Filter,modeling,1,0.5
-floor,cleaning,1,1
-fontfamily,setup,1,1
-for,cleaning,11,0.39285714285714285
-for,evaluation,10,0.35714285714285715
-for,exploratory,2,0.07142857142857142
-for,modeling,3,0.10714285714285714
-for,setup,2,0.07142857142857142
-format,cleaning,5,0.45454545454545453
-format,exploratory,6,0.5454545454545454
-fortify,cleaning,1,1
-fromList,setup,1,1
-function,cleaning,4,0.25
-function,evaluation,1,0.0625
-function,exploratory,2,0.125
-function,modeling,2,0.125
-function,setup,7,0.4375
-gamlr,modeling,4,1
-genelist,modeling,2,1
-geom_bar,evaluation,1,0.125
-geom_bar,exploratory,7,0.875
-geom_boxplot,exploratory,2,1
-geom_density,evaluation,1,1
-geom_hex,exploratory,1,1
-geom_jitter,exploratory,2,1
-geom_line,exploratory,7,1
-geom_point,exploratory,9,1
-geom_polygon,exploratory,4,1
-geom_rect,evaluation,1,1
-geom_smooth,evaluation,3,0.42857142857142855
-geom_smooth,exploratory,4,0.5714285714285714
-geom_vline,exploratory,5,1
-get,cleaning,2,1
-getm_point,exploratory,1,1
-getMutationStatsForGene,setup,2,1
-getRepo,setup,2,1
-getwd,setup,3,1
-gfm_table,exploratory,1,0.5
-gfm_table,modeling,1,0.5
-ggplot,evaluation,5,0.15625
-ggplot,exploratory,27,0.84375
-ggplot_build,exploratory,4,1
-ggplot_gtable,exploratory,5,1
-ggtitle,exploratory,12,1
-glm,modeling,3,1
-glmQLFit,modeling,1,1
-glmQLFTest,modeling,1,1
-glmTreat,modeling,1,1
-gpar,setup,10,1
-gpclibPermit,setup,1,1
-grep,exploratory,8,0.8888888888888888
-grep,setup,1,0.1111111111111111
-grepl,cleaning,1,1
-grid.arrange,exploratory,1,1
-group_by,cleaning,14,0.875
-group_by,evaluation,1,0.0625
-group_by,exploratory,1,0.0625
-gseaplot,evaluation,1,1
-gseGO,modeling,1,1
-gsm_table,exploratory,1,1
-gsub,cleaning,14,0.875
-gsub,setup,2,0.125
-head,cleaning,2,0.18181818181818182
-head,evaluation,1,0.09090909090909091
-head,exploratory,5,0.45454545454545453
-head,modeling,2,0.18181818181818182
-head,setup,1,0.09090909090909091
-help,exploratory,4,1
-hist,evaluation,3,0.6
-hist,exploratory,2,0.4
-html_node,setup,1,1
-html_table,setup,1,1
-I,cleaning,1,0.3333333333333333
-I,modeling,2,0.6666666666666666
-if,cleaning,9,0.6
-if,evaluation,2,0.13333333333333333
-if,exploratory,1,0.06666666666666667
-if,setup,3,0.2
-ifelse,cleaning,2,0.6666666666666666
-ifelse,evaluation,1,0.3333333333333333
-inner_join,cleaning,2,1
-install_github,setup,1,1
-install.packages,setup,13,1
-integer,cleaning,1,1
-intersec,cleaning,1,1
-intersect,cleaning,3,0.6
-intersect,exploratory,2,0.4
-interval,evaluation,1,0.5
-interval,modeling,1,0.5
-is.na,cleaning,8,1
-join,cleaning,1,0.5
-join,setup,1,0.5
-ks.test,exploratory,1,1
-labels,setup,3,1
-labels2colors,evaluation,4,1
-labs,evaluation,3,0.23076923076923078
-labs,exploratory,10,0.7692307692307693
-laply,cleaning,1,1
-lapply,cleaning,4,0.5714285714285714
-lapply,evaluation,1,0.14285714285714285
-lapply,exploratory,2,0.2857142857142857
-layout,exploratory,1,1
-ldply,exploratory,1,1
-left_join,cleaning,1,1
-legend,evaluation,1,1
-length,cleaning,13,0.4482758620689655
-length,evaluation,3,0.10344827586206896
-length,exploratory,7,0.2413793103448276
-length,modeling,2,0.06896551724137931
-length,setup,4,0.13793103448275862
-levels,modeling,2,1
-lfcShrink,modeling,1,1
-library,cleaning,1,0.006172839506172839
-library,setup,161,0.9938271604938271
-lines,exploratory,2,0.3333333333333333
-lines,modeling,4,0.6666666666666666
-list,cleaning,3,0.375
-list,evaluation,1,0.125
-list,exploratory,2,0.25
-list,setup,2,0.25
-list.files,setup,1,1
-lm,modeling,17,1
-lmFit,modeling,2,1
-ln,cleaning,1,1
-load,cleaning,1,0.25
-load,setup,3,0.75
-load.dataset,setup,2,1
-load.project,setup,1,1
-log,cleaning,4,0.5714285714285714
-log,exploratory,2,0.2857142857142857
-log,modeling,1,0.14285714285714285
-log10,cleaning,1,0.3333333333333333
-log10,evaluation,1,0.3333333333333333
-log10,modeling,1,0.3333333333333333
-log2FoldChange,evaluation,3,1
-ls,setup,6,1
-lstm,evaluation,1,1
-make.names,cleaning,1,1
-makeAlphaTable,cleaning,1,1
-makeCluster,setup,2,1
-makeContrasts,modeling,1,1
-map,cleaning,4,0.8
-map,modeling,1,0.2
-map_dbl,cleaning,4,0.8
-map_dbl,modeling,1,0.2
-mapIds,modeling,1,1
-mapvalues,cleaning,2,1
-match,cleaning,9,0.8181818181818182
-match,exploratory,2,0.18181818181818182
-matrix,cleaning,6,0.6666666666666666
-matrix,evaluation,1,0.1111111111111111
-matrix,setup,2,0.2222222222222222
-max,cleaning,4,0.5714285714285714
-max,exploratory,3,0.42857142857142855
-mcols,evaluation,1,1
-mean,cleaning,7,0.21875
-mean,evaluation,10,0.3125
-mean,exploratory,15,0.46875
-median,exploratory,5,1
-melt,cleaning,3,0.6
-melt,evaluation,2,0.4
-merge,cleaning,7,0.875
-merge,setup,1,0.125
-message,evaluation,1,0.125
-message,setup,7,0.875
-min,cleaning,2,0.4
-min,evaluation,1,0.2
-min,exploratory,2,0.4
-min_rank,cleaning,1,1
-missmap,exploratory,1,1
-mle2,modeling,1,1
-model.matrix,modeling,2,1
-moduleCompare,evaluation,1,1
-moduleEigengenes,evaluation,4,1
-mtext,exploratory,1,1
-mutate,cleaning,25,0.8333333333333334
-mutate,evaluation,2,0.06666666666666667
-mutate,exploratory,1,0.03333333333333333
-mutate,modeling,2,0.06666666666666667
-mutate_all,cleaning,1,1
-myplot,exploratory,1,1
-na.omit,cleaning,5,0.7142857142857143
-na.omit,exploratory,2,0.2857142857142857
-naiveBayes,modeling,1,1
-names,cleaning,11,0.2894736842105263
-names,evaluation,10,0.2631578947368421
-names,exploratory,4,0.10526315789473684
-names,modeling,1,0.02631578947368421
-names,setup,12,0.3157894736842105
-ncol,cleaning,1,0.16666666666666666
-ncol,modeling,5,0.8333333333333334
-nest,cleaning,1,1
-nrow,cleaning,12,0.5714285714285714
-nrow,evaluation,5,0.23809523809523808
-nrow,setup,4,0.19047619047619047
-nrown,cleaning,1,1
-ns,modeling,2,1
-optim,modeling,1,1
-options,setup,4,1
-opts,exploratory,12,1
-opts_chunk,setup,1,1
-order,cleaning,5,0.8333333333333334
-order,setup,1,0.16666666666666666
-outer,exploratory,1,0.5
-outer,setup,1,0.5
-p.adjust,exploratory,2,1
-par,evaluation,5,1
-paste,cleaning,18,0.43902439024390244
-paste,evaluation,9,0.21951219512195122
-paste,exploratory,2,0.04878048780487805
-paste,modeling,1,0.024390243902439025
-paste,setup,11,0.2682926829268293
-paste0,setup,7,1
-pchisq,modeling,1,1
-pdf,exploratory,1,1
-persp,exploratory,2,1
-phyla.table,cleaning,1,1
-phyla.table.rel.abund,exploratory,1,1
-plot,evaluation,1,0.1
-plot,exploratory,7,0.7
-plot,modeling,2,0.2
-plot_ly,exploratory,1,1
-plotGOgraph,exploratory,1,1
-plotMA,evaluation,1,1
-plotMD,evaluation,2,1
-plotQLDisp,modeling,1,1
-png,cleaning,1,0.5
-png,exploratory,1,0.5
-points,evaluation,2,1
-polarity,modeling,1,1
-prcomp,cleaning,1,1
-predic,modeling,1,1
-predict,evaluation,5,0.45454545454545453
-predict,modeling,6,0.5454545454545454
-print,cleaning,4,0.2
-print,evaluation,6,0.3
-print,exploratory,5,0.25
-print,modeling,2,0.1
-print,setup,3,0.15
-prp,modeling,1,1
-query,cleaning,10,0.625
-query,exploratory,3,0.1875
-query,setup,3,0.1875
-range,exploratory,16,1
-rbind,cleaning,4,0.23529411764705882
-rbind,modeling,1,0.058823529411764705
-rbind,setup,12,0.7058823529411765
-rcs,modeling,20,1
-read_csv,cleaning,1,1
-read_html,setup,1,1
-read_tsv,setup,1,1
-read.csv,cleaning,3,0.15789473684210525
-read.csv,exploratory,1,0.05263157894736842
-read.csv,setup,15,0.7894736842105263
-read.delim,cleaning,2,0.6666666666666666
-read.delim,setup,1,0.3333333333333333
-read.table,cleaning,2,0.05263157894736842
-read.table,setup,36,0.9473684210526315
-read.xlsx,setup,5,1
-readOGR,setup,1,1
-readRDS,cleaning,1,1
-rename,cleaning,1,1
-reorder,cleaning,1,1
-rep,cleaning,5,0.45454545454545453
-rep,modeling,2,0.18181818181818182
-rep,setup,4,0.36363636363636365
-require,setup,20,1
-reshape,cleaning,1,1
-results,evaluation,1,0.5
-results,modeling,1,0.5
-return,cleaning,5,0.8333333333333334
-return,evaluation,1,0.16666666666666666
-returndata.frame,cleaning,1,1
-rev,evaluation,1,1
-rm,cleaning,4,0.25
-rm,exploratory,2,0.125
-rm,setup,10,0.625
-rna_annotations,setup,2,1
-rna_count_matrix,setup,2,1
-rna_fpkm_matrix,setup,1,1
-rollmean,cleaning,1,1
-rollsum,cleaning,3,1
-round,cleaning,5,0.3333333333333333
-round,exploratory,2,0.13333333333333333
-round,modeling,8,0.5333333333333333
-row.names,cleaning,3,0.75
-row.names,modeling,1,0.25
-rownames,cleaning,32,0.8205128205128205
-rownames,evaluation,2,0.05128205128205128
-rownames,modeling,2,0.05128205128205128
-rownames,setup,3,0.07692307692307693
-rowSums,modeling,3,1
-rpart,evaluation,1,0.3333333333333333
-rpart,modeling,2,0.6666666666666666
-rpart.plot,evaluation,3,1
-rpois,cleaning,1,1
-RunRR,exploratory,1,0.5
-RunRR,modeling,1,0.5
-sample,cleaning,1,0.5
-sample,evaluation,1,0.5
-sample.split,modeling,1,1
-sapply,cleaning,4,0.6666666666666666
-sapply,exploratory,2,0.3333333333333333
-scale,exploratory,1,1
-scale_alpha_continuous,exploratory,4,1
-scale_color_discrete,exploratory,5,1
-scale_color_manual,exploratory,7,1
-scale_fill_discrete,exploratory,3,1
-scale_size_continuous,exploratory,4,1
-scale_x_continuous,exploratory,2,1
-scale_x_date,exploratory,3,1
-scale_x_sqrt,exploratory,1,1
-scale_y_continual,evaluation,1,1
-scale_y_continuous,exploratory,8,1
-scale_y_log10,exploratory,1,1
-scan,setup,2,1
-sclae,exploratory,1,1
-score.sentiment,modeling,8,1
-sd,cleaning,3,0.16666666666666666
-sd,exploratory,14,0.7777777777777778
-sd,modeling,1,0.05555555555555555
-select,cleaning,9,0.6
-select,exploratory,4,0.26666666666666666
-select,setup,2,0.13333333333333333
-seq,evaluation,1,0.14285714285714285
-seq,exploratory,2,0.2857142857142857
-seq,setup,4,0.5714285714285714
-set.seed,exploratory,1,0.3333333333333333
-set.seed,modeling,1,0.3333333333333333
-set.seed,setup,1,0.3333333333333333
-setnames,cleaning,2,1
-setTxtProgressBar,setup,1,1
-setwd,cleaning,1,0.09090909090909091
-setwd,setup,10,0.9090909090909091
-shape,cleaning,1,0.25
-shape,evaluation,3,0.75
-signedKME,evaluation,4,1
-smoothConnectivityPlot,evaluation,5,1
-smoothScatter,evaluation,3,1
-softConnectivity,evaluation,4,1
-sort,cleaning,5,0.7142857142857143
-sort,evaluation,1,0.14285714285714285
-sort,modeling,1,0.14285714285714285
-source,setup,12,1
-spearman,modeling,1,1
-spread,cleaning,1,0.5
-spread,setup,1,0.5
-sprintf,cleaning,3,0.23076923076923078
-sprintf,evaluation,2,0.15384615384615385
-sprintf,modeling,1,0.07692307692307693
-sprintf,setup,7,0.5384615384615384
-spTransform,cleaning,1,1
-sqrt,cleaning,3,1
-stopCluster,modeling,1,0.5
-stopCluster,setup,1,0.5
-str,exploratory,4,1
-str_count,cleaning,5,1
-str_detect,exploratory,2,1
-str_extract,cleaning,3,1
-str_split,cleaning,3,1
-str_to_lower,cleaning,1,1
-str_to_title,cleaning,2,1
-str_to_upper,cleaning,1,1
-str_trim,cleaning,1,1
-strptime,cleaning,3,1
-strsplit,cleaning,1,1
-sub,cleaning,2,1
-subset,cleaning,11,0.5
-subset,evaluation,1,0.045454545454545456
-subset,exploratory,3,0.13636363636363635
-subset,modeling,6,0.2727272727272727
-subset,setup,1,0.045454545454545456
-substr,cleaning,10,1
-sum,cleaning,4,0.6666666666666666
-sum,evaluation,2,0.3333333333333333
-summarise,cleaning,6,0.6666666666666666
-summarise,evaluation,1,0.1111111111111111
-summarise,exploratory,2,0.2222222222222222
-summarize,cleaning,3,0.6
-summarize,exploratory,2,0.4
-summary,evaluation,6,0.25
-summary,exploratory,2,0.08333333333333333
-summary,modeling,16,0.6666666666666666
-Surv,modeling,1,1
-synapseLogin,setup,1,1
-synTableQuery,setup,2,1
-Sys.getenv,setup,4,1
-Sys.info,setup,2,1
-t,cleaning,3,0.6
-t,exploratory,2,0.4
-t.test,exploratory,1,1
-table,cleaning,4,0.16666666666666666
-table,evaluation,9,0.375
-table,exploratory,8,0.3333333333333333
-table,modeling,3,0.125
-tail,setup,1,1
-tapply,evaluation,1,1
-tcrossprod,modeling,1,1
-tempfile,setup,1,1
-test,cleaning,1,1
-text,evaluation,2,1
-textGrob,setup,10,1
-theme,evaluation,3,0.3
-theme,exploratory,7,0.7
-theme_bw,exploratory,2,1
-theme_dark_map,exploratory,4,1
-theme_text,exploratory,16,1
-theme_tws,exploratory,3,1
-tibble,cleaning,1,1
-title_with_subtitle,exploratory,7,1
-today,setup,1,1
-toJSON,cleaning,3,1
-tolower,cleaning,3,1
-topTable,modeling,2,1
-topTags,modeling,2,1
-topTreat,modeling,1,1
-TopTreat,modeling,1,1
-train,modeling,1,0.5
-train,setup,1,0.5
-treat,modeling,1,1
-try,cleaning,1,1
-txtProgressBar,setup,1,1
-ungroup,cleaning,8,1
-unique,cleaning,6,0.5
-unique,exploratory,4,0.3333333333333333
-unique,modeling,2,0.16666666666666666
-unit,setup,30,1
-unit_format,cleaning,1,1
+-,communication,16,0.013333333333333334
+-,data cleaning,463,0.3858333333333333
+-,evaluation,122,0.10166666666666667
+-,exploratory,100,0.08333333333333333
+-,import,44,0.03666666666666667
+-,modeling,191,0.15916666666666668
+-,setup,55,0.04583333333333333
+-,visualization,209,0.17416666666666666
+:,communication,7,0.0103397341211226
+:,data cleaning,310,0.45790251107828656
+:,evaluation,52,0.07680945347119646
+:,exploratory,78,0.11521418020679468
+:,export,12,0.01772525849335303
+:,import,36,0.053175775480059084
+:,modeling,67,0.09896602658788774
+:,setup,75,0.11078286558345643
+:,visualization,40,0.059084194977843424
+::,communication,25,0.05102040816326531
+::,data cleaning,170,0.3469387755102041
+::,evaluation,43,0.08775510204081632
+::,exploratory,23,0.04693877551020408
+::,export,35,0.07142857142857142
+::,import,59,0.12040816326530612
+::,modeling,26,0.053061224489795916
+::,setup,56,0.11428571428571428
+::,visualization,53,0.10816326530612246
+:=,data cleaning,16,0.5517241379310345
+:=,evaluation,3,0.10344827586206896
+:=,exploratory,2,0.06896551724137931
+:=,export,1,0.034482758620689655
+:=,import,2,0.06896551724137931
+:=,setup,5,0.1724137931034483
+!,communication,1,0.0034129692832764505
+!,data cleaning,144,0.49146757679180886
+!,evaluation,13,0.04436860068259386
+!,exploratory,11,0.03754266211604096
+!,export,5,0.017064846416382253
+!,import,24,0.08191126279863481
+!,modeling,28,0.09556313993174062
+!,setup,43,0.14675767918088736
+!,visualization,24,0.08191126279863481
+!=,communication,1,0.007042253521126761
+!=,data cleaning,114,0.8028169014084507
+!=,exploratory,15,0.1056338028169014
+!=,import,2,0.014084507042253521
+!=,modeling,6,0.04225352112676056
+!=,setup,3,0.02112676056338028
+!=,visualization,1,0.007042253521126761
+.,data cleaning,16,0.41025641025641024
+.,evaluation,2,0.05128205128205128
+.,exploratory,5,0.1282051282051282
+.,modeling,5,0.1282051282051282
+.,setup,3,0.07692307692307693
+.,visualization,8,0.20512820512820512
+.libPaths,setup,5,1
+(,data cleaning,292,0.4694533762057878
+(,evaluation,46,0.07395498392282958
+(,exploratory,45,0.07234726688102894
+(,export,8,0.012861736334405145
+(,import,17,0.027331189710610933
+(,modeling,143,0.22990353697749197
+(,setup,49,0.07877813504823152
+(,visualization,22,0.03536977491961415
+[,communication,38,0.012987012987012988
+[,data cleaning,1358,0.46411483253588515
+[,evaluation,258,0.08817498291182502
+[,exploratory,318,0.10868079289131921
+[,export,44,0.015037593984962405
+[,import,222,0.0758714969241285
+[,modeling,283,0.09671907040328093
+[,setup,159,0.054340396445659606
+[,visualization,246,0.08407382091592618
+[[,communication,16,0.005280528052805281
+[[,data cleaning,330,0.10891089108910891
+[[,evaluation,109,0.03597359735973597
+[[,exploratory,67,0.022112211221122113
+[[,export,29,0.00957095709570957
+[[,import,22,0.007260726072607261
+[[,modeling,1980,0.6534653465346535
+[[,setup,44,0.014521452145214522
+[[,visualization,433,0.1429042904290429
+{,communication,17,0.0752212389380531
+{,data cleaning,96,0.4247787610619469
+{,evaluation,17,0.0752212389380531
+{,exploratory,6,0.02654867256637168
+{,export,8,0.035398230088495575
+{,import,12,0.05309734513274336
+{,modeling,15,0.06637168141592921
+{,setup,45,0.19911504424778761
+{,visualization,10,0.04424778761061947
+@,communication,1,0.01282051282051282
+@,data cleaning,46,0.5897435897435898
+@,evaluation,7,0.08974358974358974
+@,exploratory,3,0.038461538461538464
+@,import,8,0.10256410256410256
+@,modeling,4,0.05128205128205128
+@,setup,2,0.02564102564102564
+@,visualization,7,0.08974358974358974
+*,communication,6,0.011194029850746268
+*,data cleaning,176,0.3283582089552239
+*,evaluation,51,0.09514925373134328
+*,exploratory,75,0.13992537313432835
+*,export,11,0.020522388059701493
+*,import,8,0.014925373134328358
+*,modeling,137,0.2555970149253731
+*,setup,37,0.06902985074626866
+*,visualization,35,0.06529850746268656
+/,communication,8,0.020671834625323
+/,data cleaning,129,0.3333333333333333
+/,evaluation,54,0.13953488372093023
+/,exploratory,47,0.12144702842377261
+/,export,1,0.002583979328165375
+/,import,1,0.002583979328165375
+/,modeling,66,0.17054263565891473
+/,setup,40,0.10335917312661498
+/,visualization,41,0.10594315245478036
+&,data cleaning,158,0.6583333333333333
+&,evaluation,10,0.041666666666666664
+&,exploratory,22,0.09166666666666666
+&,import,4,0.016666666666666666
+&,modeling,15,0.0625
+&,setup,13,0.05416666666666667
+&,visualization,18,0.075
+&&,data cleaning,2,0.5
+&&,evaluation,1,0.25
+&&,export,1,0.25
+%*%,data cleaning,3,0.06818181818181818
+%*%,evaluation,1,0.022727272727272728
+%*%,modeling,37,0.8409090909090909
+%*%,setup,3,0.06818181818181818
+%/%,data cleaning,1,0.25
+%/%,setup,3,0.75
+%%,exploratory,1,0.5
+%%,setup,1,0.5
+%+%,visualization,2,1
+%<>%,data cleaning,24,0.7272727272727273
+%<>%,evaluation,6,0.18181818181818182
+%<>%,import,2,0.06060606060606061
+%<>%,setup,1,0.030303030303030304
+%>%,communication,9,0.005238649592549476
+%>%,data cleaning,1004,0.5844004656577415
+%>%,evaluation,113,0.06577415599534342
+%>%,exploratory,218,0.12689173457508732
+%>%,export,21,0.012223515715948778
+%>%,import,71,0.041327124563445866
+%>%,modeling,99,0.057625145518044235
+%>%,setup,38,0.02211874272409779
+%>%,visualization,145,0.08440046565774156
+%$%,data cleaning,8,0.8
+%$%,import,2,0.2
+%do%,evaluation,1,0.5
+%do%,setup,1,0.5
+%dopar%,modeling,1,1
+%in%,communication,1,0.004524886877828055
+%in%,data cleaning,141,0.6380090497737556
+%in%,evaluation,12,0.05429864253393665
+%in%,exploratory,33,0.1493212669683258
+%in%,import,5,0.02262443438914027
+%in%,modeling,9,0.04072398190045249
+%in%,setup,10,0.04524886877828054
+%in%,visualization,10,0.04524886877828054
+^,data cleaning,14,0.18421052631578946
+^,evaluation,15,0.19736842105263158
+^,modeling,26,0.34210526315789475
+^,setup,12,0.15789473684210525
+^,visualization,9,0.11842105263157894
++,communication,16,0.0041332988891759235
++,data cleaning,249,0.06432446396280031
++,evaluation,57,0.014724877292689228
++,exploratory,60,0.015499870834409714
++,export,28,0.007233273056057866
++,import,14,0.003616636528028933
++,modeling,1743,0.45027124773960214
++,setup,27,0.006974941875484371
++,visualization,1677,0.4332213898217515
+<,communication,4,0.023952095808383235
+<,data cleaning,64,0.38323353293413176
+<,evaluation,26,0.15568862275449102
+<,exploratory,38,0.2275449101796407
+<,export,1,0.005988023952095809
+<,modeling,18,0.10778443113772455
+<,setup,3,0.017964071856287425
+<,visualization,13,0.07784431137724551
+<-,communication,74,0.010037981551817688
+<-,data cleaning,2819,0.3823928377645144
+<-,evaluation,463,0.062805208898535
+<-,exploratory,445,0.060363537710255016
+<-,export,109,0.014785675529028758
+<-,import,1250,0.1695604991861096
+<-,modeling,909,0.1233043950081389
+<-,setup,959,0.13008681497558328
+<-,visualization,344,0.04666304937601736
+<<-,setup,1,1
+<=,communication,2,0.025974025974025976
+<=,data cleaning,33,0.42857142857142855
+<=,evaluation,15,0.19480519480519481
+<=,exploratory,10,0.12987012987012986
+<=,import,4,0.05194805194805195
+<=,modeling,3,0.03896103896103896
+<=,setup,4,0.05194805194805195
+<=,visualization,6,0.07792207792207792
+=,communication,26,0.006281710558105823
+=,data cleaning,1286,0.31070306837400335
+=,evaluation,292,0.07054844165257308
+=,exploratory,311,0.07513892244503503
+=,export,79,0.019086735926552308
+=,import,485,0.11717806233389708
+=,modeling,672,0.16235805750181204
+=,setup,760,0.18361923169847788
+=,visualization,228,0.055085769509543366
+==,communication,13,0.011893870082342177
+==,data cleaning,734,0.6715462031107045
+==,evaluation,42,0.0384263494967978
+==,exploratory,117,0.1070448307410796
+==,export,2,0.0018298261665141812
+==,import,54,0.04940530649588289
+==,modeling,49,0.04483074107959744
+==,setup,38,0.03476669716376944
+==,visualization,44,0.04025617566331199
+>,communication,1,0.005319148936170213
+>,data cleaning,83,0.44148936170212766
+>,evaluation,30,0.1595744680851064
+>,exploratory,32,0.1702127659574468
+>,export,4,0.02127659574468085
+>,import,5,0.026595744680851064
+>,modeling,16,0.0851063829787234
+>,setup,4,0.02127659574468085
+>,visualization,13,0.06914893617021277
+>=,data cleaning,34,0.5862068965517241
+>=,evaluation,8,0.13793103448275862
+>=,exploratory,11,0.1896551724137931
+>=,modeling,2,0.034482758620689655
+>=,setup,2,0.034482758620689655
+>=,visualization,1,0.017241379310344827
+|,data cleaning,90,0.2786377708978328
+|,evaluation,3,0.009287925696594427
+|,exploratory,6,0.018575851393188854
+|,export,2,0.006191950464396285
+|,import,23,0.07120743034055728
+|,modeling,193,0.5975232198142415
+|,setup,6,0.018575851393188854
+||,data cleaning,3,1
+~,communication,2,0.0017921146953405018
+~,data cleaning,48,0.043010752688172046
+~,evaluation,16,0.014336917562724014
+~,exploratory,32,0.02867383512544803
+~,export,6,0.005376344086021506
+~,import,9,0.008064516129032258
+~,modeling,724,0.6487455197132617
+~,setup,2,0.0017921146953405018
+~,visualization,277,0.2482078853046595
+$,communication,85,0.017789870238593554
+$,data cleaning,2362,0.4943491000418585
+$,evaluation,412,0.08622854750941816
+$,exploratory,509,0.10652992884051904
+$,export,56,0.011720385098367517
+$,import,196,0.041021347844286314
+$,modeling,607,0.1270406027626622
+$,setup,183,0.03830054416073671
+$,visualization,368,0.07701967350355797
+a,setup,1,1
+abbreviate,setup,1,1
+abiotic_resid,exploratory,1,1
+abline,data cleaning,3,0.06521739130434782
+abline,modeling,2,0.043478260869565216
+abline,visualization,41,0.8913043478260869
+abs,communication,1,0.010638297872340425
+abs,data cleaning,23,0.24468085106382978
+abs,evaluation,12,0.1276595744680851
+abs,exploratory,2,0.02127659574468085
+abs,import,1,0.010638297872340425
+abs,modeling,50,0.5319148936170213
+abs,setup,1,0.010638297872340425
+abs,visualization,4,0.0425531914893617
+acast,data cleaning,1,1
+acf,data cleaning,1,1
+actionButton,communication,59,0.6276595744680851
+actionButton,exploratory,13,0.13829787234042554
+actionButton,import,5,0.05319148936170213
+actionButton,setup,17,0.18085106382978725
+ACURRACY,data cleaning,1,0.14285714285714285
+ACURRACY,exploratory,1,0.14285714285714285
+ACURRACY,setup,5,0.7142857142857143
+add_rmse_rankings,data cleaning,2,0.6666666666666666
+add_rmse_rankings,modeling,1,0.3333333333333333
+add_row,exploratory,1,1
+add.axes,visualization,1,1
+addpoly,modeling,2,0.6666666666666666
+addpoly,visualization,1,0.3333333333333333
+adf.test,evaluation,1,0.5
+adf.test,modeling,1,0.5
+adply,communication,1,0.5
+adply,data cleaning,1,0.5
+aes,communication,9,0.01300578034682081
+aes,data cleaning,8,0.011560693641618497
+aes,evaluation,2,0.002890173410404624
+aes,exploratory,11,0.015895953757225433
+aes,export,1,0.001445086705202312
+aes,import,5,0.0072254335260115606
+aes,modeling,4,0.005780346820809248
+aes,setup,3,0.004335260115606936
+aes,visualization,649,0.9378612716763006
+aggregate,communication,1,0.09090909090909091
+aggregate,data cleaning,8,0.7272727272727273
+aggregate,modeling,2,0.18181818181818182
+AggregateLooks,data cleaning,5,1
+agreement,export,1,0.3333333333333333
+agreement,import,1,0.3333333333333333
+agreement,setup,1,0.3333333333333333
+AIC,evaluation,1,1
+all,data cleaning,5,0.8333333333333334
+all,modeling,1,0.16666666666666666
+all.equal,data cleaning,6,0.8571428571428571
+all.equal,import,1,0.14285714285714285
+allPuristOut,evaluation,2,0.4
+allPuristOut,import,3,0.6
+alpha,exploratory,1,0.1
+alpha,export,1,0.1
+alpha,visualization,8,0.8
+alphaMLG,exploratory,1,0.25
+alphaMLG,import,1,0.25
+alphaMLG,modeling,1,0.25
+alphaMLG,visualization,1,0.25
+analysis,import,1,1
+Analyze,import,1,0.2
+Analyze,modeling,4,0.8
+analyzeMetdataWithGenes,exploratory,1,0.5
+analyzeMetdataWithGenes,import,1,0.5
+animal_resid,exploratory,1,1
+ann,exploratory,1,1
+annotate,communication,2,0.4
+annotate,visualization,3,0.6
+AnnotatedDataFrame,exploratory,1,0.5
+AnnotatedDataFrame,import,1,0.5
+annotatePeak,evaluation,1,0.3333333333333333
+annotatePeak,visualization,2,0.6666666666666666
+annotation,import,1,0.5
+annotation,setup,1,0.5
+anova,data cleaning,1,0.016666666666666666
+anova,evaluation,21,0.35
+anova,modeling,38,0.6333333333333333
+Anova,evaluation,37,0.5441176470588235
+Anova,exploratory,19,0.27941176470588236
+Anova,modeling,12,0.17647058823529413
+anovaBF,evaluation,2,0.6666666666666666
+anovaBF,visualization,1,0.3333333333333333
+anti_join,data cleaning,2,0.3333333333333333
+anti_join,evaluation,1,0.16666666666666666
+anti_join,modeling,3,0.5
+any,data cleaning,3,1
+anyDuplicated,data cleaning,3,0.75
+anyDuplicated,exploratory,1,0.25
+aov,data cleaning,2,0.10526315789473684
+aov,evaluation,1,0.05263157894736842
+aov,exploratory,3,0.15789473684210525
+aov,modeling,13,0.6842105263157895
+apa.2way.table,communication,2,0.5
+apa.2way.table,export,2,0.5
+apa.d.table,communication,2,0.5
+apa.d.table,export,2,0.5
+append,data cleaning,1,1
+appender.file,data cleaning,3,0.16666666666666666
+appender.file,export,2,0.1111111111111111
+appender.file,import,6,0.3333333333333333
+appender.file,setup,7,0.3888888888888889
+apply,communication,1,0.017241379310344827
+apply,data cleaning,31,0.5344827586206896
+apply,evaluation,7,0.1206896551724138
+apply,exploratory,8,0.13793103448275862
+apply,export,1,0.017241379310344827
+apply,import,2,0.034482758620689655
+apply,modeling,4,0.06896551724137931
+apply,setup,1,0.017241379310344827
+apply,visualization,3,0.05172413793103448
+arrange,data cleaning,30,0.7692307692307693
+arrange,evaluation,2,0.05128205128205128
+arrange,exploratory,2,0.05128205128205128
+arrange,import,1,0.02564102564102564
+arrange,modeling,1,0.02564102564102564
+arrange,setup,3,0.07692307692307693
+array,data cleaning,16,0.8
+array,evaluation,2,0.1
+array,exploratory,2,0.1
+arrows,visualization,1,1
+as,data cleaning,1,1
+as_data_frame,data cleaning,5,0.7142857142857143
+as_data_frame,exploratory,1,0.14285714285714285
+as_data_frame,import,1,0.14285714285714285
+as_dribble,evaluation,4,0.8
+as_dribble,import,1,0.2
+as_tibble,data cleaning,2,0.2
+as_tibble,import,6,0.6
+as_tibble,modeling,1,0.1
+as_tibble,setup,1,0.1
+as.character,data cleaning,113,0.7290322580645161
+as.character,evaluation,1,0.0064516129032258064
+as.character,exploratory,7,0.04516129032258064
+as.character,import,19,0.12258064516129032
+as.character,modeling,1,0.0064516129032258064
+as.character,setup,9,0.05806451612903226
+as.character,visualization,5,0.03225806451612903
+as.data.frame,data cleaning,76,0.6666666666666666
+as.data.frame,evaluation,6,0.05263157894736842
+as.data.frame,exploratory,12,0.10526315789473684
+as.data.frame,export,1,0.008771929824561403
+as.data.frame,import,8,0.07017543859649122
+as.data.frame,modeling,7,0.06140350877192982
+as.data.frame,setup,4,0.03508771929824561
+as.data.table,data cleaning,4,0.8
+as.data.table,setup,1,0.2
+as.Date,data cleaning,12,0.8
+as.Date,exploratory,3,0.2
+as.dist,data cleaning,5,0.5555555555555556
+as.dist,modeling,2,0.2222222222222222
+as.dist,visualization,2,0.2222222222222222
+as.double,data cleaning,4,1
+as.factor,data cleaning,49,0.5632183908045977
+as.factor,evaluation,4,0.04597701149425287
+as.factor,exploratory,6,0.06896551724137931
+as.factor,import,3,0.034482758620689655
+as.factor,modeling,10,0.11494252873563218
+as.factor,setup,6,0.06896551724137931
+as.factor,visualization,9,0.10344827586206896
+as.formula,modeling,2,0.6666666666666666
+as.formula,visualization,1,0.3333333333333333
+as.integer,data cleaning,6,0.6
+as.integer,modeling,1,0.1
+as.integer,setup,2,0.2
+as.integer,visualization,1,0.1
+as.list,data cleaning,2,0.6666666666666666
+as.list,exploratory,1,0.3333333333333333
+as.logical,exploratory,14,1
+as.matrix,data cleaning,19,0.4222222222222222
+as.matrix,evaluation,2,0.044444444444444446
+as.matrix,exploratory,1,0.022222222222222223
+as.matrix,import,15,0.3333333333333333
+as.matrix,modeling,5,0.1111111111111111
+as.matrix,setup,1,0.022222222222222223
+as.matrix,visualization,2,0.044444444444444446
+as.numeric,data cleaning,193,0.5884146341463414
+as.numeric,evaluation,24,0.07317073170731707
+as.numeric,exploratory,27,0.08231707317073171
+as.numeric,export,2,0.006097560975609756
+as.numeric,import,30,0.09146341463414634
+as.numeric,modeling,16,0.04878048780487805
+as.numeric,setup,33,0.10060975609756098
+as.numeric,visualization,3,0.009146341463414634
+as.phylo,import,1,1
+as.POSIXlt,data cleaning,1,1
+as.tbl,data cleaning,1,1
+as.vector,communication,5,0.14705882352941177
+as.vector,data cleaning,13,0.38235294117647056
+as.vector,evaluation,10,0.29411764705882354
+as.vector,exploratory,3,0.08823529411764706
+as.vector,import,1,0.029411764705882353
+as.vector,modeling,1,0.029411764705882353
+as.vector,visualization,1,0.029411764705882353
+as.yearmon,data cleaning,3,1
+ascii,export,1,1
+asDataFrame,data cleaning,1,0.07692307692307693
+asDataFrame,export,3,0.23076923076923078
+asDataFrame,import,9,0.6923076923076923
+assembly.counts,visualization,1,1
+assert,setup,1,1
+assign,export,1,0.5
+assign,modeling,1,0.5
+atan,setup,2,1
+ato,modeling,1,1
+attach,import,1,1
+attributes,import,2,0.6666666666666666
+attributes,modeling,1,0.3333333333333333
+auc,evaluation,6,0.3157894736842105
+auc,exploratory,5,0.2631578947368421
+auc,modeling,7,0.3684210526315789
+auc,setup,1,0.05263157894736842
+authenticate,export,1,0.5
+authenticate,import,1,0.5
+average_twin_level_1,evaluation,1,1
+average_twin_level_2,evaluation,1,1
+axis,communication,1,0.047619047619047616
+axis,data cleaning,7,0.3333333333333333
+axis,visualization,13,0.6190476190476191
+b.diffste,modeling,4,1
+b.showsiglev,modeling,3,0.5
+b.showsiglev,visualization,3,0.5
+b.studentized_ttest,modeling,6,1
+bal.table,evaluation,5,1
+bar,visualization,2,1
+barplot,visualization,19,1
+base,import,2,0.5
+base,setup,2,0.5
+basename,data cleaning,3,0.2727272727272727
+basename,import,3,0.2727272727272727
+basename,setup,5,0.45454545454545453
+BAYES.THR,data cleaning,1,0.3333333333333333
+BAYES.THR,evaluation,1,0.3333333333333333
+BAYES.THR,modeling,1,0.3333333333333333
+BayesFactor_InformedNormal,modeling,1,1
+beep,communication,1,0.5
+beep,modeling,1,0.5
+beepr,communication,1,0.5
+beepr,modeling,1,0.5
+BESTmcmc,exploratory,1,0.5
+BESTmcmc,modeling,1,0.5
+bf10,modeling,1,1
+binconf,communication,6,0.6666666666666666
+binconf,evaluation,3,0.3333333333333333
+bind_plans,data cleaning,5,0.8333333333333334
+bind_plans,exploratory,1,0.16666666666666666
+bind_rows,data cleaning,14,0.6086956521739131
+bind_rows,evaluation,1,0.043478260869565216
+bind_rows,modeling,3,0.13043478260869565
+bind_rows,visualization,5,0.21739130434782608
+binom.test,data cleaning,1,0.3333333333333333
+binom.test,evaluation,1,0.3333333333333333
+binom.test,modeling,1,0.3333333333333333
+binomial,import,2,0.125
+binomial,modeling,14,0.875
+biocLite,communication,1,0.05555555555555555
+biocLite,data cleaning,5,0.2777777777777778
+biocLite,exploratory,2,0.1111111111111111
+biocLite,import,5,0.2777777777777778
+biocLite,setup,2,0.1111111111111111
+biocLite,visualization,3,0.16666666666666666
+blockwiseModules,modeling,2,1
+booktabs,data cleaning,1,0.5
+booktabs,exploratory,1,0.5
+booter,evaluation,2,0.2222222222222222
+booter,modeling,6,0.6666666666666666
+booter,setup,1,0.1111111111111111
+bootstrapPage,setup,1,1
+bottom_10,evaluation,1,0.5
+bottom_10,exploratory,1,0.5
+box,data cleaning,7,0.5384615384615384
+box,visualization,6,0.46153846153846156
+boxplot,exploratory,1,0.008
+boxplot,modeling,1,0.008
+boxplot,visualization,123,0.984
+bquote,visualization,9,1
+br,communication,33,0.6
+br,exploratory,11,0.2
+br,setup,11,0.2
+breakpoints,exploratory,11,1
+brewer.pal,setup,1,0.25
+brewer.pal,visualization,3,0.75
+"brewer.pal(8, ""Spectral"")",visualization,1,1
+brm,modeling,1,1
+buffer,data cleaning,1,0.5
+buffer,export,1,0.5
+build_feature_matrix,exploratory,1,1
+build.tcga.ds,modeling,3,1
+byPop_plot,visualization,1,1
+byYear_plot,communication,1,1
+c,communication,23,0.009170653907496013
+c,data cleaning,686,0.27352472089314195
+c,evaluation,175,0.06977671451355662
+c,exploratory,148,0.05901116427432217
+c,export,32,0.012759170653907496
+c,import,181,0.07216905901116427
+c,modeling,207,0.08253588516746412
+c,setup,213,0.08492822966507177
+c,visualization,843,0.3361244019138756
+ca.jo,evaluation,1,0.5
+ca.jo,modeling,1,0.5
+CairoFonts,visualization,1,1
+CairoPDF,export,3,0.75
+CairoPDF,visualization,1,0.25
+CairoTIFF,export,1,1
+calc_port_df,exploratory,1,1
+calc_vessel_vars,exploratory,1,0.5
+calc_vessel_vars,modeling,1,0.5
+calculate_roc_binary_classifier,evaluation,3,0.42857142857142855
+calculate_roc_binary_classifier,modeling,4,0.5714285714285714
+calculateCQN,modeling,2,0.6666666666666666
+calculateCQN,setup,1,0.3333333333333333
+calculateQCMetrics,import,1,0.3333333333333333
+calculateQCMetrics,modeling,1,0.3333333333333333
+calculateQCMetrics,visualization,1,0.3333333333333333
+capture.output,communication,1,1
+car,modeling,1,1
+caret,evaluation,1,0.25
+caret,modeling,3,0.75
+case_when,data cleaning,3,1
+case.two,exploratory,1,1
+cat,communication,30,0.5
+cat,data cleaning,4,0.06666666666666667
+cat,evaluation,1,0.016666666666666666
+cat,exploratory,8,0.13333333333333333
+cat,export,11,0.18333333333333332
+cat,import,3,0.05
+cat,modeling,2,0.03333333333333333
+cat,setup,1,0.016666666666666666
+cauchy,import,2,1
+CauchyKernel,export,1,0.25
+CauchyKernel,modeling,3,0.75
+cbind,communication,1,0.011494252873563218
+cbind,data cleaning,50,0.5747126436781609
+cbind,evaluation,9,0.10344827586206896
+cbind,exploratory,6,0.06896551724137931
+cbind,export,3,0.034482758620689655
+cbind,import,4,0.04597701149425287
+cbind,modeling,11,0.12643678160919541
+cbind,setup,1,0.011494252873563218
+cbind,visualization,2,0.022988505747126436
+ceiling,data cleaning,2,0.6666666666666666
+ceiling,import,1,0.3333333333333333
+cellColors,setup,1,0.5
+cellColors,visualization,1,0.5
+character,data cleaning,3,0.13043478260869565
+character,evaluation,3,0.13043478260869565
+character,exploratory,3,0.13043478260869565
+character,import,8,0.34782608695652173
+character,setup,6,0.2608695652173913
+characterize_metiers,data cleaning,1,1
+check_MCMC,evaluation,2,0.5
+check_MCMC,modeling,2,0.5
+checkboxInput,setup,2,1
+chi_sq_list,communication,1,0.5
+chi_sq_list,evaluation,1,0.5
+chisq.test,evaluation,1,0.3333333333333333
+chisq.test,exploratory,1,0.3333333333333333
+chisq.test,export,1,0.3333333333333333
+CI,evaluation,4,1
+CI_coef,modeling,1,1
+ci.high,exploratory,2,1
+ci.low,exploratory,2,1
+ciOverlap,evaluation,3,0.75
+ciOverlap,modeling,1,0.25
+circular,data cleaning,1,0.2
+circular,evaluation,1,0.2
+circular,exploratory,1,0.2
+circular,setup,2,0.4
+class,communication,1,0.1111111111111111
+class,data cleaning,2,0.2222222222222222
+class,exploratory,4,0.4444444444444444
+class,setup,2,0.2222222222222222
+classAgreement,evaluation,3,0.375
+classAgreement,export,1,0.125
+classAgreement,import,1,0.125
+classAgreement,setup,3,0.375
+cleanTrumpPredictions,data cleaning,1,1
+cliff.delta,modeling,3,1
+climate_sim,import,1,1
+close,export,4,1
+cloud,visualization,1,1
+cmapR,import,2,1
+coef,communication,2,0.10526315789473684
+coef,data cleaning,8,0.42105263157894735
+coef,evaluation,2,0.10526315789473684
+coef,exploratory,1,0.05263157894736842
+coef,modeling,4,0.21052631578947367
+coef,setup,2,0.10526315789473684
+coef_CI,evaluation,1,0.3333333333333333
+coef_CI,modeling,1,0.3333333333333333
+coef_CI,visualization,1,0.3333333333333333
+coef.hclust,modeling,1,1
+coefficients,modeling,3,1
+col_factor,import,3,1
+colData,data cleaning,2,1
+collect,exploratory,1,0.3333333333333333
+collect,import,2,0.6666666666666666
+colMeans,communication,1,0.029411764705882353
+colMeans,data cleaning,8,0.23529411764705882
+colMeans,evaluation,4,0.11764705882352941
+colMeans,exploratory,10,0.29411764705882354
+colMeans,import,2,0.058823529411764705
+colMeans,modeling,2,0.058823529411764705
+colMeans,setup,7,0.20588235294117646
+colnames,communication,5,0.0196078431372549
+colnames,data cleaning,179,0.7019607843137254
+colnames,evaluation,2,0.00784313725490196
+colnames,exploratory,12,0.047058823529411764
+colnames,export,2,0.00784313725490196
+colnames,import,29,0.11372549019607843
+colnames,modeling,10,0.0392156862745098
+colnames,setup,13,0.050980392156862744
+colnames,visualization,3,0.011764705882352941
+color_to_hex,visualization,10,1
+colorRampPalette,visualization,1,1
+cols,import,3,0.75
+cols,setup,1,0.25
+colSums,data cleaning,1,0.1
+colSums,evaluation,3,0.3
+colSums,exploratory,4,0.4
+colSums,modeling,2,0.2
+column,communication,28,0.8
+column,import,7,0.2
+ComBat,modeling,1,0.5
+ComBat,setup,1,0.5
+combn,modeling,1,0.5
+combn,setup,1,0.5
+comdistnt,data cleaning,2,1
+commandArgs,data cleaning,3,0.08333333333333333
+commandArgs,evaluation,4,0.1111111111111111
+commandArgs,import,1,0.027777777777777776
+commandArgs,modeling,1,0.027777777777777776
+commandArgs,setup,27,0.75
+comp_fun,evaluation,12,1
+compare_distributions,data cleaning,1,0.3333333333333333
+compare_distributions,evaluation,2,0.6666666666666666
+compare_models,evaluation,1,0.5
+compare_models,modeling,1,0.5
+compare_optimized,communication,1,0.07692307692307693
+compare_optimized,evaluation,2,0.15384615384615385
+compare_optimized,exploratory,1,0.07692307692307693
+compare_optimized,export,3,0.23076923076923078
+compare_optimized,import,3,0.23076923076923078
+compare_optimized,modeling,3,0.23076923076923078
+compareCluster,modeling,1,1
+compareWordsWithinLanguage,evaluation,1,0.5
+compareWordsWithinLanguage,exploratory,1,0.5
+compareWordsWithinLanguage_Domain,evaluation,1,0.5
+compareWordsWithinLanguage_Domain,modeling,1,0.5
+complete,data cleaning,1,1
+complete.cases,data cleaning,3,0.42857142857142855
+complete.cases,import,2,0.2857142857142857
+complete.cases,modeling,1,0.14285714285714285
+complete.cases,setup,1,0.14285714285714285
+compute_all_triplets,exploratory,4,0.6666666666666666
+compute_all_triplets,modeling,2,0.3333333333333333
+compute_bias_growth_curves,exploratory,1,0.25
+compute_bias_growth_curves,export,1,0.25
+compute_bias_growth_curves,visualization,2,0.5
+computePCAMatCor,modeling,2,1
+confint,communication,1,0.14285714285714285
+confint,data cleaning,2,0.2857142857142857
+confint,evaluation,4,0.5714285714285714
+confusionMatrix,evaluation,3,0.375
+confusionMatrix,modeling,5,0.625
+constructDesignMatrix_acLDL,setup,1,1
+constructDesignMatrix_SL1344,data cleaning,2,0.6666666666666666
+constructDesignMatrix_SL1344,import,1,0.3333333333333333
+contains,data cleaning,2,1
+contour,visualization,2,1
+contrasts,exploratory,6,1
+convert.factors.to.strings,data cleaning,1,1
+coord_cartesian,exploratory,1,0.06666666666666667
+coord_cartesian,visualization,14,0.9333333333333333
+coord_equal,data cleaning,1,0.2
+coord_equal,setup,2,0.4
+coord_equal,visualization,2,0.4
+coord_flip,visualization,7,1
+coord_map,visualization,1,1
+coord_polar,visualization,3,1
+coordinates,import,2,0.2222222222222222
+coordinates,modeling,2,0.2222222222222222
+coordinates,setup,4,0.4444444444444444
+coordinates,visualization,1,0.1111111111111111
+coords,evaluation,1,1
+cophenetic,data cleaning,2,0.6666666666666666
+cophenetic,modeling,1,0.3333333333333333
+cor,data cleaning,1,0.047619047619047616
+cor,evaluation,5,0.23809523809523808
+cor,exploratory,1,0.047619047619047616
+cor,modeling,12,0.5714285714285714
+cor,visualization,2,0.09523809523809523
+cor.test,evaluation,1,0.14285714285714285
+cor.test,exploratory,2,0.2857142857142857
+cor.test,modeling,4,0.5714285714285714
+Corpus,data cleaning,2,1
+corrplot,modeling,2,0.5
+corrplot,visualization,2,0.5
+count,data cleaning,1,0.030303030303030304
+count,evaluation,2,0.06060606060606061
+count,exploratory,28,0.8484848484848485
+count,setup,1,0.030303030303030304
+count,visualization,1,0.030303030303030304
+count_targets,data cleaning,1,0.5
+count_targets,evaluation,1,0.5
+countrycode,data cleaning,6,1
+cov,exploratory,1,0.5
+cov,modeling,1,0.5
+covplot,modeling,1,0.5
+covplot,visualization,1,0.5
+cowplot,export,1,0.3333333333333333
+cowplot,visualization,2,0.6666666666666666
+coxph,modeling,2,1
+create_analyzer,data cleaning,2,0.6666666666666666
+create_analyzer,setup,1,0.3333333333333333
+create_better_dt_events,setup,2,1
+create_event_locations_shared,data cleaning,2,1
+create_vessel_landings,exploratory,1,0.5
+create_vessel_landings,modeling,1,0.5
+createDataPartition,import,2,0.5
+createDataPartition,modeling,2,0.5
+createLatexTable,export,1,1
+crossprod,modeling,2,1
+CRS,data cleaning,14,0.7777777777777778
+CRS,export,2,0.1111111111111111
+CRS,setup,1,0.05555555555555555
+CRS,visualization,1,0.05555555555555555
+crump,modeling,1,1
+cum_normal_fun,data cleaning,1,1
+cumsum,data cleaning,2,1
+cumTransAlleles,modeling,1,1
+cut,data cleaning,11,0.9166666666666666
+cut,visualization,1,0.08333333333333333
+cut_by_thirds,data cleaning,2,1
+cut2,data cleaning,3,1
+cutree,visualization,1,1
+cv.glm,modeling,1,1
+cv.glmnet,modeling,2,1
+d_group_means,exploratory,1,1
+dapc,exploratory,1,1
+dapc.plot,visualization,2,1
+data,import,11,0.7333333333333333
+data,setup,4,0.26666666666666666
+data_frame,data cleaning,6,0.75
+data_frame,exploratory,1,0.125
+data_frame,modeling,1,0.125
+data_movies,exploratory,1,1
+data.frame,communication,6,0.02054794520547945
+data.frame,data cleaning,128,0.4383561643835616
+data.frame,evaluation,16,0.0547945205479452
+data.frame,exploratory,15,0.05136986301369863
+data.frame,export,15,0.05136986301369863
+data.frame,import,24,0.0821917808219178
+data.frame,modeling,18,0.06164383561643835
+data.frame,setup,51,0.17465753424657535
+data.frame,visualization,19,0.06506849315068493
+data.table,data cleaning,5,0.25
+data.table,evaluation,4,0.2
+data.table,exploratory,2,0.1
+data.table,import,7,0.35
+data.table,setup,2,0.1
+dataTableOutput,setup,1,1
+days,data cleaning,2,1
+dba,import,1,1
+dba.analyze,modeling,1,1
+dba.contrast,modeling,1,1
+dba.plotHeatmap,visualization,1,1
+dba.report,communication,1,1
+dbConnect,import,1,1
+dbscan,modeling,2,1
+dcast,data cleaning,4,0.6666666666666666
+dcast,exploratory,2,0.3333333333333333
+dcast.data.table,data cleaning,5,0.8333333333333334
+dcast.data.table,modeling,1,0.16666666666666666
+ddply,communication,1,0.017241379310344827
+ddply,data cleaning,16,0.27586206896551724
+ddply,evaluation,11,0.1896551724137931
+ddply,exploratory,10,0.1724137931034483
+ddply,modeling,17,0.29310344827586204
+ddply,setup,3,0.05172413793103448
+defaultPlotTheme,visualization,1,1
+define_participationPlot,visualization,21,1
+degFullToDegSemi,data cleaning,2,0.6666666666666666
+degFullToDegSemi,modeling,1,0.3333333333333333
+degFullToRadFull,data cleaning,4,0.6666666666666666
+degFullToRadFull,exploratory,1,0.16666666666666666
+degFullToRadFull,modeling,1,0.16666666666666666
+degree,visualization,1,1
+degSemiToDegFull,data cleaning,3,1
+density,visualization,8,1
+deparse,data cleaning,1,1
+desc,data cleaning,5,0.5555555555555556
+desc,evaluation,2,0.2222222222222222
+desc,exploratory,2,0.2222222222222222
+describeBy,data cleaning,1,0.5
+describeBy,modeling,1,0.5
+detach,data cleaning,1,0.25
+detach,setup,3,0.75
+detectCores,data cleaning,1,0.0625
+detectCores,evaluation,2,0.125
+detectCores,exploratory,2,0.125
+detectCores,import,1,0.0625
+detectCores,modeling,3,0.1875
+detectCores,setup,7,0.4375
+dev.off,data cleaning,3,0.020134228187919462
+dev.off,evaluation,14,0.09395973154362416
+dev.off,exploratory,1,0.006711409395973154
+dev.off,export,25,0.16778523489932887
+dev.off,import,1,0.006711409395973154
+dev.off,modeling,1,0.006711409395973154
+dev.off,setup,16,0.10738255033557047
+dev.off,visualization,88,0.5906040268456376
+devtools,import,2,0.3333333333333333
+devtools,setup,4,0.6666666666666666
+df,import,1,0.5
+df,setup,1,0.5
+df_tassize_subset,data cleaning,2,0.5
+df_tassize_subset,setup,2,0.5
+diag,data cleaning,2,0.05405405405405406
+diag,modeling,34,0.918918918918919
+diag,visualization,1,0.02702702702702703
+diff,data cleaning,3,0.375
+diff,evaluation,1,0.125
+diff,exploratory,2,0.25
+diff,visualization,2,0.25
+difftime,data cleaning,1,1
+dim,communication,9,0.0891089108910891
+dim,data cleaning,31,0.3069306930693069
+dim,evaluation,8,0.07920792079207921
+dim,exploratory,42,0.4158415841584158
+dim,import,4,0.039603960396039604
+dim,modeling,2,0.019801980198019802
+dim,setup,5,0.04950495049504951
+dimnames,data cleaning,7,0.7
+dimnames,evaluation,3,0.3
+dir,import,5,0.8333333333333334
+dir,setup,1,0.16666666666666666
+dir.create,communication,1,0.01694915254237288
+dir.create,data cleaning,2,0.03389830508474576
+dir.create,evaluation,2,0.03389830508474576
+dir.create,exploratory,1,0.01694915254237288
+dir.create,export,11,0.1864406779661017
+dir.create,import,1,0.01694915254237288
+dir.create,setup,40,0.6779661016949152
+dir.create,visualization,1,0.01694915254237288
+dir.exists,communication,1,0.2
+dir.exists,data cleaning,1,0.2
+dir.exists,evaluation,1,0.2
+dir.exists,setup,2,0.4
+dirname,setup,1,1
+dispersiontest,modeling,1,1
+displ,data cleaning,7,0.6363636363636364
+displ,evaluation,1,0.09090909090909091
+displ,exploratory,3,0.2727272727272727
+display,visualization,2,1
+dist,data cleaning,1,0.14285714285714285
+dist,evaluation,1,0.14285714285714285
+dist,exploratory,1,0.14285714285714285
+dist,modeling,1,0.14285714285714285
+dist,visualization,3,0.42857142857142855
+distinct,data cleaning,8,0.6153846153846154
+distinct,exploratory,4,0.3076923076923077
+distinct,modeling,1,0.07692307692307693
+dlnorm,modeling,1,1
+dlply,data cleaning,7,1
+dmvnorm,modeling,1,1
+dmy,data cleaning,2,1
+do,data cleaning,13,0.5652173913043478
+do,evaluation,6,0.2608695652173913
+do,exploratory,3,0.13043478260869565
+do,modeling,1,0.043478260869565216
+do.call,data cleaning,13,0.65
+do.call,export,4,0.2
+do.call,modeling,1,0.05
+do.call,visualization,2,0.1
+DocumentTermMatrix,modeling,2,1
+domain,data cleaning,1,0.16666666666666666
+domain,evaluation,1,0.16666666666666666
+domain,setup,3,0.5
+domain,visualization,1,0.16666666666666666
+doParallel,setup,1,1
+doPcaPlots,visualization,2,1
+dotplot,visualization,3,1
+double,import,5,1
+download.file,data cleaning,1,0.1111111111111111
+download.file,evaluation,1,0.1111111111111111
+download.file,import,6,0.6666666666666666
+download.file,modeling,1,0.1111111111111111
+downloadGSMbedFiles,export,5,0.45454545454545453
+downloadGSMbedFiles,import,6,0.5454545454545454
+dplyr,communication,6,0.031578947368421054
+dplyr,data cleaning,112,0.5894736842105263
+dplyr,evaluation,12,0.06315789473684211
+dplyr,exploratory,17,0.08947368421052632
+dplyr,import,16,0.08421052631578947
+dplyr,modeling,7,0.03684210526315789
+dplyr,setup,13,0.06842105263157895
+dplyr,visualization,7,0.03684210526315789
+dpval,data cleaning,2,1
+drake_config,modeling,1,0.5
+drake_config,setup,1,0.5
+drake_plan,communication,1,0.1111111111111111
+drake_plan,data cleaning,5,0.5555555555555556
+drake_plan,modeling,2,0.2222222222222222
+drake_plan,visualization,1,0.1111111111111111
+dredge,modeling,1,1
+drive_analysis,communication,1,0.25
+drive_analysis,exploratory,1,0.25
+drive_analysis,modeling,1,0.25
+drive_analysis,setup,1,0.25
+drive_auth,setup,1,1
+drive_ls,evaluation,1,1
+drive_mkdir,evaluation,10,0.6666666666666666
+drive_mkdir,exploratory,1,0.06666666666666667
+drive_mkdir,import,2,0.13333333333333333
+drive_mkdir,setup,2,0.13333333333333333
+drive_rm,evaluation,1,1
+droplevels,data cleaning,2,0.6666666666666666
+droplevels,evaluation,1,0.3333333333333333
+dSigTransform,exploratory,1,1
+DT,setup,1,1
+dunn.test,modeling,2,1
+duplicated,data cleaning,11,0.6111111111111112
+duplicated,import,1,0.05555555555555555
+duplicated,setup,4,0.2222222222222222
+duplicated,visualization,2,0.1111111111111111
+dx.wts,evaluation,5,1
+dygraph,import,1,0.25
+dygraph,setup,1,0.25
+dygraph,visualization,2,0.5
+dyLegend,import,1,0.25
+dyLegend,setup,1,0.25
+dyLegend,visualization,2,0.5
+dyRangeSelector,import,1,0.25
+dyRangeSelector,setup,1,0.25
+dyRangeSelector,visualization,2,0.5
+dySeries,import,1,0.25
+dySeries,setup,1,0.25
+dySeries,visualization,2,0.5
+E,visualization,6,1
+edgeRenderInfo,evaluation,1,0.25
+edgeRenderInfo,visualization,3,0.75
+element_blank,setup,7,0.08433734939759036
+element_blank,visualization,76,0.9156626506024096
+element_line,setup,1,0.05263157894736842
+element_line,visualization,18,0.9473684210526315
+element_rect,setup,1,0.14285714285714285
+element_rect,visualization,6,0.8571428571428571
+element_text,data cleaning,1,0.0072992700729927005
+element_text,exploratory,2,0.014598540145985401
+element_text,setup,7,0.051094890510948905
+element_text,visualization,127,0.927007299270073
+empirical_logit,modeling,7,0.875
+empirical_logit,visualization,1,0.125
+emplog,exploratory,1,0.5
+emplog,modeling,1,0.5
+enrichAnnoOverlap,data cleaning,1,1
+enrichMap,visualization,1,1
+enrichPathway,data cleaning,1,0.16666666666666666
+enrichPathway,modeling,4,0.6666666666666666
+enrichPathway,setup,1,0.16666666666666666
+enrichPeakOverlap,evaluation,1,0.25
+enrichPeakOverlap,exploratory,1,0.25
+enrichPeakOverlap,modeling,1,0.25
+enrichPeakOverlap,visualization,1,0.25
+epi.2by2,exploratory,1,0.5
+epi.2by2,modeling,1,0.5
+EpiModelHPC,import,1,0.5
+EpiModelHPC,modeling,1,0.5
+escalc,data cleaning,1,0.5
+escalc,evaluation,1,0.5
+estimate_pars,data cleaning,2,0.4
+estimate_pars,evaluation,1,0.2
+estimate_pars,exploratory,1,0.2
+estimate_pars,modeling,1,0.2
+ET.HargreavesSamani,data cleaning,2,1
+eval,communication,1,0.2
+eval,evaluation,2,0.4
+eval,import,2,0.4
+evaluate_plan,evaluation,2,0.6666666666666666
+evaluate_plan,modeling,1,0.3333333333333333
+everything,data cleaning,4,0.3333333333333333
+everything,exploratory,4,0.3333333333333333
+everything,modeling,2,0.16666666666666666
+everything,setup,2,0.16666666666666666
+exists,data cleaning,1,1
+exp,communication,1,0.03571428571428571
+exp,data cleaning,6,0.21428571428571427
+exp,evaluation,11,0.39285714285714285
+exp,modeling,7,0.25
+exp,visualization,3,0.10714285714285714
+expand_limits,visualization,2,1
+expand_runs,data cleaning,1,1
+expand_surveys,communication,1,0.3333333333333333
+expand_surveys,setup,2,0.6666666666666666
+expand.grid,data cleaning,9,0.391304347826087
+expand.grid,evaluation,3,0.13043478260869565
+expand.grid,exploratory,1,0.043478260869565216
+expand.grid,import,1,0.043478260869565216
+expand.grid,modeling,4,0.17391304347826086
+expand.grid,setup,4,0.17391304347826086
+expand.grid,visualization,1,0.043478260869565216
+explain.var,visualization,2,1
+expose_imports,setup,1,1
+expression,visualization,21,1
+ExpressionSet,import,1,1
+exprs,data cleaning,9,0.47368421052631576
+exprs,evaluation,1,0.05263157894736842
+exprs,import,1,0.05263157894736842
+exprs,modeling,4,0.21052631578947367
+exprs,setup,3,0.15789473684210525
+exprs,visualization,1,0.05263157894736842
+extract,data cleaning,6,0.8571428571428571
+extract,evaluation,1,0.14285714285714285
+extract_tables,setup,1,1
+extract2,data cleaning,1,0.5
+extract2,evaluation,1,0.5
+fa,exploratory,1,1
+fa.parallel,exploratory,1,1
+facet_grid,visualization,56,1
+facet_wrap,exploratory,2,0.02702702702702703
+facet_wrap,export,1,0.013513513513513514
+facet_wrap,import,1,0.013513513513513514
+facet_wrap,modeling,1,0.013513513513513514
+facet_wrap,setup,1,0.013513513513513514
+facet_wrap,visualization,68,0.918918918918919
+facet_zoom,visualization,1,1
+factor,communication,2,0.008849557522123894
+factor,data cleaning,128,0.5663716814159292
+factor,evaluation,15,0.06637168141592921
+factor,exploratory,18,0.07964601769911504
+factor,export,1,0.004424778761061947
+factor,import,5,0.022123893805309734
+factor,modeling,26,0.11504424778761062
+factor,setup,1,0.004424778761061947
+factor,visualization,30,0.13274336283185842
+Factor,data cleaning,3,0.5
+Factor,export,3,0.5
+fct_inorder,data cleaning,2,0.6666666666666666
+fct_inorder,visualization,1,0.3333333333333333
+fct_recode,visualization,1,1
+fct_reorder,visualization,1,1
+fct_rev,visualization,1,1
+fData,data cleaning,2,1
+featureNames,data cleaning,5,1
+file,communication,1,0.1
+file,export,4,0.4
+file,import,3,0.3
+file,setup,2,0.2
+File,communication,2,0.08695652173913043
+File,data cleaning,3,0.13043478260869565
+File,export,10,0.43478260869565216
+File,import,6,0.2608695652173913
+File,setup,2,0.08695652173913043
+file_in,data cleaning,3,0.75
+file_in,visualization,1,0.25
+file_out,communication,1,0.3333333333333333
+file_out,modeling,1,0.3333333333333333
+file_out,visualization,1,0.3333333333333333
+file.copy,export,2,1
+file.create,setup,2,1
+file.exists,exploratory,1,0.058823529411764705
+file.exists,export,1,0.058823529411764705
+file.exists,setup,15,0.8823529411764706
+file.mtime,data cleaning,2,1
+file.path,data cleaning,1,0.007042253521126761
+file.path,evaluation,9,0.06338028169014084
+file.path,export,14,0.09859154929577464
+file.path,import,45,0.31690140845070425
+file.path,setup,73,0.5140845070422535
+file.rename,data cleaning,1,0.3333333333333333
+file.rename,export,1,0.3333333333333333
+file.rename,setup,1,0.3333333333333333
+file.size,import,1,1
+FillInData,setup,2,1
+filter,data cleaning,176,0.654275092936803
+filter,evaluation,11,0.040892193308550186
+filter,exploratory,19,0.07063197026022305
+filter,import,12,0.04460966542750929
+filter,modeling,6,0.022304832713754646
+filter,setup,9,0.03345724907063197
+filter,visualization,36,0.13382899628252787
+Filter,data cleaning,3,1
+find_concurrent_events,data cleaning,5,0.7142857142857143
+find_concurrent_events,exploratory,1,0.14285714285714285
+find_concurrent_events,setup,1,0.14285714285714285
+find_mistracked_trials,data cleaning,2,1
+find_ND,data cleaning,2,1
+find_root,setup,2,1
+find_statio_diffs,data cleaning,1,1
+findInterval,evaluation,1,1
+first,communication,2,0.5
+first,data cleaning,2,0.5
+fisher.test,modeling,2,1
+fit,modeling,1,1
+fit_psycho,modeling,7,1
+fit.clust,modeling,2,1
+fitted,evaluation,3,0.375
+fitted,modeling,3,0.375
+fitted,visualization,2,0.25
+fixef,evaluation,2,0.5
+fixef,modeling,1,0.25
+fixef,setup,1,0.25
+flog.appender,data cleaning,3,0.16666666666666666
+flog.appender,export,2,0.1111111111111111
+flog.appender,import,6,0.3333333333333333
+flog.appender,setup,7,0.3888888888888889
+flog.info,communication,30,0.379746835443038
+flog.info,data cleaning,1,0.012658227848101266
+flog.info,evaluation,10,0.12658227848101267
+flog.info,export,8,0.10126582278481013
+flog.info,import,15,0.189873417721519
+flog.info,modeling,3,0.0379746835443038
+flog.info,setup,11,0.13924050632911392
+flog.info,visualization,1,0.012658227848101266
+floor,data cleaning,2,0.4
+floor,exploratory,1,0.2
+floor,export,1,0.2
+floor,import,1,0.2
+fluidPage,setup,1,1
+fluidRow,communication,16,0.8
+fluidRow,import,4,0.2
+fn,modeling,1,1
+fn_gsea,setup,1,1
+fn_iha_7q10,export,1,1
+fn_iha_mlf,export,1,1
+fn_run_gsea,setup,1,1
+follow_rec,data cleaning,1,1
+foo,modeling,1,1
+for,communication,3,0.02142857142857143
+for,data cleaning,63,0.45
+for,evaluation,18,0.12857142857142856
+for,exploratory,13,0.09285714285714286
+for,export,3,0.02142857142857143
+for,import,11,0.07857142857142857
+for,modeling,9,0.06428571428571428
+for,setup,15,0.10714285714285714
+for,visualization,5,0.03571428571428571
+forcats,data cleaning,2,0.3333333333333333
+forcats,visualization,4,0.6666666666666666
+foreach,evaluation,1,0.25
+foreach,modeling,1,0.25
+foreach,setup,2,0.5
+forest,modeling,1,0.5
+forest,visualization,1,0.5
+format,data cleaning,3,0.3333333333333333
+format,exploratory,2,0.2222222222222222
+format,modeling,2,0.2222222222222222
+format,visualization,2,0.2222222222222222
+formula,modeling,3,1
+fortify,setup,2,1
+fp,modeling,1,1
+fpkm_annotations,modeling,1,1
+fread,import,6,0.8571428571428571
+fread,setup,1,0.14285714285714285
+freeR,exploratory,1,1
+fromJSON,data cleaning,3,0.375
+fromJSON,import,3,0.375
+fromJSON,modeling,2,0.25
+fst,export,2,1
+Fstats,modeling,10,0.9090909090909091
+Fstats,visualization,1,0.09090909090909091
+FTL_cp,exploratory,1,0.2
+FTL_cp,import,3,0.6
+FTL_cp,modeling,1,0.2
+FTL_tripTable,import,4,1
+full_join,data cleaning,2,0.6666666666666666
+full_join,modeling,1,0.3333333333333333
+fun,evaluation,1,0.5
+fun,setup,1,0.5
+function,communication,14,0.051094890510948905
+function,data cleaning,118,0.4306569343065693
+function,evaluation,13,0.04744525547445255
+function,exploratory,15,0.05474452554744526
+function,export,12,0.043795620437956206
+function,import,15,0.05474452554744526
+function,modeling,30,0.10948905109489052
+function,setup,46,0.1678832116788321
+function,visualization,11,0.040145985401459854
+funnel,evaluation,3,1
+funWrap,data cleaning,8,0.7272727272727273
+funWrap,evaluation,3,0.2727272727272727
+future_map_dfr,setup,1,1
+fwrite,export,2,1
+fzCor,exploratory,1,1
+g1,visualization,1,1
+g2,visualization,1,1
+g3,visualization,2,1
+g4,visualization,1,1
+gam,exploratory,1,0.05555555555555555
+gam,modeling,17,0.9444444444444444
+gam.check,evaluation,1,0.5
+gam.check,modeling,1,0.5
+gArea,data cleaning,2,0.6666666666666666
+gArea,setup,1,0.3333333333333333
+gather,data cleaning,10,0.7692307692307693
+gather,evaluation,1,0.07692307692307693
+gather,exploratory,1,0.07692307692307693
+gather,modeling,1,0.07692307692307693
+gather_plan,data cleaning,2,1
+gaussian,modeling,1,1
+GaussKernel,modeling,5,1
+gbm.fit,modeling,2,1
+gc,communication,1,0.1
+gc,data cleaning,2,0.2
+gc,evaluation,1,0.1
+gc,setup,5,0.5
+gc,visualization,1,0.1
+gContains,data cleaning,1,1
+gdpRank,exploratory,2,1
+geneSelect,export,2,1
+genesInTerm,data cleaning,4,0.4444444444444444
+genesInTerm,evaluation,3,0.3333333333333333
+genesInTerm,visualization,2,0.2222222222222222
+GenTable,data cleaning,1,0.125
+GenTable,evaluation,4,0.5
+GenTable,modeling,2,0.25
+GenTable,visualization,1,0.125
+geo,import,1,1
+geom_abline,data cleaning,1,0.14285714285714285
+geom_abline,visualization,6,0.8571428571428571
+geom_area,visualization,5,1
+geom_bar,data cleaning,1,0.01020408163265306
+geom_bar,exploratory,2,0.02040816326530612
+geom_bar,export,1,0.01020408163265306
+geom_bar,import,1,0.01020408163265306
+geom_bar,visualization,93,0.9489795918367347
+geom_boxplot,data cleaning,1,0.023809523809523808
+geom_boxplot,exploratory,1,0.023809523809523808
+geom_boxplot,visualization,40,0.9523809523809523
+geom_col,visualization,4,1
+geom_density,visualization,10,1
+geom_errorbar,exploratory,1,0.038461538461538464
+geom_errorbar,visualization,25,0.9615384615384616
+geom_histogram,exploratory,4,0.12121212121212122
+geom_histogram,visualization,29,0.8787878787878788
+geom_hline,visualization,19,1
+geom_jitter,visualization,4,1
+geom_label,communication,1,1
+geom_line,communication,3,0.022727272727272728
+geom_line,data cleaning,2,0.015151515151515152
+geom_line,evaluation,1,0.007575757575757576
+geom_line,visualization,126,0.9545454545454546
+geom_path,setup,2,0.6666666666666666
+geom_path,visualization,1,0.3333333333333333
+geom_point,communication,4,0.030303030303030304
+geom_point,data cleaning,4,0.030303030303030304
+geom_point,exploratory,2,0.015151515151515152
+geom_point,modeling,1,0.007575757575757576
+geom_point,setup,1,0.007575757575757576
+geom_point,visualization,120,0.9090909090909091
+geom_pointrange,import,2,0.25
+geom_pointrange,visualization,6,0.75
+geom_polygon,setup,2,0.6666666666666666
+geom_polygon,visualization,1,0.3333333333333333
+geom_raster,visualization,2,1
+geom_rect,visualization,19,1
+geom_ribbon,visualization,19,1
+geom_rug,visualization,1,1
+geom_segment,visualization,7,1
+geom_smooth,setup,1,0.1
+geom_smooth,visualization,9,0.9
+geom_text,visualization,30,1
+geom_text_repel,visualization,4,1
+geom_tile,visualization,1,1
+geom_violin,visualization,2,1
+geom_vline,communication,2,0.06666666666666667
+geom_vline,visualization,28,0.9333333333333333
+get,data cleaning,1,0.25
+get,import,3,0.75
+GET,export,1,0.5
+GET,import,1,0.5
+get_data_path,data cleaning,3,0.09375
+get_data_path,export,3,0.09375
+get_data_path,import,10,0.3125
+get_data_path,modeling,1,0.03125
+get_data_path,setup,14,0.4375
+get_data_path,visualization,1,0.03125
+get_epi,import,1,0.5
+get_epi,modeling,1,0.5
+get_event_group,data cleaning,24,0.6666666666666666
+get_event_group,setup,12,0.3333333333333333
+get_experiment_names,data cleaning,1,0.3333333333333333
+get_experiment_names,evaluation,1,0.3333333333333333
+get_experiment_names,setup,1,0.3333333333333333
+get_parallel_cores_given_os,import,1,0.07692307692307693
+get_parallel_cores_given_os,modeling,1,0.07692307692307693
+get_parallel_cores_given_os,setup,11,0.8461538461538461
+get_param,evaluation,1,0.25
+get_param,import,2,0.5
+get_param,modeling,1,0.25
+get_parsed_binary_confusion_matrix_stats,evaluation,4,0.5714285714285714
+get_parsed_binary_confusion_matrix_stats,modeling,3,0.42857142857142855
+get_prop,data cleaning,2,1
+get_raw_data_ts,import,1,1
+get_shared_2,data cleaning,2,1
+get_shared_all,data cleaning,2,1
+get.com.preprocess.run.multiseq.ATACseq,visualization,1,1
+get.correctness,data cleaning,1,1
+get.data,data cleaning,1,1
+get.pval.from.empirical.null.dist.discrete,data cleaning,2,0.2857142857142857
+get.pval.from.empirical.null.dist.discrete,evaluation,3,0.42857142857142855
+get.pval.from.empirical.null.dist.discrete,modeling,2,0.2857142857142857
+get.results,data cleaning,1,1
+getBM,export,1,0.5
+getBM,import,1,0.5
+getCCLE_MetaGenomics,import,1,1
+getCcleExpressionData,import,1,1
+getCtrpScreensAsMatrix,import,1,1
+getData,communication,1,0.3333333333333333
+getData,import,2,0.6666666666666666
+getFiledata,import,22,1
+getGenes,import,1,0.5
+getGenes,setup,1,0.5
+getGEOInfo,data cleaning,2,1
+getmode,exploratory,6,0.6666666666666666
+getmode,modeling,1,0.1111111111111111
+getmode,visualization,2,0.2222222222222222
+getMSSMprocessedMutationCalls,import,1,1
+getOption,setup,2,1
+getProbeGeneList,exploratory,4,0.8
+getProbeGeneList,import,1,0.2
+getPromoters,data cleaning,1,0.5
+getPromoters,export,1,0.5
+getRecalculatedAUCMatrix,data cleaning,1,1
+getRes,data cleaning,2,1
+getSamplesForDisease,data cleaning,1,1
+getSanger_MetaGenomics,import,1,1
+getSig,data cleaning,1,0.2
+getSig,evaluation,1,0.2
+getSig,modeling,1,0.2
+getSig,setup,2,0.4
+getTagMatrix,data cleaning,3,0.75
+getTagMatrix,modeling,1,0.25
+getTissueType,data cleaning,2,1
+getType,exploratory,1,1
+getUniqueFiles,import,1,1
+getValueForAllCells,data cleaning,1,1
+getwd,communication,2,0.03508771929824561
+getwd,data cleaning,2,0.03508771929824561
+getwd,export,9,0.15789473684210525
+getwd,import,10,0.17543859649122806
+getwd,modeling,1,0.017543859649122806
+getwd,setup,30,0.5263157894736842
+getwd,visualization,3,0.05263157894736842
+getWordListEntropy,setup,4,1
+gg0,visualization,1,1
+gg1,visualization,1,1
+ggbiplot,visualization,2,1
+ggplot,communication,4,0.00975609756097561
+ggplot,data cleaning,5,0.012195121951219513
+ggplot,evaluation,1,0.0024390243902439024
+ggplot,exploratory,9,0.02195121951219512
+ggplot,export,1,0.0024390243902439024
+ggplot,import,3,0.007317073170731708
+ggplot,modeling,2,0.004878048780487805
+ggplot,setup,3,0.007317073170731708
+ggplot,visualization,382,0.9317073170731708
+ggplot_build,visualization,1,1
+ggplot_gtable,visualization,1,1
+ggplot2,evaluation,5,0.1724137931034483
+ggplot2,export,5,0.1724137931034483
+ggplot2,visualization,19,0.6551724137931034
+ggplotly,visualization,9,1
+ggroc,visualization,1,1
+ggsave,communication,4,0.02702702702702703
+ggsave,exploratory,5,0.033783783783783786
+ggsave,export,100,0.6756756756756757
+ggsave,import,2,0.013513513513513514
+ggsave,visualization,37,0.25
+ggtitle,visualization,15,1
+gIntersection,export,1,0.5
+gIntersection,modeling,1,0.5
+glht,evaluation,2,0.4
+glht,exploratory,2,0.4
+glht,modeling,1,0.2
+glimpse,exploratory,16,1
+glm,evaluation,3,0.1111111111111111
+glm,export,1,0.037037037037037035
+glm,modeling,22,0.8148148148148148
+glm,visualization,1,0.037037037037037035
+glm.nb,modeling,1,1
+glmer,data cleaning,1,0.03125
+glmer,modeling,31,0.96875
+glmerControl,data cleaning,1,0.25
+glmerControl,modeling,3,0.75
+glmpath,modeling,2,1
+glPca,data cleaning,1,0.16666666666666666
+glPca,modeling,3,0.5
+glPca,setup,2,0.3333333333333333
+gls,modeling,2,1
+glue,data cleaning,2,0.13333333333333333
+glue,export,1,0.06666666666666667
+glue,setup,12,0.8
+glue_data,communication,1,1
+googledrive,evaluation,16,0.6956521739130435
+googledrive,exploratory,1,0.043478260869565216
+googledrive,import,3,0.13043478260869565
+googledrive,setup,3,0.13043478260869565
+graph_from_adjacency_matrix,modeling,1,1
+graph.adjacency,modeling,1,0.5
+graph.adjacency,visualization,1,0.5
+graphRenderInfo,evaluation,1,0.25
+graphRenderInfo,visualization,3,0.75
+grep,data cleaning,22,0.55
+grep,evaluation,4,0.1
+grep,exploratory,4,0.1
+grep,import,5,0.125
+grep,setup,5,0.125
+grepl,communication,1,0.017241379310344827
+grepl,data cleaning,38,0.6551724137931034
+grepl,evaluation,1,0.017241379310344827
+grepl,exploratory,2,0.034482758620689655
+grepl,export,2,0.034482758620689655
+grepl,import,11,0.1896551724137931
+grepl,modeling,1,0.017241379310344827
+grepl,visualization,2,0.034482758620689655
+grid.arrange,setup,1,0.3333333333333333
+grid.arrange,visualization,2,0.6666666666666666
+grid.draw,visualization,1,1
+grid.text,visualization,1,1
+group_by,data cleaning,94,0.5222222222222223
+group_by,evaluation,21,0.11666666666666667
+group_by,exploratory,35,0.19444444444444445
+group_by,export,1,0.005555555555555556
+group_by,import,1,0.005555555555555556
+group_by,modeling,8,0.044444444444444446
+group_by,setup,5,0.027777777777777776
+group_by,visualization,15,0.08333333333333333
+group2,export,1,1
+groupMatch,data cleaning,3,1
+groupRankAverages,exploratory,1,1
+GSA.read.gmt,import,4,1
+GSEA,setup,2,1
+GSM1003578,communication,1,0.5
+GSM1003578,exploratory,1,0.5
+gsmFind,modeling,1,1
+gsub,communication,1,0.008264462809917356
+gsub,data cleaning,103,0.8512396694214877
+gsub,exploratory,3,0.024793388429752067
+gsub,export,1,0.008264462809917356
+gsub,import,1,0.008264462809917356
+gsub,modeling,1,0.008264462809917356
+gsub,setup,10,0.08264462809917356
+gsub,visualization,1,0.008264462809917356
+guide_legend,visualization,35,1
+guides,data cleaning,1,0.045454545454545456
+guides,export,12,0.5454545454545454
+guides,visualization,9,0.4090909090909091
+gzfile,evaluation,1,0.1111111111111111
+gzfile,export,2,0.2222222222222222
+gzfile,import,6,0.6666666666666666
+has_file,setup,1,1
+hcb,modeling,1,1
+hcb_adults,communication,1,1
+hcb_adults_feelings,exploratory,1,1
+hcb_adults_hunger,exploratory,1,1
+hcb_adults_thinking,exploratory,1,1
+hcb_children,visualization,1,1
+hcb_children_feelings,visualization,1,1
+hcb_children_hunger,visualization,1,1
+hcb_children_thinking,visualization,1,1
+hcb_feelings,exploratory,1,1
+hcb_hunger,exploratory,1,1
+hcb_thinking,exploratory,1,1
+hclus.scree,visualization,1,1
+hclust,modeling,4,0.2222222222222222
+hclust,setup,1,0.05555555555555555
+hclust,visualization,13,0.7222222222222222
+hdi,modeling,2,1
+head,communication,11,0.11956521739130435
+head,data cleaning,19,0.20652173913043478
+head,evaluation,6,0.06521739130434782
+head,exploratory,51,0.5543478260869565
+head,export,1,0.010869565217391304
+head,import,2,0.021739130434782608
+head,modeling,1,0.010869565217391304
+head,visualization,1,0.010869565217391304
+heatmap.2,data cleaning,3,0.75
+heatmap.2,visualization,1,0.25
+here,data cleaning,6,0.1935483870967742
+here,export,1,0.03225806451612903
+here,import,8,0.25806451612903225
+here,setup,16,0.5161290322580645
+hetcor,exploratory,1,1
+hist,data cleaning,1,0.0051813471502590676
+hist,evaluation,1,0.0051813471502590676
+hist,exploratory,36,0.18652849740932642
+hist,visualization,155,0.8031088082901554
+hja.map,visualization,1,1
+hr,communication,4,0.6666666666666666
+hr,import,1,0.16666666666666666
+hr,setup,1,0.16666666666666666
+html_document,communication,1,0.2
+html_document,data cleaning,1,0.2
+html_document,export,2,0.4
+html_document,visualization,1,0.2
+htmlOutput,setup,1,1
+humanize_classification,data cleaning,2,1
+humanize_metaprogramming,data cleaning,2,1
+humanReadable,import,1,1
+hyper_tibble,data cleaning,2,1
+I,modeling,1,0.16666666666666666
+I,visualization,5,0.8333333333333334
+iconv,data cleaning,3,1
+idMatches,exploratory,1,1
+if,communication,5,0.04
+if,data cleaning,27,0.216
+if,evaluation,13,0.104
+if,exploratory,4,0.032
+if,export,3,0.024
+if,import,17,0.136
+if,modeling,2,0.016
+if,setup,54,0.432
+if_else,data cleaning,1,0.125
+if_else,exploratory,1,0.125
+if_else,visualization,6,0.75
+ifelse,data cleaning,256,0.89198606271777
+ifelse,evaluation,11,0.03832752613240418
+ifelse,exploratory,4,0.013937282229965157
+ifelse,import,3,0.010452961672473868
+ifelse,modeling,6,0.020905923344947737
+ifelse,setup,5,0.017421602787456445
+ifelse,visualization,2,0.006968641114982578
+image,exploratory,1,0.5
+image,visualization,1,0.5
+imap_dfr,visualization,1,1
+import,import,2,1
+importance,communication,2,0.6666666666666666
+importance,evaluation,1,0.3333333333333333
+indNames,data cleaning,1,1
+induced_subgraph,exploratory,1,0.2
+induced_subgraph,visualization,4,0.8
+inner_join,data cleaning,6,0.75
+inner_join,exploratory,1,0.125
+inner_join,import,1,0.125
+install_github,import,1,0.16666666666666666
+install_github,setup,5,0.8333333333333334
+install.packages,import,9,0.1232876712328767
+install.packages,setup,64,0.8767123287671232
+installed.packages,import,1,0.3333333333333333
+installed.packages,setup,2,0.6666666666666666
+interaction,visualization,5,1
+interaction.plot,visualization,1,1
+intersect,communication,1,0.047619047619047616
+intersect,data cleaning,12,0.5714285714285714
+intersect,evaluation,2,0.09523809523809523
+intersect,exploratory,2,0.09523809523809523
+intersect,import,1,0.047619047619047616
+intersect,modeling,1,0.047619047619047616
+intersect,setup,2,0.09523809523809523
+intersectList,data cleaning,4,1
+invisible,setup,1,1
+IPW,evaluation,1,1
+IPWt50,evaluation,1,1
+is_exprs,evaluation,1,0.3333333333333333
+is_exprs,import,1,0.3333333333333333
+is_exprs,visualization,1,0.3333333333333333
+is.element,data cleaning,5,0.7142857142857143
+is.element,exploratory,2,0.2857142857142857
+is.factor,data cleaning,1,1
+is.infinite,exploratory,8,1
+is.na,data cleaning,139,0.5325670498084292
+is.na,evaluation,16,0.06130268199233716
+is.na,exploratory,44,0.1685823754789272
+is.na,export,1,0.0038314176245210726
+is.na,import,4,0.01532567049808429
+is.na,modeling,20,0.07662835249042145
+is.na,setup,10,0.038314176245210725
+is.na,visualization,27,0.10344827586206896
+is.null,data cleaning,2,0.4
+is.null,import,1,0.2
+is.null,setup,2,0.4
+is.numeric,data cleaning,1,1
+isPackageInstalled,setup,1,1
+isPackageLoaded,setup,1,1
+italic,visualization,2,1
+itchmodel,export,1,1
+jags,modeling,1,0.5
+jags,visualization,1,0.5
+join,data cleaning,6,0.8571428571428571
+join,evaluation,1,0.14285714285714285
+jpeg,data cleaning,2,0.3333333333333333
+jpeg,export,2,0.3333333333333333
+jpeg,modeling,1,0.16666666666666666
+jpeg,visualization,1,0.16666666666666666
+kde2d,data cleaning,1,0.3333333333333333
+kde2d,import,1,0.3333333333333333
+kde2d,modeling,1,0.3333333333333333
+keggPathwayGraphs,communication,1,0.25
+keggPathwayGraphs,exploratory,1,0.25
+keggPathwayGraphs,import,1,0.25
+keggPathwayGraphs,visualization,1,0.25
+keggPathwayNames,exploratory,1,0.25
+keggPathwayNames,import,1,0.25
+keggPathwayNames,modeling,1,0.25
+keggPathwayNames,setup,1,0.25
+kmeans,evaluation,1,0.5
+kmeans,modeling,1,0.5
+knit,communication,1,0.3333333333333333
+knit,modeling,1,0.3333333333333333
+knit,setup,1,0.3333333333333333
+knit2html,communication,12,0.5714285714285714
+knit2html,export,6,0.2857142857142857
+knit2html,import,1,0.047619047619047616
+knit2html,modeling,2,0.09523809523809523
+knitr,communication,5,0.7142857142857143
+knitr,modeling,1,0.14285714285714285
+knitr,setup,1,0.14285714285714285
+knitr_in,communication,1,0.5
+knitr_in,modeling,1,0.5
+knitr::opts_chunk,communication,1,1
+knn,modeling,1,1
+kruskal,modeling,3,1
+kruskal.test,evaluation,2,0.2857142857142857
+kruskal.test,modeling,5,0.7142857142857143
+l_ply,setup,1,1
+labeller,visualization,1,1
+labels,visualization,2,1
+labels2colors,visualization,2,1
+labs,data cleaning,2,0.017857142857142856
+labs,evaluation,1,0.008928571428571428
+labs,exploratory,1,0.008928571428571428
+labs,export,4,0.03571428571428571
+labs,visualization,104,0.9285714285714286
+lag,data cleaning,8,1
+lapply,data cleaning,43,0.5512820512820513
+lapply,evaluation,4,0.05128205128205128
+lapply,exploratory,3,0.038461538461538464
+lapply,export,4,0.05128205128205128
+lapply,import,4,0.05128205128205128
+lapply,modeling,9,0.11538461538461539
+lapply,setup,10,0.1282051282051282
+lapply,visualization,1,0.01282051282051282
+last,communication,4,0.21052631578947367
+last,data cleaning,11,0.5789473684210527
+last,evaluation,4,0.21052631578947367
+last_plot,visualization,2,1
+latex,data cleaning,2,0.3333333333333333
+latex,exploratory,1,0.16666666666666666
+latex,export,3,0.5
+latlon2county,data cleaning,1,1
+layout,data cleaning,2,0.4
+layout,modeling,1,0.2
+layout,visualization,2,0.4
+layout.circle,evaluation,1,0.5
+layout.circle,visualization,1,0.5
+layoutGraph,evaluation,1,0.25
+layoutGraph,visualization,3,0.75
+ldply,data cleaning,1,1
+left_join,data cleaning,41,0.6949152542372882
+left_join,evaluation,7,0.11864406779661017
+left_join,exploratory,5,0.0847457627118644
+left_join,import,1,0.01694915254237288
+left_join,setup,1,0.01694915254237288
+left_join,visualization,4,0.06779661016949153
+legend,modeling,1,0.047619047619047616
+legend,visualization,20,0.9523809523809523
+len,data cleaning,5,0.7142857142857143
+len,modeling,1,0.14285714285714285
+len,setup,1,0.14285714285714285
+len_weight,data cleaning,3,0.75
+len_weight,modeling,1,0.25
+length,communication,10,0.02074688796680498
+length,data cleaning,124,0.2572614107883817
+length,evaluation,65,0.13485477178423236
+length,exploratory,114,0.23651452282157676
+length,export,9,0.01867219917012448
+length,import,13,0.026970954356846474
+length,modeling,41,0.08506224066390042
+length,setup,87,0.18049792531120332
+length,visualization,19,0.03941908713692946
+levels,communication,1,0.023255813953488372
+levels,data cleaning,32,0.7441860465116279
+levels,evaluation,4,0.09302325581395349
+levels,exploratory,2,0.046511627906976744
+levels,modeling,2,0.046511627906976744
+levels,visualization,2,0.046511627906976744
+library,communication,15,0.008347245409015025
+library,data cleaning,50,0.027824151363383415
+library,evaluation,5,0.0027824151363383415
+library,exploratory,23,0.012799109627156371
+library,export,2,0.0011129660545353367
+library,import,382,0.2125765164162493
+library,modeling,24,0.01335559265442404
+library,setup,1235,0.6872565386755703
+library,visualization,61,0.03394546466332777
+lims,visualization,1,1
+Line,data cleaning,2,1
+lines,data cleaning,13,0.3170731707317073
+lines,visualization,28,0.6829268292682927
+Lines,data cleaning,2,1
+list,communication,21,0.07473309608540925
+list,data cleaning,75,0.2669039145907473
+list,evaluation,19,0.06761565836298933
+list,exploratory,16,0.05693950177935943
+list,export,27,0.09608540925266904
+list,import,19,0.06761565836298933
+list,modeling,30,0.10676156583629894
+list,setup,44,0.15658362989323843
+list,visualization,30,0.10676156583629894
+list.dirs,import,1,1
+list.files,communication,1,0.012987012987012988
+list.files,evaluation,10,0.12987012987012986
+list.files,exploratory,2,0.025974025974025976
+list.files,export,4,0.05194805194805195
+list.files,import,29,0.37662337662337664
+list.files,setup,31,0.4025974025974026
+list2ascii,data cleaning,1,1
+Literal,data cleaning,23,0.9583333333333334
+Literal,export,1,0.041666666666666664
+lm,data cleaning,2,0.005194805194805195
+lm,evaluation,4,0.01038961038961039
+lm,exploratory,4,0.01038961038961039
+lm,export,1,0.0025974025974025974
+lm,modeling,370,0.961038961038961
+lm,visualization,4,0.01038961038961039
+lme,exploratory,2,1
+lmer,export,1,0.05263157894736842
+lmer,modeling,18,0.9473684210526315
+lmList,modeling,1,1
+load,data cleaning,3,0.010526315789473684
+load,exploratory,2,0.007017543859649123
+load,import,243,0.8526315789473684
+load,setup,35,0.12280701754385964
+load,visualization,2,0.007017543859649123
+load_all,import,10,0.7142857142857143
+load_all,setup,4,0.2857142857142857
+load_data,import,5,1
+loadCounts,exploratory,1,0.25
+loadCounts,import,3,0.75
+loadData,import,1,1
+loadProject,visualization,1,1
+loess,modeling,4,1
+log,data cleaning,21,0.3
+log,evaluation,2,0.02857142857142857
+log,exploratory,3,0.04285714285714286
+log,import,2,0.02857142857142857
+log,modeling,20,0.2857142857142857
+log,visualization,22,0.3142857142857143
+log10,data cleaning,11,0.1864406779661017
+log10,evaluation,4,0.06779661016949153
+log10,exploratory,1,0.01694915254237288
+log10,modeling,3,0.05084745762711865
+log10,visualization,40,0.6779661016949152
+log2,modeling,1,1
+logical,evaluation,1,0.5
+logical,setup,1,0.5
+login,modeling,1,1
+logSumExp,data cleaning,1,0.14285714285714285
+logSumExp,evaluation,2,0.2857142857142857
+logSumExp,exploratory,1,0.14285714285714285
+logSumExp,modeling,3,0.42857142857142855
+long_hr_sim,evaluation,1,1
+ls,data cleaning,12,0.09302325581395349
+ls,evaluation,1,0.007751937984496124
+ls,exploratory,5,0.03875968992248062
+ls,import,3,0.023255813953488372
+ls,setup,108,0.8372093023255814
+lsf.str,data cleaning,1,1
+lubridate,communication,2,0.16666666666666666
+lubridate,data cleaning,8,0.6666666666666666
+lubridate,evaluation,1,0.08333333333333333
+lubridate,setup,1,0.08333333333333333
+m1,evaluation,1,0.3333333333333333
+m1,exploratory,1,0.3333333333333333
+m1,modeling,1,0.3333333333333333
+m2,data cleaning,1,1
+m3,data cleaning,1,1
+mad,data cleaning,1,0.16666666666666666
+mad,evaluation,2,0.3333333333333333
+mad,modeling,3,0.5
+main,exploratory,1,0.16666666666666666
+main,modeling,2,0.3333333333333333
+main,setup,3,0.5
+mainPanel,communication,14,0.6666666666666666
+mainPanel,exploratory,2,0.09523809523809523
+mainPanel,import,2,0.09523809523809523
+mainPanel,setup,3,0.14285714285714285
+make,evaluation,1,0.5
+make,visualization,1,0.5
+make_grid,exploratory,2,0.6666666666666666
+make_grid,modeling,1,0.3333333333333333
+make_model_data,exploratory,1,0.1111111111111111
+make_model_data,modeling,8,0.8888888888888888
+make_model_name,data cleaning,2,0.6666666666666666
+make_model_name,modeling,1,0.3333333333333333
+make_visual,data cleaning,1,0.07142857142857142
+make_visual,setup,1,0.07142857142857142
+make_visual,visualization,12,0.8571428571428571
+make_visual_PID,data cleaning,4,1
+make.names,data cleaning,4,1
+MakeBetterEventTable,import,1,1
+makeCluster,modeling,1,1
+makeDissimByPredicate,data cleaning,8,1
+manova,exploratory,1,1
+map,communication,7,0.109375
+map,data cleaning,29,0.453125
+map,evaluation,2,0.03125
+map,exploratory,2,0.03125
+map,export,12,0.1875
+map,import,6,0.09375
+map,modeling,2,0.03125
+map,visualization,4,0.0625
+map_chr,communication,1,0.2
+map_chr,data cleaning,3,0.6
+map_chr,exploratory,1,0.2
+map_dbl,communication,3,0.1875
+map_dbl,data cleaning,9,0.5625
+map_dbl,evaluation,1,0.0625
+map_dbl,modeling,3,0.1875
+map_dfr,visualization,1,1
+map_lgl,modeling,2,1
+map2,modeling,1,1
+map2_chr,data cleaning,2,1
+map2_dbl,modeling,2,1
+mapply,data cleaning,4,0.6666666666666666
+mapply,export,2,0.3333333333333333
+mapvalues,data cleaning,6,0.8571428571428571
+mapvalues,modeling,1,0.14285714285714285
+match,data cleaning,33,0.9428571428571428
+match,import,2,0.05714285714285714
+matches,setup,1,1
+matching_cases,communication,1,0.25
+matching_cases,exploratory,3,0.75
+matrix,data cleaning,26,0.3333333333333333
+matrix,evaluation,2,0.02564102564102564
+matrix,exploratory,4,0.05128205128205128
+matrix,import,13,0.16666666666666666
+matrix,modeling,10,0.1282051282051282
+matrix,setup,16,0.20512820512820512
+matrix,visualization,7,0.08974358974358974
+matrixStats,data cleaning,5,0.7142857142857143
+matrixStats,modeling,2,0.2857142857142857
+max,data cleaning,46,0.215962441314554
+max,evaluation,41,0.19248826291079812
+max,exploratory,76,0.3568075117370892
+max,export,1,0.004694835680751174
+max,modeling,11,0.051643192488262914
+max,setup,4,0.018779342723004695
+max,visualization,34,0.1596244131455399
+mclapply,evaluation,1,0.25
+mclapply,modeling,3,0.75
+mcmc,evaluation,1,1
+mcp,evaluation,2,0.4
+mcp,exploratory,2,0.4
+mcp,modeling,1,0.2
+MCplotter,visualization,2,1
+mds,modeling,7,1
+mds_Aordinal,exploratory,2,1
+mds_feelings_Aordinal,exploratory,1,1
+mds_hunger_Aordinal,modeling,1,1
+mds_thinking_Aordinal,evaluation,1,1
+mds.sol,evaluation,1,0.5
+mds.sol,modeling,1,0.5
+mean,communication,12,0.04195804195804196
+mean,data cleaning,85,0.2972027972027972
+mean,evaluation,32,0.11188811188811189
+mean,exploratory,59,0.2062937062937063
+mean,import,1,0.0034965034965034965
+mean,modeling,70,0.24475524475524477
+mean,setup,20,0.06993006993006994
+mean,visualization,7,0.024475524475524476
+mean.circular,data cleaning,2,0.6666666666666666
+mean.circular,modeling,1,0.3333333333333333
+median,data cleaning,10,0.43478260869565216
+median,evaluation,2,0.08695652173913043
+median,exploratory,5,0.21739130434782608
+median,modeling,6,0.2608695652173913
+melt,data cleaning,38,0.5846153846153846
+melt,exploratory,3,0.046153846153846156
+melt,import,17,0.26153846153846155
+melt,setup,1,0.015384615384615385
+melt,visualization,6,0.09230769230769231
+memoise,import,1,1
+memoReg,data cleaning,2,1
+merge,communication,1,0.00980392156862745
+merge,data cleaning,76,0.7450980392156863
+merge,evaluation,7,0.06862745098039216
+merge,exploratory,2,0.0196078431372549
+merge,import,1,0.00980392156862745
+merge,modeling,8,0.0784313725490196
+merge,setup,2,0.0196078431372549
+merge,visualization,5,0.049019607843137254
+message,communication,35,0.9459459459459459
+message,data cleaning,1,0.02702702702702703
+message,exploratory,1,0.02702702702702703
+MH.plot,visualization,3,1
+mice,data cleaning,1,1
+microglialException,setup,1,1
+min,data cleaning,25,0.1524390243902439
+min,evaluation,42,0.25609756097560976
+min,exploratory,73,0.4451219512195122
+min,modeling,12,0.07317073170731707
+min,setup,4,0.024390243902439025
+min,visualization,8,0.04878048780487805
+min.max.model,modeling,4,0.6666666666666666
+min.max.model,setup,2,0.3333333333333333
+model_run,setup,3,1
+model.matrix,modeling,3,0.75
+model.matrix,visualization,1,0.25
+month,data cleaning,4,1
+moving_average,exploratory,1,1
+mtext,visualization,12,1
+multiplot,visualization,1,1
+multiplot_mod,visualization,2,1
+mutate,data cleaning,248,0.7315634218289085
+mutate,evaluation,16,0.0471976401179941
+mutate,exploratory,18,0.05309734513274336
+mutate,import,12,0.035398230088495575
+mutate,modeling,26,0.07669616519174041
+mutate,setup,4,0.011799410029498525
+mutate,visualization,15,0.04424778761061947
+muted,import,1,1
+mvrnorm,setup,2,1
+myCenter,evaluation,3,0.75
+myCenter,exploratory,1,0.25
+myglm,modeling,1,1
+MySQL,import,1,1
+n,data cleaning,11,0.5
+n,evaluation,1,0.045454545454545456
+n,exploratory,9,0.4090909090909091
+n,modeling,1,0.045454545454545456
+n_distinct,data cleaning,7,1
+na.omit,data cleaning,18,0.8571428571428571
+na.omit,modeling,3,0.14285714285714285
+names,communication,11,0.03363914373088685
+names,data cleaning,213,0.6513761467889908
+names,evaluation,15,0.045871559633027525
+names,exploratory,17,0.05198776758409786
+names,export,5,0.01529051987767584
+names,import,17,0.05198776758409786
+names,modeling,13,0.039755351681957186
+names,setup,24,0.07339449541284404
+names,visualization,12,0.03669724770642202
+navbarMenu,communication,9,1
+navbarPage,communication,4,0.5714285714285714
+navbarPage,exploratory,1,0.14285714285714285
+navbarPage,import,1,0.14285714285714285
+navbarPage,setup,1,0.14285714285714285
+nc_open,import,4,1
+nchar,data cleaning,2,1
+ncol,communication,3,0.046875
+ncol,data cleaning,32,0.5
+ncol,evaluation,3,0.046875
+ncol,exploratory,10,0.15625
+ncol,export,1,0.015625
+ncol,import,3,0.046875
+ncol,modeling,3,0.046875
+ncol,setup,8,0.125
+ncol,visualization,1,0.015625
+NCOL,data cleaning,3,0.5
+NCOL,import,3,0.5
+ncvar_add,data cleaning,2,1
+ncvar_def,data cleaning,2,1
+ncvar_get,data cleaning,2,1
+ncvar_put,data cleaning,2,1
+nest,import,1,0.3333333333333333
+nest,modeling,2,0.6666666666666666
+new,data cleaning,13,0.65
+new,evaluation,4,0.2
+new,exploratory,3,0.15
+new.env,setup,6,0.8571428571428571
+new.env,visualization,1,0.14285714285714285
+newbinplot,evaluation,2,0.5
+newbinplot,visualization,2,0.5
+newCountDataSet,data cleaning,1,0.5
+newCountDataSet,modeling,1,0.5
+newSCESet,exploratory,1,0.5
+newSCESet,import,1,0.5
+next,data cleaning,2,0.6666666666666666
+next,modeling,1,0.3333333333333333
+nodeRenderInfo,evaluation,1,0.25
+nodeRenderInfo,visualization,3,0.75
+normal,import,2,1
+normalize,import,1,1
+normalize_medu,exploratory,1,0.5
+normalize_medu,import,1,0.5
+normalizePath,setup,2,1
+nPop,exploratory,1,1
+npyLoad,modeling,1,1
+nrow,communication,9,0.04128440366972477
+nrow,data cleaning,83,0.38073394495412843
+nrow,evaluation,34,0.1559633027522936
+nrow,exploratory,33,0.15137614678899083
+nrow,export,5,0.022935779816513763
+nrow,import,6,0.027522935779816515
+nrow,modeling,26,0.11926605504587157
+nrow,setup,8,0.03669724770642202
+nrow,visualization,14,0.06422018348623854
+NROW,data cleaning,1,0.5
+NROW,evaluation,1,0.5
+NTS,modeling,6,1
+num_id_matches,exploratory,1,1
+numeric,evaluation,5,0.5555555555555556
+numeric,setup,4,0.4444444444444444
+numericInput,setup,1,1
+object.size,exploratory,2,0.6666666666666666
+object.size,modeling,1,0.3333333333333333
+ogbox,data cleaning,1,1
+one_of,modeling,2,1
+oneway.test,data cleaning,1,0.3333333333333333
+oneway.test,evaluation,1,0.3333333333333333
+oneway.test,modeling,1,0.3333333333333333
+OptionParser,modeling,1,1
+options,data cleaning,2,0.06896551724137931
+options,evaluation,1,0.034482758620689655
+options,exploratory,1,0.034482758620689655
+options,import,2,0.06896551724137931
+options,setup,23,0.7931034482758621
+or_table,communication,1,1
+order,communication,1,0.02
+order,data cleaning,27,0.54
+order,evaluation,7,0.14
+order,exploratory,7,0.14
+order,modeling,4,0.08
+order,setup,1,0.02
+order,visualization,3,0.06
+ordered,data cleaning,1,0.5
+ordered,evaluation,1,0.5
+ordiellipse,visualization,1,1
+osfr,import,1,0.5
+osfr,setup,1,0.5
+output_url,import,1,1
+p,communication,1,0.07142857142857142
+p,evaluation,1,0.07142857142857142
+p,import,2,0.14285714285714285
+p,visualization,10,0.7142857142857143
+p_install_gh,setup,3,1
+p_load,import,3,0.42857142857142855
+p_load,setup,4,0.5714285714285714
+p.adjust,data cleaning,1,0.25
+p.adjust,modeling,3,0.75
+p1,exploratory,2,0.4
+p1,visualization,3,0.6
+packageVersion,setup,1,1
+pacman,import,1,0.14285714285714285
+pacman,setup,6,0.8571428571428571
+pairs,exploratory,1,1
+pairscor.fnc,exploratory,1,1
+pandoc,communication,1,0.25
+pandoc,export,3,0.75
+par,communication,2,0.016
+par,data cleaning,11,0.088
+par,evaluation,1,0.008
+par,exploratory,6,0.048
+par,export,2,0.016
+par,import,5,0.04
+par,modeling,4,0.032
+par,setup,15,0.12
+par,visualization,79,0.632
+parallel,data cleaning,1,0.07692307692307693
+parallel,evaluation,1,0.07692307692307693
+parallel,exploratory,1,0.07692307692307693
+parallel,import,1,0.07692307692307693
+parallel,modeling,2,0.15384615384615385
+parallel,setup,7,0.5384615384615384
+parameterBounds,setup,1,1
+parameterizedRandomizationDistribution,evaluation,1,0.16666666666666666
+parameterizedRandomizationDistribution,modeling,3,0.5
+parameterizedRandomizationDistribution,setup,2,0.3333333333333333
+parse,communication,1,0.2
+parse,evaluation,2,0.4
+parse,import,2,0.4
+parse_args,modeling,1,1
+parse.gctx,import,2,1
+ParseConfig,setup,1,1
+participation_plots,visualization,1,1
+past,data cleaning,1,1
+paste,communication,23,0.07076923076923076
+paste,data cleaning,62,0.19076923076923077
+paste,evaluation,13,0.04
+paste,exploratory,12,0.036923076923076927
+paste,export,59,0.18153846153846154
+paste,import,59,0.18153846153846154
+paste,modeling,13,0.04
+paste,setup,48,0.1476923076923077
+paste,visualization,36,0.11076923076923077
+Paste,data cleaning,3,0.75
+Paste,export,1,0.25
+paste0,communication,20,0.03676470588235294
+paste0,data cleaning,81,0.1488970588235294
+paste0,evaluation,12,0.022058823529411766
+paste0,exploratory,2,0.003676470588235294
+paste0,export,84,0.15441176470588236
+paste0,import,193,0.3547794117647059
+paste0,modeling,4,0.007352941176470588
+paste0,setup,92,0.16911764705882354
+paste0,visualization,56,0.10294117647058823
+path_file,import,1,0.5
+path_file,setup,1,0.5
+path.expand,setup,1,1
+pb,data cleaning,1,1
+pbd_Bayes,modeling,1,1
+pbd_ML,evaluation,1,0.5
+pbd_ML,modeling,1,0.5
+pca_A2,evaluation,1,0.5
+pca_A2,modeling,1,0.5
+pca_A2_rot,evaluation,1,0.5
+pca_A2_rot,modeling,1,0.5
+pchisq,evaluation,1,1
+pctiles_vitd,exploratory,2,1
+pData,data cleaning,3,0.375
+pData,import,2,0.25
+pData,modeling,2,0.25
+pData,visualization,1,0.125
+pdf,communication,3,0.03529411764705882
+pdf,data cleaning,2,0.023529411764705882
+pdf,exploratory,2,0.023529411764705882
+pdf,export,63,0.7411764705882353
+pdf,setup,3,0.03529411764705882
+pdf,visualization,12,0.1411764705882353
+pe,exploratory,2,0.5
+pe,modeling,2,0.5
+peak,data cleaning,1,0.5
+peak,exploratory,1,0.5
+peak1,export,1,1
+peakHeatmap,visualization,3,1
+peEdgeRenderInfo,evaluation,1,0.25
+peEdgeRenderInfo,visualization,3,0.75
+peNodeRenderInfo,evaluation,1,0.25
+peNodeRenderInfo,visualization,3,0.75
+Percent,data cleaning,3,0.75
+Percent,export,1,0.25
+performance,modeling,1,1
+perl,exploratory,1,0.3333333333333333
+perl,import,1,0.3333333333333333
+perl,setup,1,0.3333333333333333
+pf,evaluation,4,0.8
+pf,modeling,1,0.2
+pgas,import,1,0.5
+pgas,modeling,1,0.5
+pheatmap,visualization,4,1
+pkgconfig,setup,1,1
+plasma,setup,1,1
+plm,import,1,0.25
+plm,modeling,3,0.75
+plm.data,data cleaning,1,1
+plot,communication,4,0.017543859649122806
+plot,data cleaning,3,0.013157894736842105
+plot,evaluation,2,0.008771929824561403
+plot,export,2,0.008771929824561403
+plot,modeling,4,0.017543859649122806
+plot,setup,2,0.008771929824561403
+plot,visualization,211,0.9254385964912281
+plot_cp,export,1,0.1
+plot_cp,visualization,9,0.9
+plot_grid,visualization,7,1
+plot_india,exploratory,1,0.5
+plot_india,visualization,1,0.5
+plot_prop,visualization,2,1
+plot_raw,visualization,1,1
+plot_us,visualization,2,1
+plot.clust,visualization,2,1
+plot.goterm,visualization,6,1
+plot.gtex.top2pcs,exploratory,1,0.5
+plot.gtex.top2pcs,visualization,1,0.5
+plot.wp,visualization,1,1
+plot3dHairballs,visualization,5,1
+plot3dProbe,evaluation,2,0.5
+plot3dProbe,visualization,2,0.5
+plotAnnoBar,visualization,1,1
+plotAnnoPie,visualization,3,1
+plotAvgProf,visualization,7,1
+plotDendroAndColors,visualization,6,1
+plotDistToTSS,visualization,4,1
+plotExpression,visualization,1,1
+plotHighestExprs,visualization,2,1
+plotlyOutput,communication,8,0.7272727272727273
+plotlyOutput,import,2,0.18181818181818182
+plotlyOutput,setup,1,0.09090909090909091
+plotmeans,exploratory,2,1
+plotMetadata,communication,1,0.25
+plotMetadata,data cleaning,1,0.25
+plotMetadata,exploratory,1,0.25
+plotMetadata,visualization,1,0.25
+plotOutput,communication,18,0.72
+plotOutput,exploratory,2,0.08
+plotOutput,import,3,0.12
+plotOutput,setup,2,0.08
+plotPCA,import,3,0.17647058823529413
+plotPCA,modeling,3,0.17647058823529413
+plotPCA,visualization,11,0.6470588235294118
+plotQC,import,3,0.17647058823529413
+plotQC,modeling,2,0.11764705882352941
+plotQC,visualization,12,0.7058823529411765
+plotVioBox,visualization,1,1
+plyr,data cleaning,1,1
+pmap,communication,7,0.5
+pmap,data cleaning,7,0.5
+pmax,data cleaning,5,0.625
+pmax,evaluation,3,0.375
+pmean,visualization,1,1
+png,communication,3,0.10344827586206896
+png,export,19,0.6551724137931034
+png,visualization,7,0.2413793103448276
+points,communication,2,0.023529411764705882
+points,export,1,0.011764705882352941
+points,visualization,82,0.9647058823529412
+poisson,modeling,1,1
+poisson.test,evaluation,1,0.5
+poisson.test,modeling,1,0.5
+Polygon,data cleaning,7,1
+Polygons,data cleaning,7,1
+position_dodge,visualization,31,1
+position_jitterdodge,visualization,2,1
+position_stack,visualization,2,1
+possibly,modeling,2,0.6666666666666666
+possibly,setup,1,0.3333333333333333
+posterior_samples,evaluation,3,1
+posterior.mode,evaluation,1,1
+postscript,export,7,0.875
+postscript,visualization,1,0.125
+PPTA.analysis,modeling,1,1
+PPTA.design,modeling,1,1
+praw,evaluation,1,0.3333333333333333
+praw,visualization,2,0.6666666666666666
+prcomp,data cleaning,2,0.14285714285714285
+prcomp,exploratory,3,0.21428571428571427
+prcomp,modeling,9,0.6428571428571429
+pred,evaluation,1,1
+pred1,evaluation,1,0.5
+pred1,modeling,1,0.5
+predict,data cleaning,2,0.03278688524590164
+predict,evaluation,22,0.36065573770491804
+predict,export,1,0.01639344262295082
+predict,modeling,36,0.5901639344262295
+predict.glm,evaluation,2,0.4
+predict.glm,modeling,3,0.6
+prediction,modeling,1,1
+predRE,modeling,1,1
+prepareGS,data cleaning,1,0.5
+prepareGS,import,1,0.5
+prepVars,modeling,4,1
+pretty,visualization,6,1
+prho,evaluation,3,0.42857142857142855
+prho,visualization,4,0.5714285714285714
+prho2,communication,1,0.5
+prho2,visualization,1,0.5
+prhouni,evaluation,1,0.3333333333333333
+prhouni,visualization,2,0.6666666666666666
+prhounisim,evaluation,1,0.5
+prhounisim,visualization,1,0.5
+principal,evaluation,1,0.25
+principal,modeling,2,0.5
+principal,visualization,1,0.25
+print,communication,66,0.3707865168539326
+print,data cleaning,3,0.016853932584269662
+print,evaluation,17,0.09550561797752809
+print,exploratory,53,0.29775280898876405
+print,export,16,0.0898876404494382
+print,import,3,0.016853932584269662
+print,modeling,4,0.02247191011235955
+print,setup,9,0.05056179775280899
+print,visualization,7,0.03932584269662921
+print_plot_basic,visualization,1,1
+problem.site,exploratory,1,1
+pROC,evaluation,1,0.3333333333333333
+pROC,modeling,1,0.3333333333333333
+pROC,visualization,1,0.3333333333333333
+proc.time,data cleaning,1,0.125
+proc.time,evaluation,1,0.125
+proc.time,exploratory,1,0.125
+proc.time,import,1,0.125
+proc.time,modeling,2,0.25
+proc.time,setup,2,0.25
+progress::progress_bar,data cleaning,1,1
+proj4string,data cleaning,4,0.5714285714285714
+proj4string,visualization,3,0.42857142857142855
+projection,modeling,2,1
+prop.table,data cleaning,1,0.2
+prop.table,exploratory,1,0.2
+prop.table,export,1,0.2
+prop.table,setup,2,0.4
+ptrack,evaluation,1,0.3333333333333333
+ptrack,visualization,2,0.6666666666666666
+ptukey,evaluation,18,0.5806451612903226
+ptukey,modeling,12,0.3870967741935484
+ptukey,setup,1,0.03225806451612903
+pull,data cleaning,2,0.3333333333333333
+pull,evaluation,3,0.5
+pull,import,1,0.16666666666666666
+puristOut,export,1,1
+purrr,communication,2,0.07142857142857142
+purrr,data cleaning,9,0.32142857142857145
+purrr,evaluation,2,0.07142857142857142
+purrr,export,6,0.21428571428571427
+purrr,import,6,0.21428571428571427
+purrr,setup,1,0.03571428571428571
+purrr,visualization,2,0.07142857142857142
+pvpick,data cleaning,1,1
+pwr.t.test,modeling,2,1
+pwra,evaluation,1,0.3333333333333333
+pwra,visualization,2,0.6666666666666666
+q,evaluation,2,1
+q_fun,evaluation,1,1
+qnorm,modeling,1,1
+qplot,modeling,1,0.125
+qplot,visualization,7,0.875
+qqline,evaluation,6,0.75
+qqline,visualization,2,0.25
+qqnorm,evaluation,6,0.75
+qqnorm,visualization,2,0.25
+qqplot,visualization,7,1
+qt,data cleaning,1,1
+quantile,data cleaning,19,0.41304347826086957
+quantile,evaluation,11,0.2391304347826087
+quantile,exploratory,6,0.13043478260869565
+quantile,modeling,7,0.15217391304347827
+quantile,visualization,3,0.06521739130434782
+quantile_table,evaluation,1,0.5
+quantile_table,exploratory,1,0.5
+quantileCut,data cleaning,2,1
+quartz,communication,1,1
+quasipoisson,modeling,1,1
+quickpsy,modeling,4,1
+quickreadfiles,data cleaning,1,0.08333333333333333
+quickreadfiles,import,10,0.8333333333333334
+quickreadfiles,setup,1,0.08333333333333333
+qvalue,evaluation,5,0.16666666666666666
+qvalue,exploratory,14,0.4666666666666667
+qvalue,modeling,10,0.3333333333333333
+qvalue,setup,1,0.03333333333333333
+radfit,modeling,1,1
+radFullToDegFull,data cleaning,2,0.6666666666666666
+radFullToDegFull,modeling,1,0.3333333333333333
+radioButtons,setup,1,1
+radlattice,visualization,2,1
+rainbow,visualization,2,1
+randomForest,modeling,1,1
+range,communication,4,0.3333333333333333
+range,evaluation,1,0.08333333333333333
+range,exploratory,1,0.08333333333333333
+range,visualization,6,0.5
+rank,data cleaning,2,0.2857142857142857
+rank,evaluation,1,0.14285714285714285
+rank,exploratory,3,0.42857142857142855
+rank,modeling,1,0.14285714285714285
+ranNorm,evaluation,5,0.5555555555555556
+ranNorm,modeling,2,0.2222222222222222
+ranNorm,visualization,2,0.2222222222222222
+raster,data cleaning,1,0.5
+raster,setup,1,0.5
+rayleigh.test,data cleaning,7,0.4666666666666667
+rayleigh.test,evaluation,4,0.26666666666666666
+rayleigh.test,exploratory,2,0.13333333333333333
+rayleigh.test,modeling,2,0.13333333333333333
+rbeta,visualization,1,1
+rbind,communication,1,0.00684931506849315
+rbind,data cleaning,88,0.6027397260273972
+rbind,evaluation,15,0.10273972602739725
+rbind,exploratory,1,0.00684931506849315
+rbind,export,1,0.00684931506849315
+rbind,import,7,0.04794520547945205
+rbind,modeling,21,0.14383561643835616
+rbind,setup,8,0.0547945205479452
+rbind,visualization,4,0.0273972602739726
+rbind.data.frame,data cleaning,2,1
+rbind.fill,data cleaning,4,0.8
+rbind.fill,exploratory,1,0.2
+rbindlist,evaluation,1,0.25
+rbindlist,modeling,3,0.75
+rbinom,data cleaning,2,0.2857142857142857
+rbinom,evaluation,2,0.2857142857142857
+rbinom,import,1,0.14285714285714285
+rbinom,setup,2,0.2857142857142857
+RC.brayplot,visualization,1,1
+rchisq,data cleaning,1,0.5
+rchisq,evaluation,1,0.5
+read_and_interpolate,data cleaning,3,1
+read_compare_var_res,exploratory,1,0.2
+read_compare_var_res,import,3,0.6
+read_compare_var_res,setup,1,0.2
+read_csv,data cleaning,3,0.07692307692307693
+read_csv,exploratory,1,0.02564102564102564
+read_csv,import,33,0.8461538461538461
+read_csv,setup,2,0.05128205128205128
+read_delim,data cleaning,4,0.8
+read_delim,import,1,0.2
+read_dir,import,5,1
+read_excel,import,4,1
+read_fst,import,6,1
+read_graph,import,7,0.7777777777777778
+read_graph,visualization,2,0.2222222222222222
+read_rds,import,5,1
+read_sav,data cleaning,1,0.1111111111111111
+read_sav,import,8,0.8888888888888888
+read_table2,import,1,1
+read_tsv,data cleaning,2,0.2
+read_tsv,import,8,0.8
+read_ufo,data cleaning,1,0.5
+read_ufo,setup,1,0.5
+read_xml,export,1,1
+read.BPBD,import,1,0.5
+read.BPBD,modeling,1,0.5
+read.counts.and.data,import,2,0.6666666666666666
+read.counts.and.data,setup,1,0.3333333333333333
+read.csv,data cleaning,17,0.04197530864197531
+read.csv,exploratory,2,0.0049382716049382715
+read.csv,export,5,0.012345679012345678
+read.csv,import,345,0.8518518518518519
+read.csv,modeling,8,0.019753086419753086
+read.csv,setup,24,0.05925925925925926
+read.csv,visualization,4,0.009876543209876543
+read.delim,export,1,0.0625
+read.delim,import,11,0.6875
+read.delim,setup,3,0.1875
+read.delim,visualization,1,0.0625
+read.design,import,2,0.6666666666666666
+read.design,setup,1,0.3333333333333333
+read.dir,import,5,1
+read.DNase.data,import,2,1
+read.dta,exploratory,1,0.125
+read.dta,import,7,0.875
+read.egt,import,1,1
+read.exp,import,2,1
+read.gtex.data,exploratory,1,0.3333333333333333
+read.gtex.data,import,2,0.6666666666666666
+read.table,data cleaning,16,0.04071246819338423
+read.table,evaluation,2,0.005089058524173028
+read.table,exploratory,1,0.002544529262086514
+read.table,export,3,0.007633587786259542
+read.table,import,359,0.9134860050890585
+read.table,modeling,1,0.002544529262086514
+read.table,setup,11,0.027989821882951654
+read.xls,import,1,1
+read.xlsx,import,1,1
+readBigMet,import,2,1
+ReadColumnViaPipe,data cleaning,1,0.25
+ReadColumnViaPipe,import,3,0.75
+readCufflinks,import,3,1
+readFastq,import,1,1
+readGDAL,setup,1,1
+readHrResults,import,1,1
+ReadInputs,import,2,1
+readLines,import,1,1
+readMappings,import,3,1
+ReadMouseLog,setup,2,1
+readNWISdv,import,1,1
+readOGR,import,18,1
+readPeakFile,import,17,1
+readr,data cleaning,2,0.09523809523809523
+readr,export,2,0.09523809523809523
+readr,import,16,0.7619047619047619
+readr,setup,1,0.047619047619047616
+readRDS,communication,1,0.012345679012345678
+readRDS,data cleaning,4,0.04938271604938271
+readRDS,exploratory,2,0.024691358024691357
+readRDS,import,72,0.8888888888888888
+readRDS,setup,2,0.024691358024691357
+recode,data cleaning,11,0.9166666666666666
+recode,modeling,1,0.08333333333333333
+recode_factor,data cleaning,1,1
+rect,communication,2,1
+rect.hclust,visualization,2,1
+Reduce,data cleaning,5,0.625
+Reduce,exploratory,1,0.125
+Reduce,modeling,1,0.125
+Reduce,setup,1,0.125
+reducedDims,exploratory,2,0.3333333333333333
+reducedDims,modeling,4,0.6666666666666666
+regexMerge,data cleaning,2,0.6666666666666666
+regexMerge,export,1,0.3333333333333333
+registerDoMC,evaluation,1,0.09090909090909091
+registerDoMC,setup,10,0.9090909090909091
+registerDoParallel,modeling,1,0.3333333333333333
+registerDoParallel,setup,2,0.6666666666666666
+registerDoSEQ,setup,1,1
+rel,data cleaning,1,0.05555555555555555
+rel,visualization,17,0.9444444444444444
+remef,modeling,1,1
+remove,data cleaning,1,1
+remove.sites,data cleaning,2,1
+rename,data cleaning,30,0.5555555555555556
+rename,evaluation,7,0.12962962962962962
+rename,exploratory,2,0.037037037037037035
+rename,import,11,0.2037037037037037
+rename,modeling,2,0.037037037037037035
+rename,visualization,2,0.037037037037037035
+render,communication,4,0.2857142857142857
+render,data cleaning,1,0.07142857142857142
+render,export,7,0.5
+render,visualization,2,0.14285714285714285
+renderGraph,evaluation,1,0.25
+renderGraph,visualization,3,0.75
+reorder,data cleaning,1,0.1111111111111111
+reorder,exploratory,2,0.2222222222222222
+reorder,visualization,6,0.6666666666666666
+rep,communication,3,0.010869565217391304
+rep,data cleaning,119,0.4311594202898551
+rep,evaluation,23,0.08333333333333333
+rep,exploratory,11,0.03985507246376811
+rep,export,4,0.014492753623188406
+rep,import,11,0.03985507246376811
+rep,modeling,15,0.05434782608695652
+rep,setup,50,0.18115942028985507
+rep,visualization,40,0.14492753623188406
+replace,data cleaning,3,0.6
+replace,exploratory,2,0.4
+replaceElement,data cleaning,5,0.8333333333333334
+replaceElement,import,1,0.16666666666666666
+replicate,export,1,1
+replotFeatures,visualization,1,1
+Report,export,1,1
+require,data cleaning,4,0.02666666666666667
+require,export,1,0.006666666666666667
+require,import,30,0.2
+require,setup,115,0.7666666666666667
+requireNamespace,import,1,1
+rescale,visualization,8,1
+reshape,data cleaning,6,0.8571428571428571
+reshape,setup,1,0.14285714285714285
+reshape2,data cleaning,4,0.8
+reshape2,exploratory,1,0.2
+resid,evaluation,4,0.2857142857142857
+resid,export,2,0.14285714285714285
+resid,modeling,6,0.42857142857142855
+resid,visualization,2,0.14285714285714285
+resid_panel,modeling,2,0.5
+resid_panel,visualization,2,0.5
+residuals,evaluation,7,0.875
+residuals,modeling,1,0.125
+return,communication,2,0.034482758620689655
+return,data cleaning,17,0.29310344827586204
+return,evaluation,6,0.10344827586206896
+return,exploratory,7,0.1206896551724138
+return,export,1,0.017241379310344827
+return,import,2,0.034482758620689655
+return,modeling,5,0.08620689655172414
+return,setup,13,0.22413793103448276
+return,visualization,5,0.08620689655172414
+rev,visualization,1,1
+revalue,data cleaning,2,0.6666666666666666
+revalue,setup,1,0.3333333333333333
+rexp,data cleaning,1,0.5
+rexp,evaluation,1,0.5
+rf_model,evaluation,1,1
+rgb,visualization,3,1
+rgcam,visualization,1,1
+rho.circular,data cleaning,8,0.5333333333333333
+rho.circular,evaluation,5,0.3333333333333333
+rho.circular,exploratory,2,0.13333333333333333
+RIG.theme,visualization,2,1
+right_join,data cleaning,1,1
+rm,data cleaning,29,0.1695906432748538
+rm,evaluation,3,0.017543859649122806
+rm,exploratory,1,0.005847953216374269
+rm,import,3,0.017543859649122806
+rm,modeling,1,0.005847953216374269
+rm,setup,134,0.783625730994152
+rm.null,import,1,1
+rma,evaluation,1,0.2
+rma,modeling,4,0.8
+rma.mv,modeling,98,1
+rmarkdown,communication,5,0.2631578947368421
+rmarkdown,data cleaning,2,0.10526315789473684
+rmarkdown,export,9,0.47368421052631576
+rmarkdown,visualization,3,0.15789473684210525
+Rmisc,evaluation,3,1
+RMS,modeling,2,1
+rmvnorm,modeling,1,1
+RMySQL,import,1,1
+rn,data cleaning,13,0.8125
+rn,modeling,1,0.0625
+rn,setup,2,0.125
+rna_count_matrix,data cleaning,2,0.5
+rna_count_matrix,exploratory,1,0.25
+rna_count_matrix,modeling,1,0.25
+rna_fpkm_matrix,modeling,1,1
+rnaCoexist,modeling,1,1
+rnaGencodeKallistoMatrix,import,1,0.5
+rnaGencodeKallistoMatrix,modeling,1,0.5
+rnaSeqTresh,data cleaning,2,0.6666666666666666
+rnaSeqTresh,setup,1,0.3333333333333333
+rnb.getOption,data cleaning,4,0.6666666666666666
+rnb.getOption,setup,2,0.3333333333333333
+rnb.initialize.reports,communication,1,0.5
+rnb.initialize.reports,setup,1,0.5
+rnb.options,data cleaning,2,0.2857142857142857
+rnb.options,import,1,0.14285714285714285
+rnb.options,modeling,2,0.2857142857142857
+rnb.options,setup,2,0.2857142857142857
+rnb.run.qc,modeling,1,1
+rnb.sample.groups,data cleaning,2,1
+rnb.sample.replicates,data cleaning,2,1
+RnBeadSet,evaluation,1,0.5
+RnBeadSet,import,1,0.5
+rnorm,data cleaning,7,0.7777777777777778
+rnorm,exploratory,1,0.1111111111111111
+rnorm,import,1,0.1111111111111111
+roc,modeling,1,1
+roll_mean_matrix,modeling,1,1
+rotateSelect,data cleaning,2,0.5
+rotateSelect,evaluation,1,0.25
+rotateSelect,export,1,0.25
+round,communication,8,0.13793103448275862
+round,data cleaning,30,0.5172413793103449
+round,evaluation,5,0.08620689655172414
+round,exploratory,2,0.034482758620689655
+round,export,1,0.017241379310344827
+round,modeling,5,0.08620689655172414
+round,setup,5,0.08620689655172414
+round,visualization,2,0.034482758620689655
+row.names,data cleaning,14,0.875
+row.names,exploratory,1,0.0625
+row.names,setup,1,0.0625
+rowMeans,data cleaning,5,0.8333333333333334
+rowMeans,evaluation,1,0.16666666666666666
+rownames,communication,1,0.004651162790697674
+rownames,data cleaning,153,0.7116279069767442
+rownames,evaluation,4,0.018604651162790697
+rownames,exploratory,4,0.018604651162790697
+rownames,export,4,0.018604651162790697
+rownames,import,16,0.07441860465116279
+rownames,modeling,4,0.018604651162790697
+rownames,setup,10,0.046511627906976744
+rownames,visualization,19,0.08837209302325581
+rowSums,data cleaning,16,0.7272727272727273
+rowSums,evaluation,3,0.13636363636363635
+rowSums,exploratory,2,0.09090909090909091
+rowSums,modeling,1,0.045454545454545456
+rowVars,data cleaning,5,0.7142857142857143
+rowVars,modeling,2,0.2857142857142857
+rprojroot,setup,2,1
+rq,modeling,2,1
+rstan_options,communication,1,0.16666666666666666
+rstan_options,import,1,0.16666666666666666
+rstan_options,setup,4,0.6666666666666666
+run_glm,data cleaning,1,1
+run_hector_emissions,modeling,1,1
+run.wilcox,data cleaning,2,0.6666666666666666
+run.wilcox,modeling,1,0.3333333333333333
+runAnalysisTrial,modeling,1,1
+runDrugAnalysis,import,2,1
+runif,exploratory,4,0.8
+runif,setup,1,0.2
+runMarkdown,communication,1,1
+runPCA,data cleaning,2,1
+runTest,data cleaning,1,0.1111111111111111
+runTest,evaluation,2,0.2222222222222222
+runTest,modeling,5,0.5555555555555556
+runTest,visualization,1,0.1111111111111111
+s,exploratory,5,0.05555555555555555
+s,modeling,85,0.9444444444444444
+samp.ia,exploratory,2,1
+sample,data cleaning,5,0.4166666666666667
+sample,exploratory,3,0.25
+sample,import,1,0.08333333333333333
+sample,modeling,1,0.08333333333333333
+sample,setup,1,0.08333333333333333
+sample,visualization,1,0.08333333333333333
+sample_frac,data cleaning,3,0.75
+sample_frac,evaluation,1,0.25
+sample_n,evaluation,2,0.5
+sample_n,modeling,2,0.5
+sample_sizes,communication,2,1
+sampleNames,data cleaning,2,1
+SampleSites,export,1,1
+sampling,modeling,1,1
+sapply,communication,1,0.011494252873563218
+sapply,data cleaning,40,0.45977011494252873
+sapply,evaluation,5,0.05747126436781609
+sapply,exploratory,10,0.11494252873563218
+sapply,export,2,0.022988505747126436
+sapply,import,12,0.13793103448275862
+sapply,modeling,11,0.12643678160919541
+sapply,setup,5,0.05747126436781609
+sapply,visualization,1,0.011494252873563218
+save,data cleaning,6,0.05263157894736842
+save,evaluation,2,0.017543859649122806
+save,exploratory,2,0.017543859649122806
+save,export,86,0.7543859649122807
+save,import,3,0.02631578947368421
+save,modeling,6,0.05263157894736842
+save,setup,7,0.06140350877192982
+save,visualization,2,0.017543859649122806
+save_plot,export,23,1
+save.image,export,8,0.6666666666666666
+save.image,setup,3,0.25
+save.image,visualization,1,0.08333333333333333
+saveRDS,communication,1,0.02040816326530612
+saveRDS,export,46,0.9387755102040817
+saveRDS,import,1,0.02040816326530612
+saveRDS,modeling,1,0.02040816326530612
+scale,data cleaning,5,0.5
+scale,modeling,5,0.5
+scale_color_brewer,visualization,4,1
+scale_color_discrete,visualization,11,1
+scale_color_gradient,visualization,1,1
+scale_color_gradient2,visualization,1,1
+scale_color_manual,export,2,0.06451612903225806
+scale_color_manual,modeling,1,0.03225806451612903
+scale_color_manual,setup,1,0.03225806451612903
+scale_color_manual,visualization,27,0.8709677419354839
+scale_color_viridis,visualization,4,1
+scale_color_viridis_c,visualization,2,1
+scale_colour_brewer,visualization,2,1
+scale_colour_discrete,visualization,5,1
+scale_colour_gradientn,visualization,2,1
+scale_fill_brewer,visualization,4,1
+scale_fill_discrete,visualization,23,1
+scale_fill_gdocs,data cleaning,1,0.25
+scale_fill_gdocs,visualization,3,0.75
+scale_fill_gradient,visualization,3,1
+scale_fill_manual,setup,1,0.041666666666666664
+scale_fill_manual,visualization,23,0.9583333333333334
+scale_linetype_manual,visualization,1,1
+scale_shape_manual,visualization,2,1
+scale_x_continuous,visualization,35,1
+scale_x_discrete,visualization,11,1
+scale_x_log10,visualization,2,1
+scale_y_continuous,data cleaning,1,0.022222222222222223
+scale_y_continuous,visualization,44,0.9777777777777777
+scale_y_discrete,visualization,5,1
+scale_y_log10,visualization,4,1
+scale_y_reverse,visualization,2,1
+scan,data cleaning,1,0.02564102564102564
+scan,exploratory,5,0.1282051282051282
+scan,import,26,0.6666666666666666
+scan,setup,6,0.15384615384615385
+scan,visualization,1,0.02564102564102564
+scores,visualization,4,1
+sd,communication,1,0.01639344262295082
+sd,data cleaning,16,0.26229508196721313
+sd,evaluation,7,0.11475409836065574
+sd,exploratory,17,0.2786885245901639
+sd,import,1,0.01639344262295082
+sd,modeling,17,0.2786885245901639
+sd,setup,2,0.03278688524590164
+search,import,1,0.3333333333333333
+search,setup,2,0.6666666666666666
+sec_axis,visualization,1,1
+select,communication,1,0.0041841004184100415
+select,data cleaning,152,0.6359832635983264
+select,evaluation,6,0.02510460251046025
+select,exploratory,40,0.16736401673640167
+select,import,14,0.058577405857740586
+select,modeling,17,0.07112970711297072
+select,setup,9,0.03765690376569038
+select_if,communication,1,0.16666666666666666
+select_if,data cleaning,3,0.5
+select_if,exploratory,1,0.16666666666666666
+select_if,modeling,1,0.16666666666666666
+selectInput,communication,12,0.75
+selectInput,import,3,0.1875
+selectInput,setup,1,0.0625
+self,setup,2,1
+semi_join,data cleaning,8,0.42105263157894735
+semi_join,evaluation,5,0.2631578947368421
+semi_join,exploratory,1,0.05263157894736842
+semi_join,modeling,1,0.05263157894736842
+semi_join,visualization,4,0.21052631578947367
+sen,modeling,1,1
+send,communication,2,1
+send.mail,communication,1,1
+Sensitivity_Analysis,data cleaning,1,0.2
+Sensitivity_Analysis,import,1,0.2
+Sensitivity_Analysis,modeling,2,0.4
+Sensitivity_Analysis,visualization,1,0.2
+separate,data cleaning,7,1
+sepExpr,setup,1,1
+seq,communication,4,0.034782608695652174
+seq,data cleaning,19,0.16521739130434782
+seq,evaluation,9,0.0782608695652174
+seq,exploratory,6,0.05217391304347826
+seq,import,4,0.034782608695652174
+seq,modeling,6,0.05217391304347826
+seq,setup,15,0.13043478260869565
+seq,visualization,52,0.45217391304347826
+seq_len,communication,1,1
+seq2gene,data cleaning,2,1
+sessionInfo,communication,4,0.3333333333333333
+sessionInfo,setup,8,0.6666666666666666
+set,communication,1,1
+set_config,setup,1,1
+set.seed,communication,1,0.014925373134328358
+set.seed,data cleaning,2,0.029850746268656716
+set.seed,modeling,7,0.1044776119402985
+set.seed,setup,52,0.7761194029850746
+set.seed,visualization,5,0.07462686567164178
+setdiff,data cleaning,2,0.2
+setdiff,exploratory,2,0.2
+setdiff,modeling,1,0.1
+setdiff,setup,5,0.5
+setDT,evaluation,1,1
+setEdgeWeights,exploratory,1,0.25
+setEdgeWeights,modeling,2,0.5
+setEdgeWeights,visualization,1,0.25
+setEPS,setup,6,1
+setkey,communication,1,0.07142857142857142
+setkey,data cleaning,10,0.7142857142857143
+setkey,setup,3,0.21428571428571427
+setMKLthreads,communication,1,0.16666666666666666
+setMKLthreads,export,2,0.3333333333333333
+setMKLthreads,setup,2,0.3333333333333333
+setMKLthreads,visualization,1,0.16666666666666666
+setnames,data cleaning,1,1
+setNames,data cleaning,1,0.5
+setNames,modeling,1,0.5
+setNodeWeights,exploratory,1,0.25
+setNodeWeights,import,1,0.25
+setNodeWeights,modeling,1,0.25
+setNodeWeights,visualization,1,0.25
+setPars,data cleaning,2,0.4
+setPars,evaluation,1,0.2
+setPars,exploratory,1,0.2
+setPars,modeling,1,0.2
+setwd,communication,1,0.0038910505836575876
+setwd,data cleaning,3,0.011673151750972763
+setwd,evaluation,2,0.007782101167315175
+setwd,export,1,0.0038910505836575876
+setwd,import,7,0.027237354085603113
+setwd,modeling,5,0.019455252918287938
+setwd,setup,235,0.914396887159533
+setwd,visualization,3,0.011673151750972763
+shapiro.test,modeling,3,1
+shinyApp,setup,1,1
+shinyDirButton,setup,1,1
+shinyUI,setup,1,1
+sidebarLayout,communication,4,0.6666666666666666
+sidebarLayout,import,1,0.16666666666666666
+sidebarLayout,setup,1,0.16666666666666666
+sidebarPanel,communication,14,0.6666666666666666
+sidebarPanel,exploratory,2,0.09523809523809523
+sidebarPanel,import,2,0.09523809523809523
+sidebarPanel,setup,3,0.14285714285714285
+sign,evaluation,3,0.2727272727272727
+sign,exploratory,3,0.2727272727272727
+sign,modeling,2,0.18181818181818182
+sign,setup,3,0.2727272727272727
+signif,data cleaning,1,1
+signifMarker,data cleaning,1,1
+sim,modeling,2,1
+sim_abundance,exploratory,2,0.6666666666666666
+sim_abundance,modeling,1,0.3333333333333333
+sim_ays_covar,exploratory,2,0.6666666666666666
+sim_ays_covar,modeling,1,0.3333333333333333
+sim_distribution,exploratory,2,0.6666666666666666
+sim_distribution,modeling,1,0.3333333333333333
+sim_logistic,evaluation,1,0.16666666666666666
+sim_logistic,modeling,5,0.8333333333333334
+sim_parabola,exploratory,2,0.6666666666666666
+sim_parabola,modeling,1,0.3333333333333333
+sim_R,exploratory,2,0.6666666666666666
+sim_R,modeling,1,0.3333333333333333
+sim_survey_parallel,modeling,2,1
+sim_vonB,exploratory,2,0.6666666666666666
+sim_vonB,modeling,1,0.3333333333333333
+sim_Z,exploratory,2,0.6666666666666666
+sim_Z,modeling,1,0.3333333333333333
+sim.bd.age,setup,1,1
+simplify2array,exploratory,1,1
+sink,exploratory,1,0.05263157894736842
+sink,export,10,0.5263157894736842
+sink,modeling,3,0.15789473684210525
+sink,setup,5,0.2631578947368421
+skewness,communication,1,0.14285714285714285
+skewness,data cleaning,1,0.14285714285714285
+skewness,evaluation,1,0.14285714285714285
+skewness,exploratory,1,0.14285714285714285
+skewness,modeling,2,0.2857142857142857
+skewness,setup,1,0.14285714285714285
+slice,exploratory,1,1
+sliderInput,setup,1,1
+slope,exploratory,1,1
+solve,evaluation,1,0.09090909090909091
+solve,modeling,10,0.9090909090909091
+sort,communication,1,0.02631578947368421
+sort,data cleaning,18,0.47368421052631576
+sort,evaluation,3,0.07894736842105263
+sort,exploratory,11,0.2894736842105263
+sort,import,1,0.02631578947368421
+sort,modeling,2,0.05263157894736842
+sort,setup,2,0.05263157894736842
+source,data cleaning,21,0.029045643153526972
+source,evaluation,7,0.009681881051175657
+source,exploratory,22,0.030428769017980636
+source,export,1,0.0013831258644536654
+source,import,265,0.3665283540802213
+source,modeling,20,0.027662517289073305
+source,setup,377,0.5214384508990318
+source,visualization,10,0.013831258644536652
+sourceCpp,import,2,1
+sourceDirectory,import,2,0.4
+sourceDirectory,setup,3,0.6
+spantree,data cleaning,2,1
+SpatialLines,data cleaning,2,1
+SpatialLinesDataFrame,data cleaning,2,1
+SpatialPoints,data cleaning,2,0.5
+SpatialPoints,modeling,2,0.5
+SpatialPointsDataFrame,data cleaning,2,0.5
+SpatialPointsDataFrame,exploratory,1,0.25
+SpatialPointsDataFrame,modeling,1,0.25
+SpatialPolygons,data cleaning,7,1
+SpatialPolygonsDataFrame,data cleaning,6,1
+spec,modeling,1,1
+split,data cleaning,4,0.6666666666666666
+split,import,1,0.16666666666666666
+split,visualization,1,0.16666666666666666
+split_data,data cleaning,1,1
+spread,data cleaning,17,0.85
+spread,exploratory,2,0.1
+spread,modeling,1,0.05
+sprintf,communication,7,0.3333333333333333
+sprintf,data cleaning,2,0.09523809523809523
+sprintf,exploratory,4,0.19047619047619047
+sprintf,export,1,0.047619047619047616
+sprintf,import,2,0.09523809523809523
+sprintf,modeling,3,0.14285714285714285
+sprintf,setup,1,0.047619047619047616
+sprintf,visualization,1,0.047619047619047616
+spTransform,data cleaning,11,0.8461538461538461
+spTransform,export,2,0.15384615384615385
+sql,exploratory,1,0.3333333333333333
+sql,import,2,0.6666666666666666
+sqldf,data cleaning,1,0.5
+sqldf,import,1,0.5
+sqrt,data cleaning,20,0.1834862385321101
+sqrt,evaluation,29,0.26605504587155965
+sqrt,exploratory,4,0.03669724770642202
+sqrt,import,1,0.009174311926605505
+sqrt,modeling,32,0.29357798165137616
+sqrt,setup,12,0.11009174311926606
+sqrt,visualization,11,0.10091743119266056
+sread,exploratory,1,1
+stack_models,exploratory,1,1
+stan,import,1,0.16666666666666666
+stan,modeling,4,0.6666666666666666
+stan,setup,1,0.16666666666666666
+stan_glm,import,2,1
+stan_model,modeling,3,0.75
+stan_model,setup,1,0.25
+standard_model_pipeline,exploratory,1,0.1111111111111111
+standard_model_pipeline,modeling,8,0.8888888888888888
+standardizeGeneSymbols,data cleaning,2,1
+starts_with,data cleaning,5,0.5555555555555556
+starts_with,exploratory,1,0.1111111111111111
+starts_with,modeling,3,0.3333333333333333
+stat_bin,visualization,2,1
+stat_binhex,visualization,2,1
+stat_boxplot,visualization,2,1
+stat_density,modeling,3,0.3333333333333333
+stat_density,visualization,6,0.6666666666666666
+stat_density2d,visualization,1,1
+stat_function,visualization,1,1
+stat_smooth,exploratory,2,0.16666666666666666
+stat_smooth,visualization,10,0.8333333333333334
+stat_summary,visualization,33,1
+stats,exploratory,1,1
+stepAIC,modeling,2,1
+stop,data cleaning,1,0.09090909090909091
+stop,evaluation,3,0.2727272727272727
+stop,import,2,0.18181818181818182
+stop,modeling,1,0.09090909090909091
+stop,setup,4,0.36363636363636365
+stopCluster,setup,1,1
+stopifnot,data cleaning,6,0.6
+stopifnot,exploratory,1,0.1
+stopifnot,import,1,0.1
+stopifnot,modeling,1,0.1
+stopifnot,setup,1,0.1
+stopwords,data cleaning,2,1
+store,data cleaning,1,0.5
+store,export,1,0.5
+str,communication,2,0.05128205128205128
+str,data cleaning,1,0.02564102564102564
+str,evaluation,7,0.1794871794871795
+str,exploratory,27,0.6923076923076923
+str,import,1,0.02564102564102564
+str,setup,1,0.02564102564102564
+str_detect,data cleaning,3,0.5
+str_detect,import,1,0.16666666666666666
+str_detect,setup,2,0.3333333333333333
+str_extract,data cleaning,3,0.5
+str_extract,export,1,0.16666666666666666
+str_extract,setup,2,0.3333333333333333
+str_pad,data cleaning,1,1
+str_remove,data cleaning,6,1
+str_replace,data cleaning,3,0.75
+str_replace,exploratory,1,0.25
+str_replace_all,data cleaning,7,0.7777777777777778
+str_replace_all,exploratory,1,0.1111111111111111
+str_replace_all,import,1,0.1111111111111111
+str_split,data cleaning,4,1
+str_sub,data cleaning,6,0.8571428571428571
+str_sub,setup,1,0.14285714285714285
+str_to_lower,data cleaning,1,0.5
+str_to_lower,exploratory,1,0.5
+str_to_title,data cleaning,4,1
+str_trim,data cleaning,1,0.5
+str_trim,import,1,0.5
+strat.fun,export,1,1
+stringr,data cleaning,7,1
+strptime,setup,1,1
+strsplit,communication,1,0.024390243902439025
+strsplit,data cleaning,30,0.7317073170731707
+strsplit,import,6,0.14634146341463414
+strsplit,setup,4,0.0975609756097561
+structure,data cleaning,1,1
+su_vitd,exploratory,2,1
+sub,data cleaning,9,0.9
+sub,evaluation,1,0.1
+subset,communication,1,0.004975124378109453
+subset,data cleaning,152,0.7562189054726368
+subset,evaluation,5,0.024875621890547265
+subset,exploratory,17,0.0845771144278607
+subset,import,4,0.01990049751243781
+subset,modeling,9,0.04477611940298507
+subset,setup,3,0.014925373134328358
+subset,visualization,10,0.04975124378109453
+substitute,data cleaning,1,1
+substr,data cleaning,12,0.75
+substr,evaluation,1,0.0625
+substr,exploratory,3,0.1875
+substring,data cleaning,1,1
+sum,communication,1,0.0027624309392265192
+sum,data cleaning,91,0.2513812154696133
+sum,evaluation,68,0.1878453038674033
+sum,exploratory,134,0.3701657458563536
+sum,export,1,0.0027624309392265192
+sum,import,2,0.0055248618784530384
+sum,modeling,43,0.11878453038674033
+sum,setup,17,0.04696132596685083
+sum,visualization,5,0.013812154696132596
+summarise,data cleaning,57,0.4956521739130435
+summarise,evaluation,21,0.1826086956521739
+summarise,exploratory,29,0.25217391304347825
+summarise,modeling,6,0.05217391304347826
+summarise,visualization,2,0.017391304347826087
+summarize,data cleaning,16,0.4444444444444444
+summarize,evaluation,1,0.027777777777777776
+summarize,exploratory,12,0.3333333333333333
+summarize,setup,3,0.08333333333333333
+summarize,visualization,4,0.1111111111111111
+summarize_all,evaluation,1,1
+summarize_at,evaluation,1,0.5
+summarize_at,exploratory,1,0.5
+SummarizedExperiment,data cleaning,2,0.5
+SummarizedExperiment,modeling,2,0.5
+summary,communication,16,0.056140350877192984
+summary,data cleaning,3,0.010526315789473684
+summary,evaluation,86,0.3017543859649123
+summary,exploratory,118,0.41403508771929826
+summary,export,4,0.014035087719298246
+summary,modeling,54,0.18947368421052632
+summary,setup,2,0.007017543859649123
+summary,visualization,2,0.007017543859649123
+Summary,communication,1,0.25
+Summary,exploratory,2,0.5
+Summary,modeling,1,0.25
+summary_samples,evaluation,1,0.5
+summary_samples,exploratory,1,0.5
+summaryBy,setup,1,1
+summarySE,modeling,1,1
+suppressMessages,export,1,0.038461538461538464
+suppressMessages,import,10,0.38461538461538464
+suppressMessages,setup,15,0.5769230769230769
+suppressPackageStartupMessages,import,1,0.25
+suppressPackageStartupMessages,setup,3,0.75
+suppressWarnings,visualization,1,1
+surv_plot,evaluation,2,0.6666666666666666
+surv_plot,visualization,1,0.3333333333333333
+survfit,modeling,1,1
+survivalAnalysisByExpression,exploratory,5,1
+survivalAnalysisByMutation,exploratory,5,1
+survivalAnalysisByMutationAndExpression,data cleaning,2,1
+svg,export,1,0.5
+svg,visualization,1,0.5
+svgPlotGG,export,2,1
+svydesign,modeling,2,1
+svyglm,modeling,2,1
+sweep,data cleaning,1,0.5
+sweep,modeling,1,0.5
+switch,import,1,1
+syn,data cleaning,2,0.2857142857142857
+syn,export,1,0.14285714285714285
+syn,import,3,0.42857142857142855
+syn,modeling,1,0.14285714285714285
+"syn$tableQuery(""SELECT sampleIdentifier,Patient,TumorLocation,RNASeq FROM syn5556216 where usedforRNA=TRUE"")",data cleaning,1,1
+synapse,data cleaning,2,0.6666666666666666
+synapse,export,1,0.3333333333333333
+Synapse,data cleaning,1,1
+synapseLogin,communication,1,0.07692307692307693
+synapseLogin,exploratory,1,0.07692307692307693
+synapseLogin,import,1,0.07692307692307693
+synapseLogin,setup,10,0.7692307692307693
+synapseQuery,import,3,1
+synapser,data cleaning,3,0.42857142857142855
+synapser,import,2,0.2857142857142857
+synapser,setup,2,0.2857142857142857
+synDelete,import,1,1
+synGet,data cleaning,2,0.2222222222222222
+synGet,import,7,0.7777777777777778
+synLogin,communication,1,0.16666666666666666
+synLogin,setup,5,0.8333333333333334
+synStore,communication,2,0.09523809523809523
+synStore,data cleaning,2,0.09523809523809523
+synStore,export,9,0.42857142857142855
+synStore,import,6,0.2857142857142857
+synStore,setup,2,0.09523809523809523
+synTableQuery,data cleaning,1,0.16666666666666666
+synTableQuery,exploratory,1,0.16666666666666666
+synTableQuery,import,3,0.5
+synTableQuery,setup,1,0.16666666666666666
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study  FROM syn13363852 WHERE ( ( \""assay\"" = 'rnaSeq' ) AND ( \""fileFormat\"" = 'sf' ) )"")",export,1,0.3333333333333333
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study  FROM syn13363852 WHERE ( ( \""assay\"" = 'rnaSeq' ) AND ( \""fileFormat\"" = 'sf' ) )"")",import,2,0.6666666666666666
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study FROM syn11614207 WHERE ( ( \""assay\"" = 'rnaSeq' ) )"")",export,1,0.3333333333333333
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study FROM syn11614207 WHERE ( ( \""assay\"" = 'rnaSeq' ) )"")",import,2,0.6666666666666666
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study FROM syn9702734 WHERE ( ( \""parentId\"" = 'syn5493036' ) AND ( \""assay\"" = 'rnaSeq' ) AND ( \""individualID\"" IS NOT NULL ) )"")",export,1,0.3333333333333333
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study FROM syn9702734 WHERE ( ( \""parentId\"" = 'syn5493036' ) AND ( \""assay\"" = 'rnaSeq' ) AND ( \""individualID\"" IS NOT NULL ) )"")",import,2,0.6666666666666666
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study,diagnosis  FROM syn13363852 WHERE ( ( \""assay\"" = 'rnaSeq' ) AND ( \""fileFormat\"" = 'sf' ) )"")",import,1,1
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study,diagnosis FROM syn8518944 WHERE ( ( \""assay\"" = 'rnaSeq' ) ) and fileFormat='tsv' and isMultiSpecimen is NULL and name like '%gencode%'"")",import,1,1
+"synTableQuery(""SELECT id,specimenID,species,sex,age,tumorType,isCellLine,study,diagnosis FROM syn9702734 WHERE ( ( \""parentId\"" = 'syn5493036' ) AND ( \""assay\"" = 'rnaSeq' ) AND ( \""individualID\"" IS NOT NULL ) )"")",import,1,1
+Sys.Date,evaluation,1,0.05
+Sys.Date,exploratory,2,0.1
+Sys.Date,export,17,0.85
+sys.frame,setup,1,1
+Sys.getenv,data cleaning,1,0.013888888888888888
+Sys.getenv,import,4,0.05555555555555555
+Sys.getenv,setup,67,0.9305555555555556
+Sys.getpid,exploratory,1,0.3333333333333333
+Sys.getpid,setup,2,0.6666666666666666
+Sys.time,communication,7,0.3181818181818182
+Sys.time,data cleaning,1,0.045454545454545456
+Sys.time,evaluation,5,0.22727272727272727
+Sys.time,export,2,0.09090909090909091
+Sys.time,setup,7,0.3181818181818182
+system,communication,1,0.25
+system,export,1,0.25
+system,setup,2,0.5
+system.file,data cleaning,1,0.09090909090909091
+system.file,import,5,0.45454545454545453
+system.file,setup,5,0.45454545454545453
+t,data cleaning,38,0.4935064935064935
+t,evaluation,2,0.025974025974025976
+t,exploratory,3,0.03896103896103896
+t,export,3,0.03896103896103896
+t,import,3,0.03896103896103896
+t,modeling,21,0.2727272727272727
+t,setup,1,0.012987012987012988
+t,visualization,6,0.07792207792207792
+t_out,evaluation,2,1
+t.test,evaluation,4,0.14814814814814814
+t.test,exploratory,11,0.4074074074074074
+t.test,modeling,11,0.4074074074074074
+t.test,visualization,1,0.037037037037037035
+table,communication,3,0.043478260869565216
+table,data cleaning,15,0.21739130434782608
+table,evaluation,7,0.10144927536231885
+table,exploratory,22,0.3188405797101449
+table,export,5,0.07246376811594203
+table,import,2,0.028985507246376812
+table,modeling,4,0.057971014492753624
+table,setup,6,0.08695652173913043
+table,visualization,5,0.07246376811594203
+tableOutput,communication,8,0.8
+tableOutput,import,2,0.2
+tables,export,4,1
+tabPanel,communication,22,0.6875
+tabPanel,exploratory,2,0.0625
+tabPanel,import,4,0.125
+tabPanel,setup,4,0.125
+tabsetPanel,setup,1,1
+tabular,data cleaning,3,0.75
+tabular,export,1,0.25
+tagHeatmap,visualization,5,1
+tags,setup,1,1
+tail,communication,2,0.4
+tail,exploratory,2,0.4
+tail,visualization,1,0.2
+tamoxifen,exploratory,1,1
+tapply,data cleaning,3,0.3333333333333333
+tapply,evaluation,2,0.2222222222222222
+tapply,exploratory,2,0.2222222222222222
+tapply,modeling,2,0.2222222222222222
+tbl,data cleaning,1,0.25
+tbl,exploratory,1,0.25
+tbl,import,2,0.5
+tbl_df,data cleaning,10,0.6666666666666666
+tbl_df,exploratory,1,0.06666666666666667
+tbl_df,import,4,0.26666666666666666
+tbl_dt,data cleaning,2,0.6666666666666666
+tbl_dt,exploratory,1,0.3333333333333333
+Term,data cleaning,2,0.4
+Term,export,3,0.6
+test_surveys,evaluation,1,0.3333333333333333
+test_surveys,modeling,2,0.6666666666666666
+testit,setup,1,1
+text,communication,2,0.11764705882352941
+text,visualization,15,0.8823529411764706
+textcat,data cleaning,3,1
+textOutput,setup,1,1
+theme,data cleaning,2,0.010638297872340425
+theme,evaluation,1,0.005319148936170213
+theme,exploratory,1,0.005319148936170213
+theme,setup,3,0.015957446808510637
+theme,visualization,181,0.9627659574468085
+theme_apa,setup,2,1
+theme_bw,exploratory,1,0.0196078431372549
+theme_bw,setup,3,0.058823529411764705
+theme_bw,visualization,47,0.9215686274509803
+theme_classic,setup,1,0.09090909090909091
+theme_classic,visualization,10,0.9090909090909091
+theme_cowplot,visualization,7,1
+theme_dark,visualization,2,1
+theme_get,visualization,1,1
+theme_light,visualization,4,1
+theme_minimal,visualization,14,1
+theme_pander,visualization,11,1
+theme_set,setup,6,0.75
+theme_set,visualization,2,0.25
+theme_update,visualization,1,1
+threshold,data cleaning,2,1
+tibble,data cleaning,7,0.5384615384615384
+tibble,exploratory,2,0.15384615384615385
+tibble,setup,1,0.07692307692307693
+tibble,visualization,3,0.23076923076923078
+tick,data cleaning,1,1
+tidy,modeling,1,1
+tidy_beta,data cleaning,3,1
+tidync,data cleaning,2,1
+tidyr,data cleaning,5,0.8333333333333334
+tidyr,import,1,0.16666666666666666
+tiff,export,1,0.5
+tiff,import,1,0.5
+tikz,evaluation,1,0.125
+tikz,export,1,0.125
+tikz,modeling,1,0.125
+tikz,setup,1,0.125
+tikz,visualization,4,0.5
+tikzDevice,evaluation,1,0.125
+tikzDevice,export,1,0.125
+tikzDevice,modeling,1,0.125
+tikzDevice,setup,1,0.125
+tikzDevice,visualization,4,0.5
+time.taken,evaluation,1,1
+timeout,export,1,0.5
+timeout,import,1,0.5
+title,visualization,11,1
+titlePanel,setup,1,1
+tm_map,data cleaning,8,1
+tn,modeling,1,1
+toColor,export,1,0.25
+toColor,import,1,0.25
+toColor,visualization,2,0.5
+today,communication,2,0.25
+today,data cleaning,2,0.25
+today,evaluation,1,0.125
+today,exploratory,2,0.25
+today,setup,1,0.125
+tolower,data cleaning,13,0.6842105263157895
+tolower,exploratory,2,0.10526315789473684
+tolower,import,2,0.10526315789473684
+tolower,visualization,2,0.10526315789473684
+top_n,data cleaning,1,1
+topicize,data cleaning,1,1
+TOSTtwo.raw,modeling,1,1
+totalerrorToDegSemi,data cleaning,4,1
+tp,modeling,1,1
+tpm,visualization,4,1
+tpt,visualization,2,1
+tptop,visualization,3,1
+train,modeling,1,1
+train_gbm_classifier,modeling,9,1
+train_stacked_model,modeling,1,1
+trainControl,data cleaning,1,0.07142857142857142
+trainControl,evaluation,1,0.07142857142857142
+trainControl,import,1,0.07142857142857142
+trainControl,modeling,8,0.5714285714285714
+trainControl,setup,3,0.21428571428571427
+transf.ipft,visualization,3,1
+transform,data cleaning,1,1
+translatePublishable,data cleaning,1,1
+TreeCmp.Read,import,1,0.25
+TreeCmp.Read,modeling,3,0.75
+trial_counts,communication,1,0.5
+trial_counts,evaluation,1,0.5
+trim,data cleaning,4,1
+trimws,data cleaning,1,1
+try,modeling,2,0.14285714285714285
+try,setup,12,0.8571428571428571
+ts,exploratory,10,0.47619047619047616
+ts,modeling,10,0.47619047619047616
+ts,visualization,1,0.047619047619047616
+tsdisplay,exploratory,1,1
+TukeyHSD,evaluation,5,0.2631578947368421
+TukeyHSD,exploratory,1,0.05263157894736842
+TukeyHSD,modeling,13,0.6842105263157895
+tune.svm3,evaluation,1,1
+tx_prev,communication,2,1
+typeof,exploratory,2,1
+ungroup,data cleaning,20,0.7142857142857143
+ungroup,evaluation,2,0.07142857142857142
+ungroup,exploratory,4,0.14285714285714285
+ungroup,modeling,1,0.03571428571428571
+ungroup,setup,1,0.03571428571428571
+uni_models_list,evaluation,1,0.5
+uni_models_list,exploratory,1,0.5
+union,data cleaning,29,0.6170212765957447
+union,evaluation,4,0.0851063829787234
+union,exploratory,11,0.23404255319148937
+union,setup,3,0.06382978723404255
+unique,communication,4,0.025477707006369428
+unique,data cleaning,83,0.5286624203821656
+unique,evaluation,9,0.05732484076433121
+unique,exploratory,43,0.27388535031847133
+unique,export,3,0.01910828025477707
+unique,import,2,0.012738853503184714
+unique,modeling,3,0.01910828025477707
+unique,setup,5,0.03184713375796178
+unique,visualization,5,0.03184713375796178
+unit,visualization,10,1
 unlink,setup,1,1
-unlist,cleaning,4,0.8
-unlist,exploratory,1,0.2
-unname,cleaning,3,1
-unnest,cleaning,3,1
-unnest_tokens,setup,2,1
-unzip,setup,5,1
-update,modeling,4,1
-var,modeling,1,1
-vector,cleaning,1,1
-verboseBoxplot,evaluation,2,1
-verboseScatterplot,evaluation,3,1
-vioplot,evaluation,3,1
-voom,modeling,1,1
-warnings,setup,1,1
-which,cleaning,1,0.1
-which,evaluation,1,0.1
-which,exploratory,6,0.6
-which,modeling,2,0.2
-which.max,exploratory,1,1
-which.min,evaluation,1,1
-wilcox.test,evaluation,1,0.14285714285714285
-wilcox.test,exploratory,6,0.8571428571428571
-with,cleaning,2,0.3333333333333333
-with,evaluation,3,0.5
-with,modeling,1,0.16666666666666666
-within,evaluation,1,1
-write_csv,cleaning,2,1
-write.csv,setup,1,1
-write.table,evaluation,1,0.5
-write.table,exploratory,1,0.5
-xlab,evaluation,1,0.25
-xlab,exploratory,3,0.75
-xlim,exploratory,2,1
-ylab,exploratory,2,1
-ylim,evaluation,3,1
-ymd_hms,cleaning,1,0.1111111111111111
-ymd_hms,evaluation,5,0.5555555555555556
-ymd_hms,modeling,3,0.3333333333333333
+unlist,data cleaning,56,0.5436893203883495
+unlist,evaluation,6,0.05825242718446602
+unlist,exploratory,6,0.05825242718446602
+unlist,export,6,0.05825242718446602
+unlist,import,3,0.02912621359223301
+unlist,modeling,10,0.0970873786407767
+unlist,setup,13,0.1262135922330097
+unlist,visualization,3,0.02912621359223301
+unname,data cleaning,2,0.5
+unname,exploratory,2,0.5
+unzip,import,1,1
+update,modeling,2,1
+upper.tri,exploratory,1,1
+upsetplot,visualization,6,1
+ur.df,evaluation,2,0.5
+ur.df,modeling,2,0.5
+useMart,import,3,1
+V,exploratory,1,0.2
+V,modeling,2,0.4
+V,visualization,2,0.4
+VAR,evaluation,1,0.5
+VAR,modeling,1,0.5
+vargha.delaney,communication,1,0.25
+vargha.delaney,data cleaning,1,0.25
+vargha.delaney,evaluation,1,0.25
+vargha.delaney,modeling,1,0.25
+variable_freq_by_n,modeling,1,1
+varIdent,modeling,2,1
+varImpPlot,visualization,1,1
+vars,evaluation,1,0.5
+vars,exploratory,1,0.5
+vars_select,data cleaning,5,0.5555555555555556
+vars_select,exploratory,1,0.1111111111111111
+vars_select,modeling,3,0.3333333333333333
+VARselect,evaluation,1,0.5
+VARselect,modeling,1,0.5
+vb,modeling,1,1
+vcov,setup,1,1
+vector,data cleaning,24,0.26666666666666666
+vector,evaluation,14,0.15555555555555556
+vector,exploratory,7,0.07777777777777778
+vector,export,1,0.011111111111111112
+vector,import,5,0.05555555555555555
+vector,modeling,6,0.06666666666666667
+vector,setup,33,0.36666666666666664
+vegdist,setup,1,1
+vennpie,visualization,3,1
+vennplot,data cleaning,1,0.5
+vennplot,visualization,1,0.5
+verify_output_dirs,export,1,1
+View,exploratory,4,0.8
+View,visualization,1,0.2
+viewport,setup,1,0.5
+viewport,visualization,1,0.5
+vif,evaluation,3,0.5
+vif,modeling,3,0.5
+vioplot,visualization,1,1
+viridis,visualization,4,1
+viridisLite,setup,1,1
+voom,import,1,1
+VSS,exploratory,1,1
+vsurf_bb,export,1,0.5
+vsurf_bb,import,1,0.5
+walk,setup,1,1
+warning,setup,2,1
+warnings,communication,2,0.16666666666666666
+warnings,evaluation,5,0.4166666666666667
+warnings,exploratory,3,0.25
+warnings,modeling,1,0.08333333333333333
+warnings,setup,1,0.08333333333333333
+wd,data cleaning,2,1
+wday,exploratory,1,1
+week,data cleaning,3,1
+wes_palette,visualization,6,1
+wesanderson,visualization,3,1
+wetland.hydrology,data cleaning,1,1
+which,communication,2,0.005405405405405406
+which,data cleaning,221,0.5972972972972973
+which,evaluation,27,0.07297297297297298
+which,exploratory,77,0.20810810810810812
+which,export,4,0.010810810810810811
+which,import,5,0.013513513513513514
+which,modeling,8,0.021621621621621623
+which,setup,9,0.024324324324324326
+which,visualization,17,0.04594594594594595
+which.min,evaluation,1,0.3333333333333333
+which.min,modeling,1,0.3333333333333333
+which.min,setup,1,0.3333333333333333
+while,evaluation,1,0.3333333333333333
+while,exploratory,1,0.3333333333333333
+while,export,1,0.3333333333333333
+width,exploratory,3,1
+wilcox.test,data cleaning,2,0.05405405405405406
+wilcox.test,evaluation,3,0.08108108108108109
+wilcox.test,exploratory,14,0.3783783783783784
+wilcox.test,modeling,17,0.4594594594594595
+wilcox.test,visualization,1,0.02702702702702703
+window,exploratory,1,1
+windows,setup,2,1
+with,communication,1,0.018518518518518517
+with,data cleaning,14,0.25925925925925924
+with,evaluation,3,0.05555555555555555
+with,exploratory,11,0.2037037037037037
+with,modeling,9,0.16666666666666666
+with,setup,1,0.018518518518518517
+with,visualization,15,0.2777777777777778
+wordcloud,visualization,2,1
+wr,data cleaning,2,1
+write,export,5,0.8333333333333334
+write,visualization,1,0.16666666666666666
+write_bib,communication,6,1
+write_csv,exploratory,1,0.07692307692307693
+write_csv,export,12,0.9230769230769231
+write_fst,export,2,1
+write_rds,data cleaning,1,0.1111111111111111
+write_rds,export,8,0.8888888888888888
+write.csv,communication,2,0.019230769230769232
+write.csv,data cleaning,4,0.038461538461538464
+write.csv,evaluation,1,0.009615384615384616
+write.csv,export,87,0.8365384615384616
+write.csv,import,4,0.038461538461538464
+write.csv,modeling,3,0.028846153846153848
+write.csv,setup,3,0.028846153846153848
+write.table,communication,2,0.02631578947368421
+write.table,data cleaning,2,0.02631578947368421
+write.table,evaluation,2,0.02631578947368421
+write.table,exploratory,2,0.02631578947368421
+write.table,export,67,0.881578947368421
+write.table,setup,1,0.013157894736842105
+write.tree,export,1,1
+write.xlsx,export,10,1
+writeRaster,export,1,1
+x,modeling,2,1
+x11,setup,2,0.5
+x11,visualization,2,0.5
+xlab,import,2,0.029411764705882353
+xlab,modeling,1,0.014705882352941176
+xlab,visualization,65,0.9558823529411765
+xlim,modeling,1,0.09090909090909091
+xlim,visualization,10,0.9090909090909091
+xml_find_all,export,1,1
+xml_text,export,1,1
+xml2,export,3,1
+xtable,communication,8,0.7272727272727273
+xtable,exploratory,2,0.18181818181818182
+xtable,modeling,1,0.09090909090909091
+xyplot,visualization,1,1
+y_bmt,exploratory,2,1
+yaml.load_file,import,2,0.4
+yaml.load_file,modeling,1,0.2
+yaml.load_file,setup,2,0.4
+year,data cleaning,7,1
+yhat.deploy,modeling,2,1
+yhat.predict,evaluation,1,0.3333333333333333
+yhat.predict,modeling,2,0.6666666666666666
+yhat.svm.result,modeling,2,1
+ylab,import,2,0.02702702702702703
+ylab,modeling,1,0.013513513513513514
+ylab,visualization,71,0.9594594594594594
+ylim,visualization,8,1
+zapsmall,communication,6,0.6666666666666666
+zapsmall,evaluation,3,0.3333333333333333

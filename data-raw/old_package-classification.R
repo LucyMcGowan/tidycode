@@ -1,3 +1,5 @@
+## This is based on old data. Keeping it in case we return to this model.
+
 library(googlesheets)
 library(tidyverse)
 id <- "1I_jcI_qQRnT642McsJf1a666DpUdwmZsXr0cIZ2-RH0"
