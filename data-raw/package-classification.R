@@ -1,7 +1,7 @@
 library(tidyverse)
 ## data from lucy.shinyapps.io/classify
 d <- read_csv("data-raw/2019-03-14_classify-data.csv")
-d
+
 safe_parse <- possibly(rlang::parse_expr, NULL)
 safe_unnest <- possibly(unnest_calls,
                         otherwise = tibble(func = NA_character_, args = NA_character_, line = NA_real_))
@@ -27,6 +27,7 @@ classification_tbl <- tibble(
   filter(classification != "not sure") %>%
   group_by(func, classification) %>%
   summarise(n = n()) %>%
-  mutate(prevalence = n / sum(n))
+  mutate(prevalence = n / sum(n)) %>%
+  arrange(func, - prevalence)
 
 write_csv(classification_tbl, "inst/extdata/classification_tbl.csv")
