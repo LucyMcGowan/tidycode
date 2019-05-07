@@ -3,6 +3,7 @@
 export("%>%")
 export(get_classifications)
 export(get_packages_tbl)
+export(get_stopfuncs)
 export(is_package)
 export(is_pipe)
 export(ls_fun_args)
