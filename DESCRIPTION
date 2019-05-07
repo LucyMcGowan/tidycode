@@ -4,13 +4,16 @@ Title: A package to analyze lines of R code
 Version: 0.1.0
 Authors@R: c(
          person("Lucy", "D'Agostino McGowan", email = "lucydagostino@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7297-9359")),
-         person("Jim", "Hester", email = "james.f.hester@gmail.com", role = "ctb")
+         person("Jim", "Hester", email = "james.f.hester@gmail.com", role = "ctb"),
+         person("Jeff", "Leek", email = "jtleek@gmail.com", role = c("ldr"))
          )
 Description: A package to analyze lines of R code.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
-Imports: purrr,
+Imports: 
+    purrr,
     pryr,
-    tibble
+    tibble,
+    matahari
