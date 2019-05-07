@@ -6,11 +6,11 @@
 #' @export
 #'
 #' @examples
-#' matahari::dance_start()
-#' library(tidycode)
-#' expr <- matahari::dance_tbl()$expr
-#' ls_packages(expr)
-#' matahari::dance_remove()
+#' ls_packages(
+#'   list(
+#'     quote(library(tidycode)),
+#'     quote(library(purrr)))
+#'   )
 ls_packages <- function(x) {
   if (is.call(x)) {
     x <- deparse(x)

@@ -6,12 +6,7 @@
 #' @export
 #'
 #' @examples
-#' matahari::dance_start()
-#' m <- lm(mpg ~ cyl, mtcars)
-#' matahari::dance_stop()
-#' expr <- matahari::dance_tbl()$expr
-#' ls_fun_args(expr[[3]])
-#' matahari::dance_remove()
+#' ls_fun_args(quote(lm(mpg ~ cyl, mtcars)))
 ls_fun_args <- function (x) {
   if (is.function(x)) {
     c(ls_fun_args(formals(x)), ls_fun_args(body(x)))

@@ -11,7 +11,7 @@
 #' is_package(
 #'   list(
 #'     quote(library(tidycode)),
-#'     quote(library(matahari)))
+#'     quote(library(purrr)))
 #'   )
 
 is_package <- function(x) {
