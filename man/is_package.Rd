@@ -21,6 +21,6 @@ is_package(quote(tidycode::is_package))
 is_package(
   list(
     quote(library(tidycode)),
-    quote(library(matahari)))
+    quote(library(purrr)))
   )
 }

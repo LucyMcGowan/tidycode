@@ -4,10 +4,12 @@
 \alias{unnest_calls}
 \title{Unnest R calls}
 \usage{
-unnest_calls(x)
+unnest_calls(x, drop = TRUE)
 }
 \arguments{
 \item{x}{an R call or list of R calls}
+
+\item{drop}{`logical`. Whether the original input R call(s) should be dropped.}
 }
 \value{
 a tibble of the unnested R calls with three columns: `line`: the line number of the call
@@ -17,10 +19,9 @@ a tibble of the unnested R calls with three columns: `line`: the line number of 
 Unnest R calls
 }
 \examples{
-matahari::dance_start()
-m <- lm(mpg ~ cyl, mtcars)
-matahari::dance_stop()
-expr <- matahari::dance_tbl()$expr
-unnest_calls(expr)
-matahari::dance_remove()
+# Unnest a model call
+unnest_calls(quote(lm(mpg ~ cyl, mtcars)))
+
+# Unnest a model call and keep the call itself using the drop parameter
+unnest_calls(quote(lm(mpg ~ cyl, mtcars)), drop = FALSE)
 }

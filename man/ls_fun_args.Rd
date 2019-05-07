@@ -16,10 +16,5 @@ List, all arguments in an R call
 List arguments in R call
 }
 \examples{
-matahari::dance_start()
-m <- lm(mpg ~ cyl, mtcars)
-matahari::dance_stop()
-expr <- matahari::dance_tbl()$expr
-ls_fun_args(expr[[3]])
-matahari::dance_remove()
+ls_fun_args(quote(lm(mpg ~ cyl, mtcars)))
 }

@@ -16,9 +16,9 @@ Character. Vector of packages called.
 List packages
 }
 \examples{
-matahari::dance_start()
-library(tidycode)
-expr <- matahari::dance_tbl()$expr
-ls_packages(expr)
-matahari::dance_remove()
+ls_packages(
+  list(
+    quote(library(tidycode)),
+    quote(library(purrr)))
+  )
 }

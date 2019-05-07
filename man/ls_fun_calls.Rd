@@ -16,10 +16,5 @@ Character, all functions in an R call
 List functions in R call
 }
 \examples{
-matahari::dance_start()
-m <- lm(mpg ~ cyl, mtcars)
-matahari::dance_stop()
-expr <- matahari::dance_tbl()$expr
-ls_fun_calls(expr[[3]])
-matahari::dance_remove()
+ls_fun_calls(quote(lm(mpg ~ cyl, mtcars)))
 }
