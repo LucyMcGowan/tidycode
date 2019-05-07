@@ -27,7 +27,8 @@ classification_tbl <- tibble(
   filter(classification != "not sure") %>%
   group_by(func, classification) %>%
   summarise(n = n()) %>%
-  mutate(prevalence = n / sum(n)) %>%
-  arrange(func, - prevalence)
+  mutate(score = n / sum(n)) %>%
+  select(- n) %>%
+  arrange(func, - score)
 
 write_csv(classification_tbl, "inst/extdata/classification_tbl.csv")
