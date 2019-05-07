@@ -1,4 +1,4 @@
-#' Create a tibble of classifications of all functions used in your analysis
+#' Get a tidy data frame of classifications of all functions used in your analysis
 #'
 #' @param func_names Character vector of the names of all functions used in
 #' analysis. If `NULL`, will return the full data frame of all classified functions.
