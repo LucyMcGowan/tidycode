@@ -14,7 +14,15 @@
 #'   tidycode_example("example_analysis.R")
 #' )
 read_rfiles <- function(...) {
+
   files <- list(...)
+  if (!all(file.exists(unlist(files)))) {
+    stop(glue::glue("The following file(s) do not exist:",
+                    "\n * {glue::glue_collapse(files[!file.exists(unlist(files))],
+                    sep = '\n * ')}"),
+         call. = FALSE
+    )
+  }
   d <- purrr::map(files, get_expr)
   d <- do.call(rbind, d)
   d
