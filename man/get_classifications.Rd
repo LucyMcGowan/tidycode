@@ -4,22 +4,33 @@
 \alias{get_classifications}
 \title{Get a tidy data frame of classifications of all functions used in your analysis}
 \usage{
-get_classifications(func_names = NULL, include_duplicates = TRUE)
+get_classifications(lexicon = NULL, include_duplicates = TRUE)
 }
 \arguments{
-\item{func_names}{Character vector of the names of all functions used in
-analysis. If `NULL`, will return the full data frame of all classified functions.}
+\item{lexicon}{Character. The classification lexicon to retrieve. Either
+"crowdsource" or "leeklab". If \code{NULL} (default), will return all lexicons.}
 
 \item{include_duplicates}{Logical. Indicates whether to include all functions
-and classifications along with their score (default, `TRUE`) - this may
+and classifications along with their score (default, \code{TRUE}) - this may
 result in multiple lines (with multiple classifications) for a single function.
-If `FALSE`, the most prevalent classification will be selected.}
+If \code{FALSE}, the most prevalent classification will be selected.}
 }
 \value{
-If `include_duplicates = TRUE`, tibble with four columns,
-`classification` and `func`, `score`.
-If `include_duplicates = FALSE`, tibble with two columns, `classification` and
-`func`.
+A \code{tbl_df} with columns:
+\itemize{
+\item \code{func}: the function
+\item \code{classification}: the classification
+}
+
+If \code{include_duplicates = TRUE}, will include a column:
+\itemize{
+\item \code{score}: the score
+}
+
+If \code{lexicon} is \code{NULL}, will include a column:
+\itemize{
+\item \code{lexicon}: the classification lexicon
+}
 }
 \description{
 Get a tidy data frame of classifications of all functions used in your analysis
@@ -30,4 +41,8 @@ get_classifications()
 
 # Get a data frame of the most prevalent classifications
 get_classifications(include_duplicates = FALSE)
+
+# Get a data frame of only `leeklab` classifications
+get_classifications("leeklab")
+
 }

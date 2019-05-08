@@ -10,7 +10,11 @@ get_packages_tbl(pkg_names = NULL)
 \item{pkg_names}{Character vector of the names of all packages used in analysis}
 }
 \value{
-Tibble with two columns, `package` and `func`
+A \code{tbl_df} with two columns:
+\itemize{
+\item \code{package}: the name of the R package
+\item \code{func}: the name of the R function
+}
 }
 \description{
 Create a tibble of all functions included in all packages used in your analysis

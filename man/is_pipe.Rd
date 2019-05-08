@@ -15,6 +15,3 @@ logical
 \description{
 Check if an expression includes a pipe
 }
-\examples{
-is_pipe(quote(mtcars$mpg \%>\% mean()))
-}

@@ -7,7 +7,10 @@
 get_stopfuncs()
 }
 \value{
-A tibble with one column, `func`.
+A \code{tbl_df} with one column:
+\itemize{
+\item \code{func}: the function identified as a "stopword"
+}
 }
 \description{
 Get a data frame listing one function per row.
