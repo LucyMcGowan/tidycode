@@ -6,7 +6,6 @@
 #'  * `package`: the name of the R package
 #'  * `func`: the name of the R function
 #'
-#' @export
 get_packages_tbl <- function(pkg_names = NULL) {
   if (is.null(pkg_names)) {
     return(deal_with_pipe(.tidycode$cran_tbl))
@@ -23,7 +22,9 @@ get_packages_tbl <- function(pkg_names = NULL) {
 }
 
 
-# TODO: This is a bit of a patch for now, maybe come up with a larger solution
+# This makes it so the pipe is attributed to magrittr, not all packages that
+# export the pipe
+
 deal_with_pipe <- function(x) {
   if ("%>%" %in% x$func) {
     x <- x[x$func != "%>%", ]
