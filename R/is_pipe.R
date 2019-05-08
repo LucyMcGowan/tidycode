@@ -1,8 +1,3 @@
-#' Check if an expression includes a pipe
-#'
-#' @param x an R call
-#'
-#' @return logical
 is_pipe <- function(x) {
   if(is.list(x) | (is.character(x) & length(x) > 1)) {
     return(purrr::map_lgl(x, is_pipe))
