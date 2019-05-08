@@ -2,7 +2,10 @@
 #'
 #' @param pkg_names Character vector of the names of all packages used in analysis
 #'
-#' @return Tibble with two columns, `package` and `func`
+#' @return A `tbl_df` with two columns:
+#'  * `package`: the name of the R package
+#'  * `func`: the name of the R function
+#'
 #' @export
 get_packages_tbl <- function(pkg_names = NULL) {
   if (is.null(pkg_names)) {
