@@ -23,6 +23,9 @@
 #'   unnest_calls(expr, drop = FALSE)
 unnest_calls <- function(.data, input, drop = TRUE) {
   x <- .data[[rlang::quo_name(rlang::enquo(input))]]
+  if (is.character(x)) {
+   x <- map(x, safe_parse)
+  }
   d <- .unnest_calls(x)
   tbl <- .data[d$line, ]
   tbl <- tibble::add_column(tbl, func = d$func)
@@ -33,7 +36,15 @@ unnest_calls <- function(.data, input, drop = TRUE) {
   tbl
 }
 
-.unnest_calls <- function(x) {
+.unnest_calls <- function(x, input) {
+  if (!(is.list(x) | is.call(x) | is.name(x))) {
+    stop(glue::glue("The class of the `input` parameter must be one of the",
+                    " following:",
+                    "\n  * character vector",
+                    "\n  * list containing R calls", sep = "\n"),
+         call. = FALSE
+    )
+  }
   if (is.list(x)) {
     m <- purrr::map(x, .unnest_calls)
     line <- rep(1:length(m), times = purrr::map_dbl(m, nrow))
@@ -54,3 +65,5 @@ unnest_calls <- function(.data, input, drop = TRUE) {
   }
   return(d)
 }
+
+safe_parse <- possibly(rlang::parse_expr, NULL)
