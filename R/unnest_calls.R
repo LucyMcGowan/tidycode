@@ -24,7 +24,7 @@
 unnest_calls <- function(.data, input, drop = TRUE) {
   x <- .data[[rlang::quo_name(rlang::enquo(input))]]
   if (is.character(x)) {
-   x <- map(x, safe_parse)
+   x <- purrr::map(x, safe_parse)
   }
   d <- .unnest_calls(x)
   tbl <- .data[d$line, ]
@@ -66,4 +66,4 @@ unnest_calls <- function(.data, input, drop = TRUE) {
   return(d)
 }
 
-safe_parse <- possibly(rlang::parse_expr, NULL)
+safe_parse <- purrr::possibly(rlang::parse_expr, NULL)

@@ -5,3 +5,5 @@
 ^internal$
 ^data-raw$
 ^\.httr-oauth$
+^docs$
+^\.travis\.yml$
