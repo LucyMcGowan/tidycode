@@ -17,7 +17,7 @@ Imports:
     purrr,
     pryr,
     tibble,
-    matahari,
+    matahari (>= 0.0.0.9012),
     rlang,
     glue
 URL: https://github.com/LucyMcGowan/tidycode
@@ -25,3 +25,5 @@ BugReports: https://github.com/LucyMcGowan/tidycode/issues
 Suggests: 
     testthat,
     covr
+Remotes:  
+    jhudsl/matahari
