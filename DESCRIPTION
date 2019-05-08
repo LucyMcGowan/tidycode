@@ -19,3 +19,5 @@ Imports:
     tibble,
     matahari,
     rlang
+URL: https://github.com/LucyMcGowan/tidycode
+BugReports: https://github.com/LucyMcGowan/tidycode/issues
