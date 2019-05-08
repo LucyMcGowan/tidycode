@@ -18,7 +18,8 @@ Imports:
     pryr,
     tibble,
     matahari,
-    rlang
+    rlang,
+    glue
 URL: https://github.com/LucyMcGowan/tidycode
 BugReports: https://github.com/LucyMcGowan/tidycode/issues
 Suggests: 
