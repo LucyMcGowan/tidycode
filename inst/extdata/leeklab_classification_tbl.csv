@@ -1,0 +1,643 @@
+func,classification,score
+%%,data cleaning,1
+%>%,data cleaning,0.8636363636363636
+%>%,exploratory,0.09090909090909091
+%>%,setup,0.045454545454545456
+%in%,data cleaning,1
+%within%,data cleaning,1
+abline,evaluation,1
+abs,data cleaning,0.6666666666666666
+abs,modeling,0.3333333333333333
+ad.data.frame,exploratory,1
+adonis,exploratory,0.5
+adonis,modeling,0.5
+aes,exploratory,0.9642857142857143
+aes,evaluation,0.03571428571428571
+AIC,evaluation,1
+AnnotationHub,setup,1
+anova,modeling,1
+anti_join,data cleaning,1
+aov,evaluation,0.6666666666666666
+aov,modeling,0.3333333333333333
+apply,data cleaning,0.7272727272727273
+apply,exploratory,0.18181818181818182
+apply,modeling,0.09090909090909091
+arrange,data cleaning,1
+arrangeGrob,setup,1
+as_tibble,setup,1
+as.character,data cleaning,0.7894736842105263
+as.character,exploratory,0.15789473684210525
+as.character,evaluation,0.05263157894736842
+as.data.frame,data cleaning,0.4666666666666667
+as.data.frame,setup,0.26666666666666666
+as.data.frame,exploratory,0.2
+as.data.frame,evaluation,0.06666666666666667
+as.factor,data cleaning,0.8888888888888888
+as.factor,exploratory,0.1111111111111111
+as.integer,evaluation,0.6666666666666666
+as.integer,setup,0.3333333333333333
+as.list,modeling,1
+as.matrix,setup,0.4
+as.matrix,data cleaning,0.2
+as.matrix,evaluation,0.2
+as.matrix,modeling,0.2
+as.numeric,data cleaning,0.5897435897435898
+as.numeric,evaluation,0.3076923076923077
+as.numeric,modeling,0.05128205128205128
+as.numeric,setup,0.05128205128205128
+as.numerics,data cleaning,1
+as.POSIXct,data cleaning,1
+attach,setup,1
+attributes,data cleaning,1
+AUCRF,modeling,1
+barplot,exploratory,1
+bayesglm,modeling,1
+bind_rows,data cleaning,1
+binom.test,evaluation,1
+biocLite,setup,1
+brewer.pal,evaluation,1
+broom,modeling,1
+bucket_age,data cleaning,1
+build_dep,setup,1
+by,data cleaning,0.6666666666666666
+by,exploratory,0.3333333333333333
+c,data cleaning,0.3409090909090909
+c,evaluation,0.2159090909090909
+c,exploratory,0.20454545454545456
+c,setup,0.17045454545454544
+c,modeling,0.06818181818181818
+calcCI.exp,exploratory,0.5
+calcCI.exp,modeling,0.5
+calcNormFactors,modeling,1
+capture.output,data cleaning,1
+cat,data cleaning,0.4166666666666667
+cat,setup,0.4166666666666667
+cat,evaluation,0.08333333333333333
+cat,modeling,0.08333333333333333
+cbind,data cleaning,0.6153846153846154
+cbind,evaluation,0.15384615384615385
+cbind,setup,0.15384615384615385
+cbind,modeling,0.07692307692307693
+cBind,data cleaning,0.375
+cBind,modeling,0.375
+cBind,evaluation,0.25
+center,data cleaning,1
+cite_options,setup,1
+cleanbib,setup,1
+close,setup,1
+cnetplot,exploratory,1
+coef,evaluation,0.46153846153846156
+coef,modeling,0.38461538461538464
+coef,exploratory,0.15384615384615385
+colnames,data cleaning,0.6851851851851852
+colnames,evaluation,0.2222222222222222
+colnames,modeling,0.07407407407407407
+colnames,setup,0.018518518518518517
+colorRampPalette,evaluation,1
+commanArgs,setup,1
+conames,data cleaning,1
+confusionMatrix,evaluation,1
+coord_cartesian,exploratory,1
+coord_map,exploratory,1
+cor,modeling,0.9230769230769231
+cor,exploratory,0.07692307692307693
+cor.test,modeling,1
+corplot,exploratory,1
+corPvalueStudent,evaluation,1
+cort,modeling,1
+count,data cleaning,0.5
+count,exploratory,0.25
+count,setup,0.25
+coxph,modeling,1
+cpm,modeling,1
+create_analysis_df,setup,1
+createSummaryDataset,exploratory,1
+crossprod,data cleaning,1
+data,setup,1
+data.frame,setup,0.38461538461538464
+data.frame,data cleaning,0.23076923076923078
+data.frame,exploratory,0.15384615384615385
+data.frame,modeling,0.15384615384615385
+data.frame,evaluation,0.07692307692307693
+data.matrix,data cleaning,1
+data.table,setup,1
+DataFrame,modeling,1
+date,setup,1
+dbind,data cleaning,1
+dcast,data cleaning,1
+ddply,data cleaning,1
+decideTestsDGE,modeling,1
+desc,data cleaning,1
+DESeq,modeling,1
+DESeqDataSetFromMatrix,modeling,1
+detecCores,setup,1
+detectCores,setup,1
+dev.off,exploratory,1
+DGEList,modeling,1
+dict,data cleaning,1
+dim,data cleaning,0.5
+dim,modeling,0.5
+dir.create,setup,1
+distinct,data cleaning,1
+dmr,modeling,1
+dnorm,modeling,1
+do.call,setup,0.6666666666666666
+do.call,data cleaning,0.3333333333333333
+dotplot,evaluation,0.5
+dotplot,exploratory,0.5
+download.file,setup,1
+drop_na,data cleaning,1
+duplicated,exploratory,1
+eBayes,modeling,1
+Edit.table,data cleaning,1
+EditTable,data cleaning,1
+else,evaluation,0.5
+else,data cleaning,0.25
+else,setup,0.25
+enrichGo,data cleaning,1
+enrichKEGG,modeling,1
+enrichMap,exploratory,1
+estimateDisp,modeling,1
+eval,exploratory,1
+exists,setup,1
+exp,evaluation,0.3333333333333333
+exp,exploratory,0.3333333333333333
+exp,modeling,0.3333333333333333
+expand_limits,exploratory,1
+expand.grid,modeling,0.6666666666666666
+expand.grid,data cleaning,0.3333333333333333
+experience,data cleaning,1
+facet_grid,exploratory,1
+facet_wrap,exploratory,1
+factor,modeling,0.5483870967741935
+factor,data cleaning,0.3225806451612903
+factor,exploratory,0.06451612903225806
+factor,setup,0.06451612903225806
+favtor,modeling,1
+fev.off,setup,1
+file,setup,1
+file.exists,setup,1
+file.path,setup,1
+fill,data cleaning,1
+filter,data cleaning,0.7407407407407407
+filter,exploratory,0.18518518518518517
+filter,evaluation,0.07407407407407407
+Filter,data cleaning,0.5
+Filter,modeling,0.5
+floor,data cleaning,1
+fontfamily,setup,1
+for,data cleaning,0.39285714285714285
+for,evaluation,0.35714285714285715
+for,modeling,0.10714285714285714
+for,exploratory,0.07142857142857142
+for,setup,0.07142857142857142
+format,exploratory,0.5454545454545454
+format,data cleaning,0.45454545454545453
+fortify,data cleaning,1
+fromList,setup,1
+function,setup,0.4375
+function,data cleaning,0.25
+function,exploratory,0.125
+function,modeling,0.125
+function,evaluation,0.0625
+gamlr,modeling,1
+genelist,modeling,1
+geom_bar,exploratory,1
+geom_boxplot,exploratory,1
+geom_density,evaluation,1
+geom_hex,exploratory,1
+geom_jitter,exploratory,1
+geom_line,exploratory,1
+geom_point,exploratory,1
+geom_polygon,exploratory,1
+geom_smooth,exploratory,1
+geom_vline,exploratory,1
+get,data cleaning,1
+getm_point,exploratory,1
+getMutationStatsForGene,setup,1
+getRepo,setup,1
+getwd,setup,1
+gfm_table,exploratory,0.5
+gfm_table,modeling,0.5
+ggplot,exploratory,0.9642857142857143
+ggplot,evaluation,0.03571428571428571
+ggplot_build,exploratory,1
+ggplot_gtable,exploratory,1
+ggtitle,exploratory,1
+glm,modeling,1
+glmQLFit,modeling,1
+glmQLFTest,modeling,1
+glmTreat,modeling,1
+gpar,setup,1
+gpclibPermit,setup,1
+grep,exploratory,0.8888888888888888
+grep,setup,0.1111111111111111
+grepl,data cleaning,1
+grid.arrange,exploratory,1
+group_by,data cleaning,0.875
+group_by,evaluation,0.0625
+group_by,exploratory,0.0625
+gseaplot,evaluation,1
+gseGO,modeling,1
+gsm_table,exploratory,1
+gsub,data cleaning,0.875
+gsub,setup,0.125
+head,exploratory,0.45454545454545453
+head,data cleaning,0.18181818181818182
+head,modeling,0.18181818181818182
+head,evaluation,0.09090909090909091
+head,setup,0.09090909090909091
+help,exploratory,1
+hist,evaluation,0.6
+hist,exploratory,0.4
+html_node,setup,1
+html_table,setup,1
+I,modeling,0.6666666666666666
+I,data cleaning,0.3333333333333333
+if,data cleaning,0.6
+if,setup,0.2
+if,evaluation,0.13333333333333333
+if,exploratory,0.06666666666666667
+ifelse,data cleaning,0.6666666666666666
+ifelse,evaluation,0.3333333333333333
+inner_join,data cleaning,1
+install.packages,setup,1
+integer,data cleaning,1
+intersec,data cleaning,1
+intersect,data cleaning,0.6
+intersect,exploratory,0.4
+interval,evaluation,0.5
+interval,modeling,0.5
+is.na,data cleaning,1
+join,data cleaning,0.5
+join,setup,0.5
+ks.test,exploratory,1
+labels,setup,1
+labels2colors,evaluation,1
+labs,exploratory,1
+laply,data cleaning,1
+lapply,data cleaning,0.5714285714285714
+lapply,exploratory,0.2857142857142857
+lapply,evaluation,0.14285714285714285
+layout,exploratory,1
+ldply,exploratory,1
+left_join,data cleaning,1
+legend,evaluation,1
+length,data cleaning,0.4482758620689655
+length,exploratory,0.2413793103448276
+length,setup,0.13793103448275862
+length,evaluation,0.10344827586206896
+length,modeling,0.06896551724137931
+levels,modeling,1
+lfcShrink,modeling,1
+library,setup,0.9938271604938271
+library,data cleaning,0.006172839506172839
+lines,modeling,0.6666666666666666
+lines,exploratory,0.3333333333333333
+list,data cleaning,0.375
+list,exploratory,0.25
+list,setup,0.25
+list,evaluation,0.125
+list.files,setup,1
+lm,modeling,1
+lmFit,modeling,1
+ln,data cleaning,1
+load,setup,0.75
+load,data cleaning,0.25
+load.dataset,setup,1
+load.project,setup,1
+log,data cleaning,0.5714285714285714
+log,exploratory,0.2857142857142857
+log,modeling,0.14285714285714285
+log10,data cleaning,0.3333333333333333
+log10,evaluation,0.3333333333333333
+log10,modeling,0.3333333333333333
+log2FoldChange,evaluation,1
+ls,setup,1
+lstm,evaluation,1
+make.names,data cleaning,1
+makeAlphaTable,data cleaning,1
+makeCluster,setup,1
+makeContrasts,modeling,1
+map,data cleaning,0.8
+map,modeling,0.2
+map_dbl,data cleaning,0.8
+map_dbl,modeling,0.2
+mapIds,modeling,1
+mapvalues,data cleaning,1
+match,data cleaning,0.8181818181818182
+match,exploratory,0.18181818181818182
+matrix,data cleaning,0.6666666666666666
+matrix,setup,0.2222222222222222
+matrix,evaluation,0.1111111111111111
+max,data cleaning,0.5714285714285714
+max,exploratory,0.42857142857142855
+mcols,evaluation,1
+mean,exploratory,0.46875
+mean,evaluation,0.3125
+mean,data cleaning,0.21875
+median,exploratory,1
+melt,data cleaning,0.6
+melt,evaluation,0.4
+merge,data cleaning,0.875
+merge,setup,0.125
+message,setup,0.875
+message,evaluation,0.125
+min,data cleaning,0.4
+min,exploratory,0.4
+min,evaluation,0.2
+min_rank,data cleaning,1
+missmap,exploratory,1
+mle2,modeling,1
+model.matrix,modeling,1
+moduleCompare,evaluation,1
+moduleEigengenes,evaluation,1
+mtext,exploratory,1
+mutate,data cleaning,0.8333333333333334
+mutate,evaluation,0.06666666666666667
+mutate,modeling,0.06666666666666667
+mutate,exploratory,0.03333333333333333
+mutate_all,data cleaning,1
+myplot,exploratory,1
+na.omit,data cleaning,0.7142857142857143
+na.omit,exploratory,0.2857142857142857
+naiveBayes,modeling,1
+names,setup,0.3157894736842105
+names,data cleaning,0.2894736842105263
+names,evaluation,0.2631578947368421
+names,exploratory,0.10526315789473684
+names,modeling,0.02631578947368421
+ncol,modeling,0.8333333333333334
+ncol,data cleaning,0.16666666666666666
+nest,data cleaning,1
+nrow,data cleaning,0.5714285714285714
+nrow,evaluation,0.23809523809523808
+nrow,setup,0.19047619047619047
+nrown,data cleaning,1
+ns,modeling,1
+optim,modeling,1
+options,setup,1
+opts,exploratory,1
+opts_chunk,setup,1
+order,data cleaning,0.8333333333333334
+order,setup,0.16666666666666666
+outer,exploratory,0.5
+outer,setup,0.5
+p.adjust,exploratory,1
+par,evaluation,1
+paste,data cleaning,0.43902439024390244
+paste,setup,0.2682926829268293
+paste,evaluation,0.21951219512195122
+paste,exploratory,0.04878048780487805
+paste,modeling,0.024390243902439025
+paste0,setup,1
+pchisq,modeling,1
+pdf,exploratory,1
+persp,exploratory,1
+phyla.table,data cleaning,1
+phyla.table.rel.abund,exploratory,1
+plot,exploratory,0.7
+plot,modeling,0.2
+plot,evaluation,0.1
+plot_ly,exploratory,1
+plotGOgraph,exploratory,1
+plotMA,evaluation,1
+plotMD,evaluation,1
+plotQLDisp,modeling,1
+png,data cleaning,0.5
+png,exploratory,0.5
+points,evaluation,1
+prcomp,data cleaning,1
+predic,modeling,1
+predict,modeling,0.5454545454545454
+predict,evaluation,0.45454545454545453
+print,evaluation,0.3
+print,exploratory,0.25
+print,data cleaning,0.2
+print,setup,0.15
+print,modeling,0.1
+prp,modeling,1
+query,data cleaning,0.625
+query,exploratory,0.1875
+query,setup,0.1875
+range,exploratory,1
+rbind,setup,0.7058823529411765
+rbind,data cleaning,0.23529411764705882
+rbind,modeling,0.058823529411764705
+rcs,modeling,1
+read_csv,data cleaning,1
+read_html,setup,1
+read_tsv,setup,1
+read.csv,setup,0.7647058823529411
+read.csv,data cleaning,0.17647058823529413
+read.csv,exploratory,0.058823529411764705
+read.delim,data cleaning,0.6666666666666666
+read.delim,setup,0.3333333333333333
+read.table,setup,0.9473684210526315
+read.table,data cleaning,0.05263157894736842
+read.xlsx,setup,1
+readOGR,setup,1
+readRDS,data cleaning,1
+rename,data cleaning,1
+reorder,data cleaning,1
+rep,data cleaning,0.45454545454545453
+rep,setup,0.36363636363636365
+rep,modeling,0.18181818181818182
+require,setup,1
+reshape,data cleaning,1
+results,evaluation,0.5
+results,modeling,0.5
+return,data cleaning,0.8333333333333334
+return,evaluation,0.16666666666666666
+returndata.frame,data cleaning,1
+rev,evaluation,1
+rm,setup,0.625
+rm,data cleaning,0.25
+rm,exploratory,0.125
+rna_annotations,setup,1
+rna_count_matrix,setup,1
+rna_fpkm_matrix,setup,1
+rollmean,data cleaning,1
+rollsum,data cleaning,1
+round,modeling,0.5333333333333333
+round,data cleaning,0.3333333333333333
+round,exploratory,0.13333333333333333
+row.names,data cleaning,0.75
+row.names,modeling,0.25
+rownames,data cleaning,0.8205128205128205
+rownames,setup,0.07692307692307693
+rownames,evaluation,0.05128205128205128
+rownames,modeling,0.05128205128205128
+rowSums,modeling,1
+rpart,modeling,0.6666666666666666
+rpart,evaluation,0.3333333333333333
+rpart.plot,evaluation,1
+rpois,data cleaning,1
+RunRR,exploratory,0.5
+RunRR,modeling,0.5
+sample,data cleaning,0.5
+sample,evaluation,0.5
+sample.split,modeling,1
+sapply,data cleaning,0.6666666666666666
+sapply,exploratory,0.3333333333333333
+scale,exploratory,1
+scale_alpha_continuous,exploratory,1
+scale_color_discrete,exploratory,1
+scale_color_manual,exploratory,1
+scale_fill_discrete,exploratory,1
+scale_size_continuous,exploratory,1
+scale_x_continuous,exploratory,1
+scale_x_date,exploratory,1
+scale_x_sqrt,exploratory,1
+scale_y_continual,evaluation,1
+scale_y_continuous,exploratory,1
+scale_y_log10,exploratory,1
+scan,setup,1
+sclae,exploratory,1
+score.sentiment,modeling,1
+sd,exploratory,0.7777777777777778
+sd,data cleaning,0.16666666666666666
+sd,modeling,0.05555555555555555
+select,data cleaning,0.6
+select,exploratory,0.26666666666666666
+select,setup,0.13333333333333333
+seq,setup,0.5714285714285714
+seq,exploratory,0.2857142857142857
+seq,evaluation,0.14285714285714285
+set.seed,exploratory,0.3333333333333333
+set.seed,modeling,0.3333333333333333
+set.seed,setup,0.3333333333333333
+setnames,data cleaning,1
+setTxtProgressBar,setup,1
+setwd,setup,0.9090909090909091
+setwd,data cleaning,0.09090909090909091
+shape,evaluation,0.75
+shape,data cleaning,0.25
+signedKME,evaluation,1
+smoothConnectivityPlot,evaluation,1
+smoothScatter,evaluation,1
+softConnectivity,evaluation,1
+sort,data cleaning,0.7142857142857143
+sort,evaluation,0.14285714285714285
+sort,modeling,0.14285714285714285
+source,setup,1
+spearman,modeling,1
+spread,data cleaning,0.5
+spread,setup,0.5
+sprintf,setup,0.5384615384615384
+sprintf,data cleaning,0.23076923076923078
+sprintf,evaluation,0.15384615384615385
+sprintf,modeling,0.07692307692307693
+spTransform,data cleaning,1
+sqrt,data cleaning,1
+stopCluster,modeling,0.5
+stopCluster,setup,0.5
+str,exploratory,1
+str_detect,exploratory,1
+str_extract,data cleaning,1
+str_split,data cleaning,1
+str_to_lower,data cleaning,1
+str_to_title,data cleaning,1
+str_to_upper,data cleaning,1
+str_trim,data cleaning,1
+strptime,data cleaning,1
+strsplit,data cleaning,1
+sub,data cleaning,1
+subset,data cleaning,0.5
+subset,modeling,0.2727272727272727
+subset,exploratory,0.13636363636363635
+subset,evaluation,0.045454545454545456
+subset,setup,0.045454545454545456
+substr,data cleaning,1
+sum,data cleaning,0.6666666666666666
+sum,evaluation,0.3333333333333333
+summarise,data cleaning,0.6666666666666666
+summarise,exploratory,0.2222222222222222
+summarise,evaluation,0.1111111111111111
+summarize,data cleaning,0.6
+summarize,exploratory,0.4
+summary,modeling,0.6666666666666666
+summary,evaluation,0.25
+summary,exploratory,0.08333333333333333
+Surv,modeling,1
+synapseLogin,setup,1
+synTableQuery,setup,1
+Sys.getenv,setup,1
+Sys.info,setup,1
+t,data cleaning,0.6
+t,exploratory,0.4
+t.test,exploratory,1
+table,evaluation,0.375
+table,exploratory,0.3333333333333333
+table,data cleaning,0.16666666666666666
+table,modeling,0.125
+tail,setup,1
+tapply,evaluation,1
+tcrossprod,modeling,1
+tempfile,setup,1
+test,data cleaning,1
+text,evaluation,1
+textGrob,setup,1
+theme,exploratory,1
+theme_bw,exploratory,1
+theme_dark_map,exploratory,1
+theme_text,exploratory,1
+theme_tws,exploratory,1
+tibble,data cleaning,1
+title_with_subtitle,exploratory,1
+today,setup,1
+toJSON,data cleaning,1
+tolower,data cleaning,1
+topTable,modeling,1
+topTags,modeling,1
+topTreat,modeling,1
+TopTreat,modeling,1
+train,modeling,0.5
+train,setup,0.5
+treat,modeling,1
+try,data cleaning,1
+txtProgressBar,setup,1
+ungroup,data cleaning,1
+unique,data cleaning,0.5
+unique,exploratory,0.3333333333333333
+unique,modeling,0.16666666666666666
+unit,setup,1
+unit_format,data cleaning,1
+unlink,setup,1
+unlist,data cleaning,0.8
+unlist,exploratory,0.2
+unname,data cleaning,1
+unnest,data cleaning,1
+unnest_tokens,setup,1
+unzip,setup,1
+update,modeling,1
+var,modeling,1
+vector,data cleaning,1
+verboseBoxplot,evaluation,1
+verboseScatterplot,evaluation,1
+vioplot,evaluation,1
+voom,modeling,1
+warnings,setup,1
+which,exploratory,0.6
+which,modeling,0.2
+which,data cleaning,0.1
+which,evaluation,0.1
+which.max,exploratory,1
+which.min,evaluation,1
+wilcox.test,exploratory,0.8571428571428571
+wilcox.test,evaluation,0.14285714285714285
+with,evaluation,0.5
+with,data cleaning,0.3333333333333333
+with,modeling,0.16666666666666666
+within,evaluation,1
+write_csv,data cleaning,1
+write.csv,setup,1
+write.table,evaluation,0.5
+write.table,exploratory,0.5
+xlab,exploratory,0.75
+xlab,evaluation,0.25
+xlim,exploratory,1
+ylab,exploratory,1
+ymd_hms,evaluation,0.5555555555555556
+ymd_hms,modeling,0.3333333333333333
+ymd_hms,data cleaning,0.1111111111111111
