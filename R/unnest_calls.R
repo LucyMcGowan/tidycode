@@ -1,37 +1,41 @@
 #' Unnest R calls
 #'
-#' @param x an R call or list of R calls
-#' @param drop `logical`. Whether the original input R call(s) should be dropped.
+#' @param .data A data frame
+#' @param input Input column that contains an R call or list of R calls to be
+#'   split into individual functions
+#' @param drop `logical`. Whether the original input column should be dropped.
 #'
-#' @return a tibble of the unnested R calls with three columns: `line`: the line number of the call
-#'  (if a list was supplied), `func`: the name of the function called, `args`: a list of arguments
+#' @return The original data frame with an additional three columns:
+#'  * `line`: the line number of the call
+#'  * `func`: the name of the function called
+#'  * `args`: a list of arguments
 #' @export
 #'
 #' @examples
+#' d <- read_rfiles(tidycode_example("example_plot.R"))
+#'
 #' # Unnest a model call
-#' unnest_calls(quote(lm(mpg ~ cyl, mtcars)))
+#' d %>%
+#'   unnest_calls(expr)
 #'
 #' # Unnest a model call and keep the call itself using the drop parameter
-#' unnest_calls(quote(lm(mpg ~ cyl, mtcars)), drop = FALSE)
-unnest_calls <- function(x, drop = TRUE) {
+#' d %>%
+#'   unnest_calls(expr, drop = FALSE)
+unnest_calls <- function(.data, input, drop = TRUE) {
+  x <- .data[[rlang::quo_name(rlang::enquo(input))]]
   d <- .unnest_calls(x)
-  if (!drop) {
-    if (!is.list(x)) {
-      x <- list(x)
-      }
-    x <- rep(x,
-             times = stats::aggregate(d$line,
-                               by = list(line = d$line),
-                               FUN = length)$x
-             )
-    d$call <- x
+  tbl <- .data[d$line, ]
+  tbl <- tibble::add_column(tbl, func = d$func)
+  tbl <- tibble::add_column(tbl, args = d$args)
+  if (drop) {
+    tbl[[rlang::quo_name(rlang::enquo(input))]] <- NULL
   }
-  d
+  tbl
 }
 
 .unnest_calls <- function(x) {
   if (is.list(x)) {
-    m <- purrr::map(x, unnest_calls)
+    m <- purrr::map(x, .unnest_calls)
     line <- rep(1:length(m), times = purrr::map_dbl(m, nrow))
     d <- do.call(rbind, m)
     d$line <- line

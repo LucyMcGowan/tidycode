@@ -4,24 +4,35 @@
 \alias{unnest_calls}
 \title{Unnest R calls}
 \usage{
-unnest_calls(x, drop = TRUE)
+unnest_calls(.data, input, drop = TRUE)
 }
 \arguments{
-\item{x}{an R call or list of R calls}
+\item{.data}{A data frame}
 
-\item{drop}{`logical`. Whether the original input R call(s) should be dropped.}
+\item{input}{Input column that contains an R call or list of R calls to be
+split into individual functions}
+
+\item{drop}{\code{logical}. Whether the original input column should be dropped.}
 }
 \value{
-a tibble of the unnested R calls with three columns: `line`: the line number of the call
- (if a list was supplied), `func`: the name of the function called, `args`: a list of arguments
+The original data frame with an additional three columns:
+\itemize{
+\item \code{line}: the line number of the call
+\item \code{func}: the name of the function called
+\item \code{args}: a list of arguments
+}
 }
 \description{
 Unnest R calls
 }
 \examples{
+d <- read_rfiles(tidycode_example("example_plot.R"))
+
 # Unnest a model call
-unnest_calls(quote(lm(mpg ~ cyl, mtcars)))
+d \%>\%
+  unnest_calls(expr)
 
 # Unnest a model call and keep the call itself using the drop parameter
-unnest_calls(quote(lm(mpg ~ cyl, mtcars)), drop = FALSE)
+d \%>\%
+  unnest_calls(expr, drop = FALSE)
 }
