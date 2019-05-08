@@ -52,73 +52,53 @@ names of the packages included.
 #> [1] "broom" "glue"
 ```
 
-Use the `get_packages_tbl()` to create a tibble of all functions
-included in the packages that were used.
-
-``` r
-(pkg_tbl <- get_packages_tbl(pkg_names))
-#> # A tibble: 2,401 x 2
-#>    func            package
-#>    <chr>           <chr>  
-#>  1 augment         broom  
-#>  2 augment_columns broom  
-#>  3 bootstrap       broom  
-#>  4 confint_tidy    broom  
-#>  5 finish_glance   broom  
-#>  6 fix_data_frame  broom  
-#>  7 glance          broom  
-#>  8 inflate         broom  
-#>  9 tidy            broom  
-#> 10 tidyMCMC        broom  
-#> # … with 2,391 more rows
-```
-
 Create a data frame of your expressions, splitting each into individual
 functions.
 
 ``` r
-u <- unnest_calls(m$expr)
-```
-
-Left join the package tibble to classify your functions by package name.
-
-``` r
-u <- u %>%
-  dplyr::left_join(pkg_tbl)
-#> Joining, by = "func"
-u
-#> # A tibble: 8 x 4
-#>   func      args        line package
-#>   <chr>     <list>     <int> <chr>  
-#> 1 library   <list [1]>     1 base   
-#> 2 library   <list [1]>     2 base   
-#> 3 <-        <list [2]>     3 base   
-#> 4 lm        <list [2]>     3 stats  
-#> 5 ~         <list [2]>     3 base   
-#> 6 <-        <list [2]>     4 base   
-#> 7 tidy      <list [1]>     4 broom  
-#> 8 glue_data <list [2]>     5 glue
+u <- unnest_calls(m, expr)
 ```
 
 Add in the function classifications\!
 
 ``` r
-classification_tbl <- get_classifications()
 u %>%
-  dplyr::left_join(classification_tbl)
+  dplyr::left_join(
+    get_classifications("crowdsource", include_duplicates = FALSE)
+    )
 #> Joining, by = "func"
-#> # A tibble: 53 x 7
-#>    func    args        line package classification     n prevalence
-#>    <chr>   <list>     <int> <chr>   <chr>          <int>      <dbl>
-#>  1 library <list [1]>     1 base    setup           1235    0.687  
-#>  2 library <list [1]>     1 base    import           382    0.213  
-#>  3 library <list [1]>     1 base    visualization     61    0.0339 
-#>  4 library <list [1]>     1 base    data cleaning     50    0.0278 
-#>  5 library <list [1]>     1 base    modeling          24    0.0134 
-#>  6 library <list [1]>     1 base    exploratory       23    0.0128 
-#>  7 library <list [1]>     1 base    communication     15    0.00835
-#>  8 library <list [1]>     1 base    evaluation         5    0.00278
-#>  9 library <list [1]>     1 base    export             2    0.00111
-#> 10 library <list [1]>     2 base    setup           1235    0.687  
-#> # … with 43 more rows
+#> # A tibble: 8 x 8
+#>   result     error  output   warnings messages func   args   classification
+#>   <list>     <list> <list>   <list>   <list>   <chr>  <list> <chr>         
+#> 1 <chr [8]>  <NULL> <chr [1… <chr [1… <chr [0… libra… <list… setup         
+#> 2 <chr [9]>  <NULL> <chr [1… <chr [1… <chr [0… libra… <list… setup         
+#> 3 <S3: lm>   <NULL> <chr [1… <chr [0… <chr [0… <-     <list… data cleaning 
+#> 4 <S3: lm>   <NULL> <chr [1… <chr [0… <chr [0… lm     <list… modeling      
+#> 5 <S3: lm>   <NULL> <chr [1… <chr [0… <chr [0… ~      <list… modeling      
+#> 6 <tibble [… <NULL> <chr [1… <chr [0… <chr [0… <-     <list… data cleaning 
+#> 7 <tibble [… <NULL> <chr [1… <chr [0… <chr [0… tidy   <list… modeling      
+#> 8 <S3: glue> <NULL> <chr [1… <chr [0… <chr [0… glue_… <list… communication
+```
+
+We can also remove a list of “stopwords”. We have a function,
+`get_stopfuncs()` that lists common “stopwords”, frequently used
+operators, like `%>%` and `+`.
+
+``` r
+u %>%
+  dplyr::left_join(
+    get_classifications("crowdsource", include_duplicates = FALSE)
+    ) %>%
+  dplyr::anti_join(get_stopfuncs()) %>%
+  dplyr::select(func, classification)
+#> Joining, by = "func"
+#> Joining, by = "func"
+#> # A tibble: 5 x 2
+#>   func      classification
+#>   <chr>     <chr>         
+#> 1 library   setup         
+#> 2 library   setup         
+#> 3 lm        modeling      
+#> 4 tidy      modeling      
+#> 5 glue_data communication
 ```
