@@ -23,4 +23,5 @@ Imports:
 URL: https://github.com/LucyMcGowan/tidycode
 BugReports: https://github.com/LucyMcGowan/tidycode/issues
 Suggests: 
-    testthat
+    testthat,
+    covr

@@ -1,6 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.org/LucyMcGowan/tidycode.svg?branch=master)](https://travis-ci.org/LucyMcGowan/tidycode)
+[![Codecov test
+coverage](https://codecov.io/gh/LucyMcGowan/tidycode/branch/master/graph/badge.svg)](https://codecov.io/gh/LucyMcGowan/tidycode?branch=master)
+<!-- badges: end -->
+
 # tidycode
 
 The goal of tidycode is to allow users to analyze R expressions in a
