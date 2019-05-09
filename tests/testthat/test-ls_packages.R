@@ -15,3 +15,7 @@ test_that("listing packages from data frame works", {
   pkgs <- ls_packages(d$expr)
   expect_equal(pkgs, "tidyverse")
 })
+
+test_that("can list packages from an individual call", {
+  expect_equal(ls_packages(quote(library(tidycode))), "tidycode")
+})
