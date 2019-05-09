@@ -24,6 +24,10 @@ URL: https://github.com/LucyMcGowan/tidycode
 BugReports: https://github.com/LucyMcGowan/tidycode/issues
 Suggests: 
     testthat,
-    covr
-Remotes:  
+    covr,
+    knitr,
+    rmarkdown,
+    dplyr
+Remotes: 
     jhudsl/matahari
+VignetteBuilder: knitr

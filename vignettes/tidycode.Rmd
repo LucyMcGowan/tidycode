@@ -1,0 +1,119 @@
+---
+title: "tidycode"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{tidycode}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Please see the tidycode website for full documentation:
+
+  * <https://lucymcgowan.github.io/tidycode/>
+  
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The tidycode package is an attempt to make analyzing R code tidy. It is modeled after the [tidytext package](https://www.tidytextmining.com). 
+
+```{r setup}
+library(tidycode)
+```
+
+## Read R files in as a tidy data frame
+
+One way to analyze code is to read in existing R files. The `read_rfiles()` function will allow parse your R files into individual R calls, indicating the original file path along with the line number for each call.  The tidycode package includes some example files with the paths accessible via the `tidycode_example()` function. Let's examine two, the `example_plots.R` file and the `example_analysis.R` file.
+
+```{r}
+cat(readLines(tidycode_example("example_plot.R")), sep = '\n')
+```
+
+```{r}
+cat(readLines(tidycode_example("example_analysis.R")), sep = '\n')
+```
+
+Using the `read_rfiles()` function, we can read them in as a tidy data frame.
+
+```{r}
+(d <- read_rfiles(
+  tidycode_example("example_plot.R"),
+  tidycode_example("example_analysis.R")
+  ))
+```
+
+This tidy data frame has one row per R call in the original file. It places the file path in the `file` column, the R call in the `expr` column, and the line number in the `line` column. Since this is in a tidy format, we can manipulate it using common data manipulation functions.
+
+Let's examine the first row. 
+
+```{r}
+d[1, ]
+```
+
+This is the first line of the `example_plot.R` file. We can dig into the `expr` list column to see what R call was made on this first line.
+
+```{r}
+d[1, "expr"][[1]]
+```
+
+The call is `library(tidyverse)`.
+
+## Unnest calls into individual functions
+
+Similar to the tidytext package that will unnest groups of words by token using the `unnest_tokens()` function, such as by word or sentence, we can unnest these calls into individual functions using the `unnest_calls()` function. To do this, we can pipe the data frame we just created, `d` into the `unnest_calls()` function and specify the column that contains the R calls, in this case `expr`.
+
+```{r, message=FALSE, warning=FALSE}
+library(dplyr)
+
+d_funcs <- d %>%
+  unnest_calls(expr)
+
+d_funcs
+```
+
+This added two columns to our data frame, `func` a column of type `character` indicating each function called and `args` a list column containing the arguments for each function. Let's examine that first row again. 
+
+```{r}
+d_funcs[1, ]
+```
+
+Here the function is `library`, which tracks with what we have previously observed. Examining the `args` list column, we see the following.
+
+```{r}
+d_funcs[1, "args"][[1]]
+```
+
+The argument for the `library` function on this first line is `tidyverse`. This aligns with what we observed, the first R call is `library(tidyverse)`.
+
+## Remove "stopwords"
+
+In text analysis, there is the concept of "stopwords". These are often small common filler words you want to remove before completing an analysis, such as "a" or "the". In a tidy _code_ analysis, we can use a similar concept to remove some functions. For example we may want to remove the assignment operator, `<-`, before completing an analysis. We have compiled a list of common stop functions in the `get_stopfuncs()` function to antijoin from the data frame.
+
+```{r}
+d_funcs %>%
+  anti_join(get_stopfuncs())
+```
+
+## Classify code
+
+Akin to the tidytext `get_sentiments()` function for sentiment analysis, the tidycode package has a `get_classifications()` function that will output a classification data frame. By default, this outputs a data frame with two classification lexicons, `crowdsource` and `leeklab`. The `crowdsource` lexicon was developed by twitter users who tried out the [classify shiny application](https://lucy.shinyapps.io/classify). The `leeklab` lexicon was curated by members of [Jeff Leek's Lab](https://jtleek.com). Both lexicons involve the same functions classified multiple times by different users. The `score` column indicates the percentage of functions that were classified as a given class. To just use the most prevalent classification, you can set the `incude_duplicates` parameter to `FALSE` in the `get_classifications()` function. By default both the  `crowdsource` and `leeklab` lexicons will be output. To get just one, specify the `lexicon` parameter. Here we will merge in the `crowdsource` lexicon, picking the most prevalent classification by setting the `incude_duplicates` parameter to `FALSE`.
+
+```{r}
+d_funcs %>%
+  anti_join(get_stopfuncs()) %>%
+  left_join(get_classifications("crowdsource", include_duplicates = FALSE)) %>%
+  select(func, classification)
+```
+
+Notice we know have one classification per function. If we left the `incude_duplicates` parameter to its default, `TRUE`, we would end up with more than one classification per function along with a `score` column. 
+
+```{r}
+d_funcs %>%
+  anti_join(get_stopfuncs()) %>%
+  left_join(get_classifications("crowdsource")) %>%
+  select(func, classification, score)
+```
+
