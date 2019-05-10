@@ -71,7 +71,7 @@ Add in the function classifications\!
 
 ``` r
 u %>%
-  dplyr::left_join(
+  dplyr::inner_join(
     get_classifications("crowdsource", include_duplicates = FALSE)
     )
 #> Joining, by = "func"
@@ -94,7 +94,7 @@ operators, like `%>%` and `+`.
 
 ``` r
 u %>%
-  dplyr::left_join(
+  dplyr::inner_join(
     get_classifications("crowdsource", include_duplicates = FALSE)
     ) %>%
   dplyr::anti_join(get_stopfuncs()) %>%

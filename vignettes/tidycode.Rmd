@@ -104,7 +104,7 @@ Akin to the tidytext `get_sentiments()` function for sentiment analysis, the tid
 ```{r}
 d_funcs %>%
   anti_join(get_stopfuncs()) %>%
-  left_join(get_classifications("crowdsource", include_duplicates = FALSE)) %>%
+  inner_join(get_classifications("crowdsource", include_duplicates = FALSE)) %>%
   select(func, classification)
 ```
 
@@ -113,7 +113,7 @@ Notice we know have one classification per function. If we left the `incude_dupl
 ```{r}
 d_funcs %>%
   anti_join(get_stopfuncs()) %>%
-  left_join(get_classifications("crowdsource")) %>%
+  inner_join(get_classifications("crowdsource")) %>%
   select(func, classification, score)
 ```
 

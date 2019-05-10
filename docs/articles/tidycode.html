@@ -212,11 +212,11 @@
 <p>Akin to the tidytext <code>get_sentiments()</code> function for sentiment analysis, the tidycode package has a <code><a href="../reference/get_classifications.html">get_classifications()</a></code> function that will output a classification data frame. By default, this outputs a data frame with two classification lexicons, <code>crowdsource</code> and <code>leeklab</code>. The <code>crowdsource</code> lexicon was developed by twitter users who tried out the <a href="https://lucy.shinyapps.io/classify">classify shiny application</a>. The <code>leeklab</code> lexicon was curated by members of <a href="https://jtleek.com">Jeff Leek’s Lab</a>. Both lexicons involve the same functions classified multiple times by different users. The <code>score</code> column indicates the percentage of functions that were classified as a given class. To just use the most prevalent classification, you can set the <code>incude_duplicates</code> parameter to <code>FALSE</code> in the <code><a href="../reference/get_classifications.html">get_classifications()</a></code> function. By default both the <code>crowdsource</code> and <code>leeklab</code> lexicons will be output. To get just one, specify the <code>lexicon</code> parameter. Here we will merge in the <code>crowdsource</code> lexicon, picking the most prevalent classification by setting the <code>incude_duplicates</code> parameter to <code>FALSE</code>.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">d_funcs <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb11-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">anti_join</a></span>(<span class="kw"><a href="../reference/get_stopfuncs.html">get_stopfuncs</a></span>()) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="kw"><a href="../reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>, <span class="dt">include_duplicates =</span> <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">inner_join</a></span>(<span class="kw"><a href="../reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>, <span class="dt">include_duplicates =</span> <span class="ot">FALSE</span>)) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb11-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(func, classification)</a>
 <a class="sourceLine" id="cb11-5" data-line-number="5"><span class="co">#&gt; Joining, by = "func"</span></a>
 <a class="sourceLine" id="cb11-6" data-line-number="6"><span class="co">#&gt; Joining, by = "func"</span></a>
-<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="co">#&gt; # A tibble: 17 x 2</span></a>
+<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="co">#&gt; # A tibble: 15 x 2</span></a>
 <a class="sourceLine" id="cb11-8" data-line-number="8"><span class="co">#&gt;    func       classification</span></a>
 <a class="sourceLine" id="cb11-9" data-line-number="9"><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;         </span></a>
 <a class="sourceLine" id="cb11-10" data-line-number="10"><span class="co">#&gt;  1 library    setup         </span></a>
@@ -231,19 +231,17 @@
 <a class="sourceLine" id="cb11-19" data-line-number="19"><span class="co">#&gt; 10 library    setup         </span></a>
 <a class="sourceLine" id="cb11-20" data-line-number="20"><span class="co">#&gt; 11 mutate     data cleaning </span></a>
 <a class="sourceLine" id="cb11-21" data-line-number="21"><span class="co">#&gt; 12 select     data cleaning </span></a>
-<a class="sourceLine" id="cb11-22" data-line-number="22"><span class="co">#&gt; 13 datadist   &lt;NA&gt;          </span></a>
-<a class="sourceLine" id="cb11-23" data-line-number="23"><span class="co">#&gt; 14 options    setup         </span></a>
-<a class="sourceLine" id="cb11-24" data-line-number="24"><span class="co">#&gt; 15 ols        &lt;NA&gt;          </span></a>
-<a class="sourceLine" id="cb11-25" data-line-number="25"><span class="co">#&gt; 16 summary    exploratory   </span></a>
-<a class="sourceLine" id="cb11-26" data-line-number="26"><span class="co">#&gt; 17 plot       visualization</span></a></code></pre></div>
+<a class="sourceLine" id="cb11-22" data-line-number="22"><span class="co">#&gt; 13 options    setup         </span></a>
+<a class="sourceLine" id="cb11-23" data-line-number="23"><span class="co">#&gt; 14 summary    exploratory   </span></a>
+<a class="sourceLine" id="cb11-24" data-line-number="24"><span class="co">#&gt; 15 plot       visualization</span></a></code></pre></div>
 <p>Notice we know have one classification per function. If we left the <code>incude_duplicates</code> parameter to its default, <code>TRUE</code>, we would end up with more than one classification per function along with a <code>score</code> column.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">d_funcs <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb12-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">anti_join</a></span>(<span class="kw"><a href="../reference/get_stopfuncs.html">get_stopfuncs</a></span>()) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(<span class="kw"><a href="../reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">inner_join</a></span>(<span class="kw"><a href="../reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>)) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb12-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(func, classification, score)</a>
 <a class="sourceLine" id="cb12-5" data-line-number="5"><span class="co">#&gt; Joining, by = "func"</span></a>
 <a class="sourceLine" id="cb12-6" data-line-number="6"><span class="co">#&gt; Joining, by = "func"</span></a>
-<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="co">#&gt; # A tibble: 117 x 3</span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="co">#&gt; # A tibble: 115 x 3</span></a>
 <a class="sourceLine" id="cb12-8" data-line-number="8"><span class="co">#&gt;    func    classification   score</span></a>
 <a class="sourceLine" id="cb12-9" data-line-number="9"><span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt;            &lt;dbl&gt;</span></a>
 <a class="sourceLine" id="cb12-10" data-line-number="10"><span class="co">#&gt;  1 library setup          0.687  </span></a>
@@ -256,7 +254,7 @@
 <a class="sourceLine" id="cb12-17" data-line-number="17"><span class="co">#&gt;  8 library evaluation     0.00278</span></a>
 <a class="sourceLine" id="cb12-18" data-line-number="18"><span class="co">#&gt;  9 library export         0.00111</span></a>
 <a class="sourceLine" id="cb12-19" data-line-number="19"><span class="co">#&gt; 10 select  data cleaning  0.636  </span></a>
-<a class="sourceLine" id="cb12-20" data-line-number="20"><span class="co">#&gt; # … with 107 more rows</span></a></code></pre></div>
+<a class="sourceLine" id="cb12-20" data-line-number="20"><span class="co">#&gt; # … with 105 more rows</span></a></code></pre></div>
 </div>
   </div>
 

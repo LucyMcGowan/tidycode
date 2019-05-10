@@ -111,7 +111,7 @@
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">u &lt;-<span class="st"> </span><span class="kw"><a href="reference/unnest_calls.html">unnest_calls</a></span>(m, expr)</a></code></pre></div>
 <p>Add in the function classifications!</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">u <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">inner_join</a></span>(</a>
 <a class="sourceLine" id="cb6-3" data-line-number="3">    <span class="kw"><a href="reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>, <span class="dt">include_duplicates =</span> <span class="ot">FALSE</span>)</a>
 <a class="sourceLine" id="cb6-4" data-line-number="4">    )</a>
 <a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt; Joining, by = "func"</span></a>
@@ -128,7 +128,7 @@
 <a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt; 8 &lt;S3: glue&gt; &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… glue_… &lt;list… communication</span></a></code></pre></div>
 <p>We can also remove a list of “stopwords”. We have a function, <code><a href="reference/get_stopfuncs.html">get_stopfuncs()</a></code> that lists common “stopwords”, frequently used operators, like <code>%&gt;%</code> and <code>+</code>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">u <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">inner_join</a></span>(</a>
 <a class="sourceLine" id="cb7-3" data-line-number="3">    <span class="kw"><a href="reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>, <span class="dt">include_duplicates =</span> <span class="ot">FALSE</span>)</a>
 <a class="sourceLine" id="cb7-4" data-line-number="4">    ) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb7-5" data-line-number="5"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">anti_join</a></span>(<span class="kw"><a href="reference/get_stopfuncs.html">get_stopfuncs</a></span>()) <span class="op">%&gt;%</span></a>
