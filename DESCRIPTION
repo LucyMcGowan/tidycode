@@ -17,9 +17,9 @@ Imports:
     purrr,
     pryr,
     tibble,
-    matahari (>= 0.0.0.9012),
     rlang,
-    glue
+    glue,
+    matahari
 URL: https://github.com/LucyMcGowan/tidycode
 BugReports: https://github.com/LucyMcGowan/tidycode/issues
 Suggests: 
@@ -28,6 +28,4 @@ Suggests:
     knitr,
     rmarkdown,
     dplyr
-Remotes: 
-    jhudsl/matahari
 VignetteBuilder: knitr
