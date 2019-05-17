@@ -1,13 +1,13 @@
 Package: tidycode
 Type: Package
-Title: A package to analyze lines of R code the tidy way
+Title: A Package to Analyze Lines of R Code the Tidy Way
 Version: 0.1.0
 Authors@R: c(
          person("Lucy", "D'Agostino McGowan", email = "lucydagostino@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7297-9359")),
          person("Jim", "Hester", email = "james.f.hester@gmail.com", role = "ctb"),
          person("Jeff", "Leek", email = "jtleek@gmail.com", role = c("ldr"))
          )
-Description: A package to analyze lines of R code.
+Description: Analyze lines of R code using tidy principles.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
