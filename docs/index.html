@@ -86,9 +86,11 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install tidycode from github with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># install.packages("devtools")</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"LucyMcGowan/tidycode"</span>)</a></code></pre></div>
+<p>You can install tidycode from CRAN with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"tidycode"</span>)</a></code></pre></div>
+<p>You can install the development version of tidycode from github with:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># install.packages("remotes")</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"LucyMcGowan/tidycode"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
@@ -97,57 +99,57 @@
 <h3 class="hasAnchor">
 <a href="#read-in-exisiting-code" class="anchor"></a>Read in exisiting code</h3>
 <p>Using the matahari package, we can read in existing code, either as a string or a file, and turn it into a matahari tibble using <code><a href="https://www.rdocumentation.org/packages/matahari/topics/dance_recital">matahari::dance_recital()</a></code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">code &lt;-<span class="st"> "</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="st">library(broom)</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="st">library(glue)</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="st">m &lt;- lm(mpg ~ am, data = mtcars)</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="st">t &lt;- tidy(m)</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="st">glue_data(t, 'The point estimate for term {term} is {estimate}.')</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="st">"</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9">m &lt;-<span class="st"> </span>matahari<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/matahari/topics/dance_recital">dance_recital</a></span>(code)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">code &lt;-<span class="st"> "</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="st">library(broom)</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="st">library(glue)</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="st">m &lt;- lm(mpg ~ am, data = mtcars)</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="st">t &lt;- tidy(m)</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="st">glue_data(t, 'The point estimate for term {term} is {estimate}.')</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="st">"</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">m &lt;-<span class="st"> </span>matahari<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/matahari/topics/dance_recital">dance_recital</a></span>(code)</a></code></pre></div>
 <p>Alternatively, you may already have a matahari tibble that was recorded during an R session.</p>
 <p>Load the tidycode library.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(tidycode)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(tidycode)</a></code></pre></div>
 <p>We can use the expressions from this matahari tibble to extract the names of the packages included.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">(pkg_names &lt;-<span class="st"> </span><span class="kw"><a href="reference/ls_packages.html">ls_packages</a></span>(m<span class="op">$</span>expr))</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; [1] "broom" "glue"</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">(pkg_names &lt;-<span class="st"> </span><span class="kw"><a href="reference/ls_packages.html">ls_packages</a></span>(m<span class="op">$</span>expr))</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#&gt; [1] "broom" "glue"</span></a></code></pre></div>
 <p>Create a data frame of your expressions, splitting each into individual functions.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">u &lt;-<span class="st"> </span><span class="kw"><a href="reference/unnest_calls.html">unnest_calls</a></span>(m, expr)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">u &lt;-<span class="st"> </span><span class="kw"><a href="reference/unnest_calls.html">unnest_calls</a></span>(m, expr)</a></code></pre></div>
 <p>Add in the function classifications!</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">u <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">inner_join</a></span>(</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">    <span class="kw"><a href="reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>, <span class="dt">include_duplicates =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb6-4" data-line-number="4">    )</a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt; Joining, by = "func"</span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt; # A tibble: 8 x 8</span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;   value      error  output   warnings messages func   args   classification</span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;   &lt;list&gt;     &lt;list&gt; &lt;list&gt;   &lt;list&gt;   &lt;list&gt;   &lt;chr&gt;  &lt;list&gt; &lt;chr&gt;         </span></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt; 1 &lt;chr [8]&gt;  &lt;NULL&gt; &lt;chr [1… &lt;chr [1… &lt;chr [0… libra… &lt;list… setup         </span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt; 2 &lt;chr [9]&gt;  &lt;NULL&gt; &lt;chr [1… &lt;chr [1… &lt;chr [0… libra… &lt;list… setup         </span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt; 3 &lt;lm&gt;       &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… &lt;-     &lt;list… data cleaning </span></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt; 4 &lt;lm&gt;       &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… lm     &lt;list… modeling      </span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt; 5 &lt;lm&gt;       &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… ~      &lt;list… modeling      </span></a>
-<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; 6 &lt;tibble [… &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… &lt;-     &lt;list… data cleaning </span></a>
-<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt; 7 &lt;tibble [… &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… tidy   &lt;list… modeling      </span></a>
-<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt; 8 &lt;glue&gt;     &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… glue_… &lt;list… communication</span></a></code></pre></div>
-<p>We can also remove a list of “stopwords”. We have a function, <code><a href="reference/get_stopfuncs.html">get_stopfuncs()</a></code> that lists common “stopwords”, frequently used operators, like <code>%&gt;%</code> and <code>+</code>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">u <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">inner_join</a></span>(</a>
 <a class="sourceLine" id="cb7-3" data-line-number="3">    <span class="kw"><a href="reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>, <span class="dt">include_duplicates =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb7-4" data-line-number="4">    ) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">anti_join</a></span>(<span class="kw"><a href="reference/get_stopfuncs.html">get_stopfuncs</a></span>()) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(func, classification)</a>
-<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt; Joining, by = "func"</span></a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; Joining, by = "func"</span></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt; # A tibble: 5 x 2</span></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt;   func      classification</span></a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;         </span></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt; 1 library   setup         </span></a>
-<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt; 2 library   setup         </span></a>
-<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt; 3 lm        modeling      </span></a>
-<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt; 4 tidy      modeling      </span></a>
-<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt; 5 glue_data communication</span></a></code></pre></div>
+<a class="sourceLine" id="cb7-4" data-line-number="4">    )</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; Joining, by = "func"</span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt; # A tibble: 8 x 8</span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt;   value      error  output   warnings messages func   args   classification</span></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt;   &lt;list&gt;     &lt;list&gt; &lt;list&gt;   &lt;list&gt;   &lt;list&gt;   &lt;chr&gt;  &lt;list&gt; &lt;chr&gt;         </span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt; 1 &lt;chr [8]&gt;  &lt;NULL&gt; &lt;chr [1… &lt;chr [1… &lt;chr [0… libra… &lt;list… setup         </span></a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt; 2 &lt;chr [9]&gt;  &lt;NULL&gt; &lt;chr [1… &lt;chr [1… &lt;chr [0… libra… &lt;list… setup         </span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt; 3 &lt;lm&gt;       &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… &lt;-     &lt;list… data cleaning </span></a>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt; 4 &lt;lm&gt;       &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… lm     &lt;list… modeling      </span></a>
+<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt; 5 &lt;lm&gt;       &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… ~      &lt;list… modeling      </span></a>
+<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt; 6 &lt;tibble [… &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… &lt;-     &lt;list… data cleaning </span></a>
+<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt; 7 &lt;tibble [… &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… tidy   &lt;list… modeling      </span></a>
+<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt; 8 &lt;glue&gt;     &lt;NULL&gt; &lt;chr [1… &lt;chr [0… &lt;chr [0… glue_… &lt;list… communication</span></a></code></pre></div>
+<p>We can also remove a list of “stopwords”. We have a function, <code><a href="reference/get_stopfuncs.html">get_stopfuncs()</a></code> that lists common “stopwords”, frequently used operators, like <code>%&gt;%</code> and <code>+</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">u <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">inner_join</a></span>(</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">    <span class="kw"><a href="reference/get_classifications.html">get_classifications</a></span>(<span class="st">"crowdsource"</span>, <span class="dt">include_duplicates =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">    ) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">anti_join</a></span>(<span class="kw"><a href="reference/get_stopfuncs.html">get_stopfuncs</a></span>()) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(func, classification)</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt; Joining, by = "func"</span></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt; Joining, by = "func"</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt; # A tibble: 5 x 2</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt;   func      classification</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;         </span></a>
+<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt; 1 library   setup         </span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt; 2 library   setup         </span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt; 3 lm        modeling      </span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt; 4 tidy      modeling      </span></a>
+<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt; 5 glue_data communication</span></a></code></pre></div>
 </div>
 </div>
 </div>
@@ -157,6 +159,8 @@
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=tidycode">https://​cloud.r-project.org/​package=tidycode</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/LucyMcGowan/tidycode">https://​github.com/​LucyMcGowan/​tidycode</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/LucyMcGowan/tidycode/issues">https://​github.com/​LucyMcGowan/​tidycode/​issues</a>
@@ -184,6 +188,7 @@
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/LucyMcGowan/tidycode"><img src="https://travis-ci.org/LucyMcGowan/tidycode.svg?branch=master" alt="Travis build status"></a></li>
 <li><a href="https://codecov.io/gh/LucyMcGowan/tidycode?branch=master"><img src="https://codecov.io/gh/LucyMcGowan/tidycode/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://cran.r-project.org/package=tidycode"><img src="https://www.r-pkg.org/badges/version/tidycode" alt="CRAN status"></a></li>
 </ul>
 </div>
 </div>

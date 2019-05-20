@@ -7,6 +7,8 @@
 status](https://travis-ci.org/LucyMcGowan/tidycode.svg?branch=master)](https://travis-ci.org/LucyMcGowan/tidycode)
 [![Codecov test
 coverage](https://codecov.io/gh/LucyMcGowan/tidycode/branch/master/graph/badge.svg)](https://codecov.io/gh/LucyMcGowan/tidycode?branch=master)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/tidycode)](https://cran.r-project.org/package=tidycode)
 <!-- badges: end -->
 
 # tidycode
