@@ -21,7 +21,13 @@ The goal of tidycode is to allow users to analyze R expressions in a tidy way.
 
 ## Installation
 
-You can install tidycode from github with:
+You can install tidycode from CRAN with:
+
+```{r cran-installation, eval = FALSE}
+install.packages("tidycode")
+```
+
+You can install the development version of tidycode from github with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")

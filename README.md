@@ -16,7 +16,13 @@ tidy way.
 
 ## Installation
 
-You can install tidycode from github with:
+You can install tidycode from CRAN with:
+
+``` r
+install.packages("tidycode")
+```
+
+You can install the development version of tidycode from github with:
 
 ``` r
 # install.packages("devtools")
@@ -76,16 +82,16 @@ u %>%
     )
 #> Joining, by = "func"
 #> # A tibble: 8 x 8
-#>   result     error  output   warnings messages func   args   classification
+#>   value      error  output   warnings messages func   args   classification
 #>   <list>     <list> <list>   <list>   <list>   <chr>  <list> <chr>         
 #> 1 <chr [8]>  <NULL> <chr [1… <chr [1… <chr [0… libra… <list… setup         
 #> 2 <chr [9]>  <NULL> <chr [1… <chr [1… <chr [0… libra… <list… setup         
-#> 3 <S3: lm>   <NULL> <chr [1… <chr [0… <chr [0… <-     <list… data cleaning 
-#> 4 <S3: lm>   <NULL> <chr [1… <chr [0… <chr [0… lm     <list… modeling      
-#> 5 <S3: lm>   <NULL> <chr [1… <chr [0… <chr [0… ~      <list… modeling      
+#> 3 <lm>       <NULL> <chr [1… <chr [0… <chr [0… <-     <list… data cleaning 
+#> 4 <lm>       <NULL> <chr [1… <chr [0… <chr [0… lm     <list… modeling      
+#> 5 <lm>       <NULL> <chr [1… <chr [0… <chr [0… ~      <list… modeling      
 #> 6 <tibble [… <NULL> <chr [1… <chr [0… <chr [0… <-     <list… data cleaning 
 #> 7 <tibble [… <NULL> <chr [1… <chr [0… <chr [0… tidy   <list… modeling      
-#> 8 <S3: glue> <NULL> <chr [1… <chr [0… <chr [0… glue_… <list… communication
+#> 8 <glue>     <NULL> <chr [1… <chr [0… <chr [0… glue_… <list… communication
 ```
 
 We can also remove a list of “stopwords”. We have a function,
