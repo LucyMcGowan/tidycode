@@ -25,8 +25,8 @@ install.packages("tidycode")
 You can install the development version of tidycode from github with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("LucyMcGowan/tidycode")
+# install.packages("remotes")
+remotes::install_github("LucyMcGowan/tidycode")
 ```
 
 ## Example
