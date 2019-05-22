@@ -33,7 +33,7 @@ remotes::install_github("LucyMcGowan/tidycode")
 
 ## Example
 
-### Read in exisiting code
+### Read in existing code
 
 Using the matahari package, we can read in existing code, either as a
 string or a file, and turn it into a matahari tibble using
