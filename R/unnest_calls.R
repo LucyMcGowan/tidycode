@@ -30,6 +30,7 @@ unnest_calls <- function(.data, input, drop = TRUE) {
   tbl <- .data[d$line, ]
   tbl <- tibble::add_column(tbl, func = d$func)
   tbl <- tibble::add_column(tbl, args = d$args)
+  tbl$line <- d$line
   if (drop) {
     tbl[[rlang::quo_name(rlang::enquo(input))]] <- NULL
   }
