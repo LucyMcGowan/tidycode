@@ -1,0 +1,89 @@
+---
+title: "Calculating the proportion of code classified in an R file"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{calculating-proportion-of-code}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tidycode)
+```
+
+## Introduction
+
+tidycode can be used to easily classify the lines of code in an R file (e.g., as data cleaning, setup, etc.).
+
+This vignette shows how tidycode can easily be used to calculate the proportion of a total R file classified to different categories?
+
+## Loading and setting up
+
+We will frist load the tidyverse and tidycode packages, and then use the tidycode function `read_rfiles()` to read two example files:
+
+```{r}
+library(tidyverse)
+library(tidycode)
+
+two_rfiles <- read_rfiles(
+  tidycode_example("example_plot.R"),
+  tidycode_example("example_analysis.R")
+)
+
+```
+
+## Classify the lines of code in the R files
+
+Next, we can classify the lines of code in the two rfiles saved to the object `two_rfiles`:
+
+```{r}
+unnested_expressions <- unnest_calls(two_rfiles, expr)
+
+classified_code <- unnested_expressions %>%
+  dplyr::inner_join(
+    get_classifications("crowdsource", include_duplicates = FALSE)
+  ) %>%
+  dplyr::anti_join(get_stopfuncs()) %>%
+  dplyr::select(file, func, classification)
+```
+
+## Creating a function
+
+Then, we will create a simple function that takes the classified code and calculates the proportion of the lines of code in each file that is classified into different categories:
+
+```{r}
+calc_proportion_of_file <- function(d) {
+  d %>% 
+    count(file, classification) %>% 
+    group_by(file) %>% 
+    mutate(prop = n / sum(n))
+}
+```
+
+## Using the function
+
+It is easy to use the function on our classified code:
+
+```{r}
+proportion_of_file <- calc_proportion_of_file(classified_code)
+
+proportion_of_file
+```
+
+## Visualization
+
+We can also easily visualize the results:
+
+```{r}
+proportion_of_file %>% 
+  ggplot(aes(x = classification, y = prop, color = file)) +
+  geom_point() +
+  theme(legend.position = "bottom")
+```
