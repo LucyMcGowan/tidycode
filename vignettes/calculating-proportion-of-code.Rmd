@@ -83,7 +83,17 @@ We can also easily visualize the results:
 
 ```{r}
 proportion_of_file %>% 
-  ggplot(aes(x = classification, y = prop, color = file)) +
-  geom_point() +
+  ggplot(aes(x = reorder(classification, prop), y = prop, fill = file))+
+  coord_flip()+
+  geom_bar(stat="identity")+
+  geom_text(aes(x = reorder(classification, prop), y = prop, group = file, label = paste0(round(prop*100, digits=0), "%")), position = position_stack(), hjust=1)+
+  geom_text(
+    aes(label = paste0(round(stat(y)*100, digits=0), "%"), group = classification), 
+    stat = 'summary', fun.y = sum, hjust=-.5
+  )+
+  scale_y_continuous(labels=scales::percent_format(), limits=c(0,1.1), breaks=c(0, .2, .4, .6, .8, 1))+
+  guides(fill=guide_legend(ncol=1))+
+  xlab("Type of Code")+
+  ylab("Proportion of Code")+
   theme(legend.position = "bottom")
 ```
