@@ -24,7 +24,7 @@ This vignette shows how tidycode can easily be used to calculate the proportion 
 
 We will frist load the tidyverse and tidycode packages, and then use the tidycode function `read_rfiles()` to read two example files:
 
-```{r}
+```{r, message = FALSE}
 library(tidyverse)
 library(tidycode)
 
