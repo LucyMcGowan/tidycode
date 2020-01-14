@@ -14,10 +14,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(tidycode)
-```
-
 ## Introduction
 
 tidycode can be used to easily classify the lines of code in an R file (e.g., as data cleaning, setup, etc.).
@@ -59,7 +55,7 @@ classified_code <- unnested_expressions %>%
 Then, we will create a simple function that takes the classified code and calculates the proportion of the lines of code in each file that is classified into different categories:
 
 ```{r}
-calc_proportion_of_file <- function(d) {
+calc_proportion_file <- function(d) {
   d %>% 
     count(file, classification) %>% 
     group_by(file) %>% 
@@ -72,28 +68,81 @@ calc_proportion_of_file <- function(d) {
 It is easy to use the function on our classified code:
 
 ```{r}
-proportion_of_file <- calc_proportion_of_file(classified_code)
+proportion_of_file <- calc_proportion_file(classified_code)
 
 proportion_of_file
 ```
 
-## Visualization
+## Visualizing classified code on a per-file basis
 
 We can also easily visualize the results:
 
 ```{r}
-proportion_of_file %>% 
-  ggplot(aes(x = reorder(classification, prop), y = prop, fill = file))+
+proportion_of_file %>%
+  ggplot()+
   coord_flip()+
-  geom_bar(stat="identity")+
-  geom_text(aes(x = reorder(classification, prop), y = prop, group = file, label = paste0(round(prop*100, digits=0), "%")), position = position_stack(), hjust=1)+
-  geom_text(
-    aes(label = paste0(round(stat(y)*100, digits=0), "%"), group = classification), 
-    stat = 'summary', fun.y = sum, hjust=-.5
+  geom_bar(aes(x=0, y=prop, fill=reorder(classification, prop)), stat="identity", size=1)+
+  scale_y_continuous(labels=scales::percent_format())+
+  facet_wrap(~file, ncol=1)+
+  labs(
+    title = "Proportion of Code by File",
+    y = "Proportion of Code",
+    fill = "Classification"
   )+
-  scale_y_continuous(labels=scales::percent_format(), limits=c(0,1.1), breaks=c(0, .2, .4, .6, .8, 1))+
-  guides(fill=guide_legend(ncol=1))+
-  xlab("Type of Code")+
-  ylab("Proportion of Code")+
-  theme(legend.position = "bottom")
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.title.y = element_blank(),
+    strip.text = element_text(hjust=0),
+    panel.background = element_blank(),
+    strip.background = element_blank(),
+    panel.grid.major.x = element_line(color="grey80")
+  )
+```
+
+This can become quite a large viz if there are very many files; thus, this approach may be more useful when trying to visualize code on on a per-file basis for a relatively small (perhaps 10-15 or fewer) files.
+
+Next, we show how this approach may be scaled up to a larger number of files by visualizing the proportion of code classified across many files.
+
+## Visualizing classified code across files
+
+First, we'll create a function that is an analog to `calc_proportion_file()`, but for calculating the mean proportion across many files:
+
+```{r}
+calc_proportion_overall <- function(d) {
+  d %>% group_by(classification) %>%
+    count() %>% 
+    ungroup() %>% 
+    mutate(
+      prop = prop.table(n)
+    )
+}
+```
+
+We can use this in the same way as `calc_proportion_file()`, passing `classified_code` as the sole argument:
+
+```{r}
+proportion_overall <- calc_proportion_overall(classified_code)
+proportion_overall
+```
+
+These results can be visualized as follows:
+
+```{r}
+proportion_overall %>%
+  ggplot()+
+  coord_flip()+
+  geom_bar(aes(x=reorder(classification, prop), y=1), stat="identity", fill="grey80")+
+  geom_bar(aes(x=reorder(classification, prop), y=prop, fill=prop), stat="identity")+
+  geom_text(aes(x=reorder(classification, prop), y=prop, label=paste0(round(prop*100, digits=0), "%"), hjust=-.5))+
+  scale_y_continuous(labels=scales::percent_format())+
+  labs(
+    title = "Overall Proportion of Code",
+    y = "Proportion of Code",
+    x = "Classification"
+  )+
+  theme(
+    panel.background = element_blank(),
+    legend.position = "none"
+  )
 ```
