@@ -24,7 +24,7 @@ This vignette shows how tidycode can easily be used to calculate the proportion 
 
 ## Loading and setting up
 
-We will frist load the tidyverse and tidycode packages, and then use the tidycode function `read_rfiles()` to read two example files:
+We will frist load the tidyverse and tidycode packages and then use the tidycode function `read_rfiles()` to read the two example files (built-in to tidycode):
 
 ```{r, message = FALSE}
 library(tidyverse)
@@ -39,7 +39,7 @@ two_rfiles <- read_rfiles(
 
 ## Classify the lines of code in the R files
 
-Next, we can classify the lines of code in the two rfiles saved to the object `two_rfiles`:
+Next, we can classify the lines of code in the two rfiles saved to the object `two_rfiles`, using the `unnest_calls()` and subsequent functions as described in the [tidycode vignette](tidycode.html):
 
 ```{r}
 unnested_expressions <- unnest_calls(two_rfiles, expr)
@@ -54,7 +54,7 @@ classified_code <- unnested_expressions %>%
 
 ## Creating a function
 
-Then, we will create a simple function that takes the classified code and calculates the proportion of the lines of code in each file that is classified into different categories:
+Then, we will create a simple function that a) takes the classified code and then b) calculates the proportion of the lines of code in each file that is classified into different categories:
 
 ```{r}
 calc_proportion_file <- function(d) {
@@ -67,7 +67,7 @@ calc_proportion_file <- function(d) {
 
 ## Using the function
 
-It is easy to use the function on our classified code:
+It is easy to use the function on our classified code; just pass the classified code to it.:
 
 ```{r}
 proportion_of_file <- calc_proportion_file(classified_code)
@@ -102,9 +102,11 @@ proportion_of_file %>%
   )
 ```
 
-This can become quite a large viz if there are very many files; thus, this approach may be more useful when trying to visualize code on on a per-file basis for a relatively small (perhaps 10-15 or fewer) files.
+This can become quite a large visualization if there are very many files. 
 
-Next, we show how this approach may be scaled up to a larger number of files by visualizing the proportion of code classified across many files.
+Thus, this approach may be more useful when trying to visualize code on on a per-file basis for a relatively small (perhaps 10-15 or fewer) files.
+
+Another approach can be scaled up to a larger number of files, as is described next.
 
 ## Visualizing classified code across files
 
