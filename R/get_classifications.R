@@ -26,7 +26,6 @@
 #'
 #' # Get a data frame of only `leeklab` classifications
 #' get_classifications("leeklab")
-#'
 #' @export
 get_classifications <- function(lexicon = NULL, include_duplicates = TRUE) {
   if (include_duplicates) {
@@ -34,7 +33,7 @@ get_classifications <- function(lexicon = NULL, include_duplicates = TRUE) {
   } else {
     classification_tbl <- .tidycode$classification_tbl[
       !duplicated(.tidycode$classification_tbl[, c("lexicon", "func")]), c("lexicon", "func", "classification")
-      ]
+    ]
   }
   if (is.null(lexicon)) {
     return(classification_tbl)
@@ -43,5 +42,3 @@ get_classifications <- function(lexicon = NULL, include_duplicates = TRUE) {
   classification_tbl[["lexicon"]] <- NULL
   classification_tbl
 }
-
-

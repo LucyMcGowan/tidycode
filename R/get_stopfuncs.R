@@ -41,6 +41,5 @@ get_stopfuncs <- function() {
     "<",
     ">=",
     "<="
-    )
-  )
+  ))
 }

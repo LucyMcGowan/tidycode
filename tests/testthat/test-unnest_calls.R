@@ -2,11 +2,15 @@ context("test-unnest_calls")
 
 test_that("errors if given the wrong type", {
   d <- tibble::tibble(x = 1:5)
-  expect_error(unnest_calls(d, x),
-               "The class of the `input` parameter must be")
+  expect_error(
+    unnest_calls(d, x),
+    "The class of the `input` parameter must be"
+  )
   d <- tibble::tibble(x = list("library(tidycode)"))
-  expect_error(unnest_calls(d, x),
-               "The class of the `input` parameter must be")
+  expect_error(
+    unnest_calls(d, x),
+    "The class of the `input` parameter must be"
+  )
 })
 
 

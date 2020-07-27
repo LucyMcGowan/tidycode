@@ -44,5 +44,4 @@ get_classifications(include_duplicates = FALSE)
 
 # Get a data frame of only `leeklab` classifications
 get_classifications("leeklab")
-
 }

@@ -5,8 +5,8 @@ test_that("listing packages from list of calls works", {
     quote(library(tidycode)),
     quote(library(chicken)),
     quote(foo::bar),
-    quote(lm(mpg ~ cyl, mtcars)))
-  )
+    quote(lm(mpg ~ cyl, mtcars))
+  ))
   expect_equal(pkgs, c("tidycode", "chicken", "foo"))
 })
 

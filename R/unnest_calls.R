@@ -24,7 +24,7 @@
 unnest_calls <- function(.data, input, drop = TRUE) {
   x <- .data[[rlang::quo_name(rlang::enquo(input))]]
   if (is.character(x)) {
-   x <- purrr::map(x, safe_parse)
+    x <- purrr::map(x, safe_parse)
   }
   d <- .unnest_calls(x)
   tbl <- .data[d$line, ]
@@ -40,10 +40,12 @@ unnest_calls <- function(.data, input, drop = TRUE) {
 .unnest_calls <- function(x, input) {
   if (!(is.list(x) | is.call(x) | is.name(x))) {
     stop(glue::glue("The class of the `input` parameter must be one of the",
-                    " following:",
-                    "\n  * character vector",
-                    "\n  * list containing R calls", sep = "\n"),
-         call. = FALSE
+      " following:",
+      "\n  * character vector",
+      "\n  * list containing R calls",
+      sep = "\n"
+    ),
+    call. = FALSE
     )
   }
   if (is.list(x)) {
@@ -53,16 +55,20 @@ unnest_calls <- function(.data, input, drop = TRUE) {
     d$line <- line
   }
   if (is.call(x)) {
-    c <-  ls_fun_calls(x)
+    c <- ls_fun_calls(x)
     a <- ls_fun_args(x)
-    d <- tibble::tibble(func = unlist(c),
-                        args = rep(a, purrr::map_dbl(c, length)),
-                        line = 1)
+    d <- tibble::tibble(
+      func = unlist(c),
+      args = rep(a, purrr::map_dbl(c, length)),
+      line = 1
+    )
   }
   if (is.name(x)) {
-    d <- tibble::tibble(func = as.character(x),
-                        args = list(character(0)),
-                        line = 1)
+    d <- tibble::tibble(
+      func = as.character(x),
+      args = list(character(0)),
+      line = 1
+    )
   }
   return(d)
 }

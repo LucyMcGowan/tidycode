@@ -4,12 +4,13 @@ library(tidyverse)
 ## Currently there are 14,449 repos on CRAN (don't know how to pull this number from API?)
 
 n <- 14500
-pages <- 1:(n/100)
+pages <- 1:(n / 100)
 get_repos <- function(page) {
   repos <- gh::gh("/users/:username/repos",
-                  username = "cran",
-                  per_page = 100,
-                  page = page)
+    username = "cran",
+    per_page = 100,
+    page = page
+  )
   map_chr(repos, "name")
 }
 
@@ -23,9 +24,10 @@ tibble(
 get_namespace <- function(repo) {
   safe_gh <- purrr::possibly(gh::gh, NULL)
   d <- safe_gh("/repos/:owner/:repo/contents/:path",
-               owner = "cran",
-               repo = repo,
-               path = "NAMESPACE")
+    owner = "cran",
+    repo = repo,
+    path = "NAMESPACE"
+  )
   if (is.null(d)) {
     return(
       list(
@@ -50,8 +52,10 @@ extract_namespace <- function(x, thing) {
   if (length(str[[1]]) == 0) {
     return(NA_character_)
   }
-  str <- stringr::str_remove_all(unlist(str),
-                                 glue::glue("\\n|\\\"| |{thing}\\(|\\)"))
+  str <- stringr::str_remove_all(
+    unlist(str),
+    glue::glue("\\n|\\\"| |{thing}\\(|\\)")
+  )
   if (thing == "S3method") {
     return(gsub(",", ".", str))
   }
@@ -140,9 +144,10 @@ export_pattern_repos <- export_pattern_tbl %>%
 get_r_paths <- function(repo) {
   safe_gh <- purrr::possibly(gh::gh, NULL)
   d <- safe_gh("/repos/:owner/:repo/contents/:path",
-               owner = "cran",
-               repo = repo,
-               path = "R")
+    owner = "cran",
+    repo = repo,
+    path = "R"
+  )
   tibble::tibble(
     repo = repo,
     path = map_chr(d, "path")
@@ -151,7 +156,8 @@ get_r_paths <- function(repo) {
 
 r_paths <- map_df(export_pattern_repos, get_r_paths)
 
-map2(d$repo, d$path, ~gh::gh("/repos/:owner/:repo/contents/:path",
-                             owner = "cran",
-                             repo = .x,
-                             path = .y))
+map2(d$repo, d$path, ~ gh::gh("/repos/:owner/:repo/contents/:path",
+  owner = "cran",
+  repo = .x,
+  path = .y
+))

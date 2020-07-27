@@ -14,7 +14,6 @@
 #'   tidycode_example("example_analysis.R")
 #' )
 read_rfiles <- function(...) {
-
   files <- list(...)
   files <- purrr::flatten(files)
   urls <- files[purrr::map_lgl(files, is_url)]
@@ -27,18 +26,22 @@ read_rfiles <- function(...) {
   file_paths[purrr::map_lgl(files, is_url)] <- url_files
 
   if (!all(check_r(files))) {
-    stop(glue::glue("All files must be .R files.",
-                    "\nYou are trying to read the following files:",
-                    "\n * {glue::glue_collapse(files, sep = '\n * ')}"),
-         call. = FALSE
+    stop(glue::glue(
+      "All files must be .R files.",
+      "\nYou are trying to read the following files:",
+      "\n * {glue::glue_collapse(files, sep = '\n * ')}"
+    ),
+    call. = FALSE
     )
   }
 
   if (!all(file.exists(unlist(file_paths)))) {
-    stop(glue::glue("The following file(s) do not exist:",
-                    "\n * {glue::glue_collapse(files[!file.exists(unlist(file_paths))],
-                    sep = '\n * ')}"),
-         call. = FALSE
+    stop(glue::glue(
+      "The following file(s) do not exist:",
+      "\n * {glue::glue_collapse(files[!file.exists(unlist(file_paths))],
+                    sep = '\n * ')}"
+    ),
+    call. = FALSE
     )
   }
   d <- purrr::map2(file_paths, files, get_expr)
@@ -49,7 +52,7 @@ read_rfiles <- function(...) {
 get_expr <- function(x, y) {
   d <- tibble::tibble(
     file = y,
-    expr = matahari::dance_recital(x, evaluate = FALSE)[['expr']]
+    expr = matahari::dance_recital(x, evaluate = FALSE)[["expr"]]
   )
   d$line <- 1:nrow(d)
   d

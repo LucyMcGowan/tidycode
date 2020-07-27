@@ -6,7 +6,7 @@
 #
 # @examples
 # ls_fun_args(quote(lm(mpg ~ cyl, mtcars)))
-ls_fun_args <- function (x) {
+ls_fun_args <- function(x) {
   if (is.function(x)) {
     c(ls_fun_args(formals(x)), ls_fun_args(body(x)))
   }

@@ -19,6 +19,7 @@ List packages
 ls_packages(
   list(
     quote(library(tidycode)),
-    quote(library(purrr)))
+    quote(library(purrr))
   )
+)
 }

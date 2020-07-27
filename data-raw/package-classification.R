@@ -8,14 +8,17 @@ d <- read_csv("data-raw/2019-03-14_classify-data.csv")
 safe_parse <- possibly(rlang::parse_expr, NULL)
 
 classes <- tibble(
-  calls =  map(d$code, safe_parse),
-  classification = d$class)
+  calls = map(d$code, safe_parse),
+  classification = d$class
+)
 
 classes <- classes %>%
-  filter(!map_lgl(calls, is.null),
-         !map_lgl(calls, ~ all(is.na(.x))),
-         !map_lgl(calls, is.character),
-         !map_lgl(calls, is.numeric))
+  filter(
+    !map_lgl(calls, is.null),
+    !map_lgl(calls, ~ all(is.na(.x))),
+    !map_lgl(calls, is.character),
+    !map_lgl(calls, is.numeric)
+  )
 
 
 crowdsource_classification_tbl <- classes %>%
@@ -25,8 +28,8 @@ crowdsource_classification_tbl <- classes %>%
   summarise(n = n()) %>%
   mutate(score = n / sum(n)) %>%
   ungroup() %>%
-  select(- n) %>%
-  arrange(func, - score)
+  select(-n) %>%
+  arrange(func, -score)
 
 write_csv(crowdsource_classification_tbl, "inst/extdata/crowdsource_classification_tbl.csv")
 
@@ -38,8 +41,10 @@ id <- "1I_jcI_qQRnT642McsJf1a666DpUdwmZsXr0cIZ2-RH0"
 d <- gs_read(gs_key(id, lookup = TRUE))
 
 d <- d[, 1:9]
-colnames(d) <- c("time", "url", "setup", "exploratory", "cleaning",
-                 "modeling", "evaluation", "other", "analysis")
+colnames(d) <- c(
+  "time", "url", "setup", "exploratory", "cleaning",
+  "modeling", "evaluation", "other", "analysis"
+)
 cleanup <- function(x) {
   x <- unlist(strsplit(x, ","))
   trimws(x)
@@ -72,8 +77,8 @@ leeklab_classification_tbl <- tibble::tibble(
   summarise(n = n()) %>%
   mutate(score = n / sum(n)) %>%
   ungroup() %>%
-  select(- n) %>%
-  arrange(func, - score)
+  select(-n) %>%
+  arrange(func, -score)
 
 write_csv(leeklab_classification_tbl, "inst/extdata/leeklab_classification_tbl.csv")
 
@@ -81,9 +86,9 @@ write_csv(leeklab_classification_tbl, "inst/extdata/leeklab_classification_tbl.c
 classification_tbl <-
   bind_rows(list(
     crowdsource = crowdsource_classification_tbl,
-    leeklab= leeklab_classification_tbl
-    ),
-    .id = "lexicon"
+    leeklab = leeklab_classification_tbl
+  ),
+  .id = "lexicon"
   )
 
 write_csv(classification_tbl, "inst/extdata/classification_tbl.csv")

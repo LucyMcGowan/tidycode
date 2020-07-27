@@ -9,8 +9,9 @@
 #' ls_packages(
 #'   list(
 #'     quote(library(tidycode)),
-#'     quote(library(purrr)))
+#'     quote(library(purrr))
 #'   )
+#' )
 ls_packages <- function(x) {
   if (is.call(x)) {
     x <- deparse(x)

@@ -6,7 +6,7 @@
 #
 # @examples
 # ls_fun_calls(quote(lm(mpg ~ cyl, mtcars)))
-ls_fun_calls <- function (x) {
+ls_fun_calls <- function(x) {
   if (is.function(x)) {
     c(ls_fun_calls(formals(x)), ls_fun_calls(body(x)))
   }

@@ -31,5 +31,3 @@ is_package <- function(x) {
   }
   any(x %in% c("library", "require", "::"))
 }
-
-
