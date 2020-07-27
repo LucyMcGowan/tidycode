@@ -27,8 +27,9 @@ This vignette shows how tidycode can easily be used to calculate the proportion 
 We will frist load the tidyverse and tidycode packages and then use the tidycode function `read_rfiles()` to read the two example files (built-in to tidycode):
 
 ```{r, message = FALSE}
-library(tidyverse)
 library(tidycode)
+library(dplyr)
+library(ggplot2)
 
 two_rfiles <- read_rfiles(
   tidycode_example("example_plot.R"),
@@ -45,11 +46,11 @@ Next, we can classify the lines of code in the two rfiles saved to the object `t
 unnested_expressions <- unnest_calls(two_rfiles, expr)
 
 classified_code <- unnested_expressions %>%
-  dplyr::inner_join(
+  inner_join(
     get_classifications("crowdsource", include_duplicates = FALSE)
   ) %>%
-  dplyr::anti_join(get_stopfuncs()) %>%
-  dplyr::select(file, func, classification)
+  anti_join(get_stopfuncs()) %>%
+  select(file, func, classification)
 ```
 
 ## Creating a function
@@ -81,16 +82,16 @@ We can also easily visualize the results:
 
 ```{r}
 proportion_of_file %>%
-  ggplot()+
-  coord_flip()+
-  geom_bar(aes(x=0, y=prop, fill=reorder(classification, prop)), stat="identity", size=1)+
-  scale_y_continuous(labels=scales::percent_format())+
-  facet_wrap(~file, ncol=1)+
+  ggplot(aes(x = 0, y = prop, fill = reorder(classification, prop))) +
+  geom_bar(stat = "identity", size = 1) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  coord_flip() +
+  facet_wrap(~file, ncol = 1)+
   labs(
     title = "Proportion of Code by File",
     y = "Proportion of Code",
     fill = "Classification"
-  )+
+  ) +
   theme(
     axis.text.y = element_blank(),
     axis.ticks.y = element_blank(),
@@ -134,17 +135,17 @@ These results can be visualized as follows:
 
 ```{r}
 proportion_overall %>%
-  ggplot()+
-  coord_flip()+
-  geom_bar(aes(x=reorder(classification, prop), y=1), stat="identity", fill="grey80")+
-  geom_bar(aes(x=reorder(classification, prop), y=prop, fill=prop), stat="identity")+
-  geom_text(aes(x=reorder(classification, prop), y=prop, label=paste0(round(prop*100, digits=0), "%"), hjust=-.5))+
-  scale_y_continuous(labels=scales::percent_format())+
+  ggplot() +
+  geom_bar(aes(x = reorder(classification, prop), y = 1), stat = "identity", fill = "grey80") +
+  geom_bar(aes(x = reorder(classification, prop), y = prop, fill = prop), stat = "identity")+
+  geom_text(aes(x = reorder(classification, prop), y = prop, label = paste0(round(prop * 100, digits = 0), "%"), hjust = -.5)) +
+  scale_y_continuous(labels = scales::percent_format()) +
+  coord_flip() +
   labs(
     title = "Overall Proportion of Code",
     y = "Proportion of Code",
     x = "Classification"
-  )+
+  ) +
   theme(
     panel.background = element_blank(),
     legend.position = "none"
