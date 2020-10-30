@@ -61,11 +61,13 @@ library(tidycode)
 ```
 
 We can use the expressions from this matahari tibble to extract the
-names of the packages included.
+names of the packages included. We can also create a data frame that
+will include *all* functions of the packages included.
 
 ``` r
 (pkg_names <- ls_packages(m$expr))
 #> [1] "broom" "glue"
+pkg_functions <- get_package_functions(m$expr)
 ```
 
 Create a data frame of your expressions, splitting each into individual
@@ -73,6 +75,27 @@ functions.
 
 ``` r
 u <- unnest_calls(m, expr)
+```
+
+Merge in the package names
+
+``` r
+u <- u %>%
+  dplyr::left_join(pkg_functions) %>%
+  dplyr::select(func, args, line, package)
+#> Joining, by = "func"
+u
+#> # A tibble: 8 x 4
+#>   func      args              line package
+#>   <chr>     <list>           <int> <chr>  
+#> 1 library   <list [1]>           1 base   
+#> 2 library   <list [1]>           2 base   
+#> 3 <-        <list [2]>           3 base   
+#> 4 lm        <named list [2]>     3 stats  
+#> 5 ~         <list [2]>           3 base   
+#> 6 <-        <list [2]>           4 base   
+#> 7 tidy      <list [1]>           4 broom  
+#> 8 glue_data <list [2]>           5 glue
 ```
 
 Add in the function classifications\!
@@ -83,17 +106,17 @@ u %>%
     get_classifications("crowdsource", include_duplicates = FALSE)
     )
 #> Joining, by = "func"
-#> # A tibble: 8 x 8
-#>   value      error  output   warnings messages func   args   classification
-#>   <list>     <list> <list>   <list>   <list>   <chr>  <list> <chr>         
-#> 1 <chr [8]>  <NULL> <chr [1… <chr [1… <chr [0… libra… <list… setup         
-#> 2 <chr [9]>  <NULL> <chr [1… <chr [1… <chr [0… libra… <list… setup         
-#> 3 <lm>       <NULL> <chr [1… <chr [0… <chr [0… <-     <list… data cleaning 
-#> 4 <lm>       <NULL> <chr [1… <chr [0… <chr [0… lm     <list… modeling      
-#> 5 <lm>       <NULL> <chr [1… <chr [0… <chr [0… ~      <list… modeling      
-#> 6 <tibble [… <NULL> <chr [1… <chr [0… <chr [0… <-     <list… data cleaning 
-#> 7 <tibble [… <NULL> <chr [1… <chr [0… <chr [0… tidy   <list… modeling      
-#> 8 <glue>     <NULL> <chr [1… <chr [0… <chr [0… glue_… <list… communication
+#> # A tibble: 8 x 5
+#>   func      args              line package classification
+#>   <chr>     <list>           <int> <chr>   <chr>         
+#> 1 library   <list [1]>           1 base    setup         
+#> 2 library   <list [1]>           2 base    setup         
+#> 3 <-        <list [2]>           3 base    data cleaning 
+#> 4 lm        <named list [2]>     3 stats   modeling      
+#> 5 ~         <list [2]>           3 base    modeling      
+#> 6 <-        <list [2]>           4 base    data cleaning 
+#> 7 tidy      <list [1]>           4 broom   modeling      
+#> 8 glue_data <list [2]>           5 glue    communication
 ```
 
 We can also remove a list of “stopwords”. We have a function,

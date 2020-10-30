@@ -61,10 +61,11 @@ Load the tidycode library.
 library(tidycode)
 ```
 
-We can use the expressions from this matahari tibble to extract the names of the packages included.
+We can use the expressions from this matahari tibble to extract the names of the packages included. We can also create a data frame that will include _all_ functions of the packages included.
 
 ```{r}
 (pkg_names <- ls_packages(m$expr))
+pkg_functions <- get_package_functions(m$expr)
 ```
 
 Create a data frame of your expressions, splitting each into individual functions.
@@ -72,6 +73,16 @@ Create a data frame of your expressions, splitting each into individual function
 ```{r}
 u <- unnest_calls(m, expr)
 ```
+
+Merge in the package names
+
+```{r}
+u <- u %>%
+  dplyr::left_join(pkg_functions) %>%
+  dplyr::select(func, args, line, package)
+u
+```
+
 
 Add in the function classifications!
 
@@ -81,6 +92,7 @@ u %>%
     get_classifications("crowdsource", include_duplicates = FALSE)
     )
 ```
+
 We can also remove a list of "stopwords". We have a function, `get_stopfuncs()` that lists common "stopwords", frequently used operators, like `%>%` and `+`. 
 
 ```{r}
