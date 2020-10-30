@@ -32,7 +32,8 @@ get_classifications <- function(lexicon = NULL, include_duplicates = TRUE) {
     classification_tbl <- .tidycode$classification_tbl
   } else {
     classification_tbl <- .tidycode$classification_tbl[
-      !duplicated(.tidycode$classification_tbl[, c("lexicon", "func")]), c("lexicon", "func", "classification")
+      !duplicated(.tidycode$classification_tbl[, c("lexicon", "func")]),
+      c("lexicon", "func", "classification")
     ]
   }
   if (is.null(lexicon)) {

@@ -2,7 +2,9 @@
 
 export("%>%")
 export(get_classifications)
+export(get_package_functions)
 export(get_stopfuncs)
+export(load_packages)
 export(ls_packages)
 export(read_rfiles)
 export(tidycode_example)
