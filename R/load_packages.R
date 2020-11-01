@@ -15,11 +15,11 @@
 #' )
 load_packages <- function(x) {
   pkgs <- ls_packages(x)
-  not_installed <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+  not_installed <- pkgs[!(pkgs %in% utils::installed.packages()[,"Package"])]
   if(length(not_installed) > 0) {
     stop_glue("Some of the packages in your call list have not been installed. ",
               "Please install the following package before proceeding:\n",
-              "{glue_collapse(glue('* {not_installed}'), sep = '\n')}")
+              "{glue::glue_collapse(glue::glue('* {not_installed}'), sep = '\n')}")
     } else {
     invisible(lapply(pkgs, require, character.only = TRUE))
   }
